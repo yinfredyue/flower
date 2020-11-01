@@ -16,7 +16,7 @@
 # ==============================================================================
 
 set -e
-cd "$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"/../../../
+cd "$( cd $( dirname ${BASH_SOURCE[0]} ) >/dev/null 2>&1 && pwd )"/../../
 
 docker run -d --rm --network flower --name logserver flower:latest \
   python3.7 -m flwr_experimental.logserver

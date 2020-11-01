@@ -1,5 +1,3 @@
-#!/bin/bash
-
 # Copyright 2020 Adap GmbH. All Rights Reserved.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,20 +12,3 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 # ==============================================================================
-set -e
-cd "$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"/../../
-SERVER_ADDRESS="[::]:8080"
-NUM_CLIENTS=2
-I_START=0
-I_END=${NUM_CLIENTS}
-
-echo "Starting $NUM_CLIENTS clients."
-for ((i = $I_START; i < $I_END; i++))
-do
-    echo "Starting client(cid=$i) with partition $i out of $NUM_CLIENTS clients."
-    python3 -m flwr_example.quickstart_pytorch.client \
-      --cid=$i \
-      --server_address=$SERVER_ADDRESS \
-      --nb_clients=$NUM_CLIENTS &
-done
-echo "Started $NUM_CLIENTS clients."
