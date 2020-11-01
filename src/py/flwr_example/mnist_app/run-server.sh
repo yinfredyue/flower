@@ -33,4 +33,4 @@ cd "$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"/../../
 # Which is the same as 
 
 # Start a Flower server
-python3 -m flwr_example.quickstart_pytorch.server
+python3 -m flwr_example.mnist_app.server

@@ -1,0 +1,13 @@
+DEBUG flower 2020-11-01 01:40:29,055 | server.py:176 | fit_round received 2 results and 0 failures
+DEBUG flower 2020-11-01 01:40:29,124 | server.py:138 | evaluate: strategy sampled 2 clients
+DEBUG flower 2020-11-01 01:40:35,857 | server.py:148 | evaluate received 2 results and 0 failures
+INFO flower 2020-11-01 01:40:35,858 | server.py:121 | [TIME] FL finished in 584.6778996999928
+INFO flower 2020-11-01 01:40:35,862 | app.py:59 | app_fit: losses_distributed [(1, 0.04670296795666218)]
+INFO flower 2020-11-01 01:40:35,862 | app.py:60 | app_fit: accuracies_distributed []
+INFO flower 2020-11-01 01:40:35,863 | app.py:61 | app_fit: losses_centralized []
+INFO flower 2020-11-01 01:40:35,865 | app.py:62 | app_fit: accuracies_centralized []
+DEBUG flower 2020-11-01 01:40:35,878 | server.py:138 | evaluate: strategy sampled 4 clients
+DEBUG flower 2020-11-01 01:40:47,662 | server.py:148 | evaluate received 4 results and 0 failures
+INFO flower 2020-11-01 01:40:47,663 | app.py:71 | app_evaluate: federated loss: 0.04565876815468073
+INFO flower 2020-11-01 01:40:47,664 | app.py:75 | app_evaluate: results [('ipv4:172.21.0.4:37458', EvaluateRes(num_examples=2500, loss=0.04279500991106033, accuracy=0.9836000204086304)), ('ipv4:172.21.0.5:48720', EvaluateRes(num_examples=2500, loss=0.04405936226248741, accuracy=0.9860000014305115)), ('ipv4:172.21.0.6:51132', EvaluateRes(num_examples=2500, loss=0.046434156596660614, accuracy=0.9851999878883362)), ('ipv4:172.21.0.7:47740', EvaluateRes(num_examples=2500, loss=0.04934654384851456, accuracy=0.9836000204086304))]
+INFO flower 2020-11-01 01:40:47,664 | app.py:77 | app_evaluate: failures []
