@@ -35,11 +35,15 @@ def on_channel_state_change(channel_connectivity: str) -> None:
     log(DEBUG, channel_connectivity)
 
 
+# Context manager:
+# https://book.pythontips.com/en/latest/context_managers.html
+# https://docs.python.org/3/library/contextlib.html#contextlib.contextmanager
 @contextmanager
 def insecure_grpc_connection(
     server_address: str,
 ) -> Iterator[Tuple[Callable[[], ServerMessage], Callable[[ClientMessage], None]]]:
     """Establish an insecure gRPC connection to a gRPC server."""
+    # https://grpc.github.io/grpc/python/grpc.html#create-client
     channel = grpc.insecure_channel(
         server_address,
         options=[
@@ -47,6 +51,7 @@ def insecure_grpc_connection(
             ("grpc.max_receive_message_length", 256 * 1024 * 1024),
         ],
     )
+    # https://grpc.github.io/grpc/python/grpc.html#grpc.Channel.subscribe
     channel.subscribe(on_channel_state_change)
 
     queue: Queue[ClientMessage] = Queue(  # pylint: disable=unsubscriptable-object
@@ -54,6 +59,17 @@ def insecure_grpc_connection(
     )
     stub = FlowerServiceStub(channel)  # type: ignore
 
+    # iter(Callable, None)
+    # https://stackoverflow.com/questions/38087427/what-are-the-uses-of-itercallable-sentinel
+    # https://amir.rachum.com/blog/2013/11/10/python-tips-iterate-with-a-sentinel-value/
+    # rpc Join(stream ClientMessage) returns (stream ServerMessage) {}
+    # 
+    # On the client side, the client has a local object known as stub (for some 
+    # languages, the preferred term is client) that implements the same methods 
+    # as the service. The client can then just call those methods on the local 
+    # object, wrapping the parameters for the call in the appropriate protocol 
+    # buffer message type - gRPC looks after sending the request(s) to the 
+    # server and returning the server’s protocol buffer response(s).
     server_message_iterator: Iterator[ServerMessage] = stub.Join(iter(queue.get, None))
 
     receive: Callable[[], ServerMessage] = lambda: next(server_message_iterator)
