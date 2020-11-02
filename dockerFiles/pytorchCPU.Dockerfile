@@ -27,4 +27,4 @@ RUN pip install matplotlib
 
 # For client container, the work directory MUST be /src/py, otherwise Python
 # cannot find the module correctly.
-WORKDIR /app/src/py
+WORKDIR /app/src/py/
