@@ -5,8 +5,8 @@ FROM pytorchcpu
 
 # To build this image:
 # $ cd flower/
-# $ docker build --tag flowerpytorch:latest -f ./dockerFiles/flowerPytorch.Dockerfile ./dockerFiles
+# $ docker build --tag flowerpytorch:latest -f ./dockerFiles/flowerPytorch.Dockerfile .
 
-WORKDIR /app/src/py
+WORKDIR /app/src/py/
 
 COPY ./src/ /app/src/
