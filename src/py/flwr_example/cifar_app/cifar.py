@@ -38,7 +38,11 @@ from torch import Tensor
 import flwr as fl
 
 # Working directory is /app/src/py
-DATA_ROOT = "../data/cifar-10"
+DATA_ROOT = "./data/cifar-10"
+import os
+pwd = os.getcwd()
+data_path = os.path.join(pwd, DATA_ROOT)
+print(data_path)
 # DATA_ROOT = "~/.flower/data/cifar-10"
 
 # pylint: disable-msg=unsubscriptable-object
