@@ -1,0 +1,93 @@
+NFO flower 2020-11-09 09:15:35,562 | app.py:32 | Opened (insecure) gRPC connection
+--- Logging error ---
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/logging/handlers.py", line 1196, in emit
+    h.endheaders()
+  File "/usr/local/lib/python3.7/http/client.py", line 1272, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.7/http/client.py", line 1032, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.7/http/client.py", line 972, in send
+    self.connect()
+  File "/usr/local/lib/python3.7/http/client.py", line 944, in connect
+    (self.host,self.port), self.timeout, self.source_address)
+  File "/usr/local/lib/python3.7/socket.py", line 707, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+  File "/usr/local/lib/python3.7/socket.py", line 752, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+Call stack:
+  File "/usr/local/lib/python3.7/threading.py", line 890, in _bootstrap
+    self._bootstrap_inner()
+  File "/usr/local/lib/python3.7/threading.py", line 926, in _bootstrap_inner
+    self.run()
+  File "/usr/local/lib/python3.7/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/local/lib/python3.7/site-packages/grpc/_channel.py", line 1327, in _deliver
+    callback(connectivity)
+  File "/app/src/py/flwr/client/grpc_client/connection.py", line 35, in on_channel_state_change
+    log(DEBUG, channel_connectivity)
+Message: <ChannelConnectivity.IDLE: (0, 'idle')>
+Arguments: ()
+DEBUG flower 2020-11-09 09:15:35,578 | connection.py:35 | ChannelConnectivity.READY
+--- Logging error ---
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/logging/handlers.py", line 1196, in emit
+    h.endheaders()
+  File "/usr/local/lib/python3.7/http/client.py", line 1272, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.7/http/client.py", line 1032, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.7/http/client.py", line 972, in send
+    self.connect()
+  File "/usr/local/lib/python3.7/http/client.py", line 944, in connect
+    (self.host,self.port), self.timeout, self.source_address)
+  File "/usr/local/lib/python3.7/socket.py", line 707, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+  File "/usr/local/lib/python3.7/socket.py", line 752, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+Call stack:
+  File "/usr/local/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/usr/local/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/app/src/py/flwr_example/mnist_app/client.py", line 103, in <module>
+    fl.client.start_client(args.server_address, client)
+  File "/app/src/py/flwr/client/app.py", line 32, in start_client
+    log(INFO, "Opened (insecure) gRPC connection")
+Message: 'Opened (insecure) gRPC connection'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/logging/handlers.py", line 1196, in emit
+    h.endheaders()
+  File "/usr/local/lib/python3.7/http/client.py", line 1272, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.7/http/client.py", line 1032, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.7/http/client.py", line 972, in send
+    self.connect()
+  File "/usr/local/lib/python3.7/http/client.py", line 944, in connect
+    (self.host,self.port), self.timeout, self.source_address)
+  File "/usr/local/lib/python3.7/socket.py", line 707, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+  File "/usr/local/lib/python3.7/socket.py", line 752, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+Call stack:
+  File "/usr/local/lib/python3.7/threading.py", line 890, in _bootstrap
+    self._bootstrap_inner()
+  File "/usr/local/lib/python3.7/threading.py", line 926, in _bootstrap_inner
+    self.run()
+  File "/usr/local/lib/python3.7/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/local/lib/python3.7/site-packages/grpc/_channel.py", line 1327, in _deliver
+    callback(connectivity)
+  File "/app/src/py/flwr/client/grpc_client/connection.py", line 35, in on_channel_state_change
+    log(DEBUG, channel_connectivity)
+Message: <ChannelConnectivity.READY: (2, 'ready')>
+Arguments: ()
+Training 1 epoch(s) w/ 469 mini-batches each
+
+command terminated with exit code 137oss: 0.170644

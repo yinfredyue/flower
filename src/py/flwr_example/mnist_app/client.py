@@ -72,7 +72,7 @@ if __name__ == "__main__":
         metavar="N",
         help="number of epochs to train (default: 14)",
     )
-    
+
     args = parser.parse_args()
 
     fl.common.logger.configure(f"{args.cid}", host=args.log_host)
