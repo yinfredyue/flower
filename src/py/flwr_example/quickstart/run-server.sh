@@ -16,8 +16,4 @@
 # ==============================================================================
 
 # Start a Flower server
-python3 -m flwr_example.pytorch.server \
-  --rounds=5 \
-  --sample_fraction=1.0 \
-  --min_sample_size=2 \
-  --min_num_clients=2
+python -m flwr_example.quickstart.server
