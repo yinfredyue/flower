@@ -1,24 +1,13 @@
-# Copyright 2020 Adap GmbH. All Rights Reserved.
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#     http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-# ==============================================================================
-"""Flower server."""
+"""Flower asynchronous server."""
 
 
 import concurrent.futures
 import timeit
 from logging import DEBUG, INFO
 from typing import List, Optional, Tuple, cast
+
+import threading
+import time
 
 from flwr.common import (
     Disconnect,
@@ -31,10 +20,11 @@ from flwr.common import (
     parameters_to_weights,
 )
 from flwr.common.logger import log
-from flwr.server.client_manager import ClientManager
+from flwr.server.client_manager import ClientManager, SimpleClientManager
 from flwr.server.client_proxy import ClientProxy
 from flwr.server.history import History
 from flwr.server.strategy import DefaultStrategy, Strategy
+from flwr.server.strategy.aggregate import aggregate, weighted_loss_avg
 
 FitResultsAndFailures = Tuple[List[Tuple[ClientProxy, FitRes]], List[BaseException]]
 EvaluateResultsAndFailures = Tuple[
@@ -44,29 +34,32 @@ ReconnectResultsAndFailures = Tuple[
     List[Tuple[ClientProxy, Disconnect]], List[BaseException]
 ]
 
+# Implemenetation details:
+# - How serverAsync knows it should start another round of training? How long it 
+# should wait before starting next round?
 
-def set_strategy(strategy: Optional[Strategy]) -> Strategy:
-    """Return Strategy."""
-    return strategy if strategy is not None else DefaultStrategy()
 
-
-class Server:
-    """Flower server."""
+class ServerAsync:
+    "Flower asynchronous server"
 
     def __init__(
-        self, client_manager: ClientManager, strategy: Optional[Strategy] = None
+        self, 
+        client_manager: ClientManager = None, 
+        strategy: Optional[Strategy] = None,
+        round_timeout: int = 30,
     ) -> None:
-        self._client_manager: ClientManager = client_manager
+        self._client_manager: ClientManager = client_manager if client_manager is not None else SimpleClientManager()
         self.weights: Weights = []
-        self.strategy: Strategy = set_strategy(strategy)
+        self.strategy: Strategy = strategy if strategy is not None else DefaultStrategy()
+        self.round_timeout = round_timeout
+        self.lock = threading.Lock()
 
     def client_manager(self) -> ClientManager:
         """Return ClientManager."""
         return self._client_manager
 
-    # pylint: disable=too-many-locals
     def fit(self, num_rounds: int) -> History:
-        """Run federated averaging for a number of rounds."""
+        """Run ASYNC federated averaging for a number of rounds."""
         history = History()
         # Initialize weights by asking one client to return theirs
         self.weights = self._get_initial_weights()
@@ -89,41 +82,42 @@ class Server:
         log(INFO, "[TIME] FL starting")
         start_time = timeit.default_timer()
 
+        # For now, assume that num_rounds = 1
         for current_round in range(1, num_rounds + 1):
             # Train model and replace previous global model
-            weights_prime = self.fit_round(rnd=current_round)
-            if weights_prime is not None:
-                self.weights = weights_prime
+            weights_prime = self.start_fit_round(rnd=current_round)
+            time.sleep(self.round_timeout)
 
-            # Evaluate model using strategy implementation
-            res_cen = self.strategy.evaluate(weights=self.weights)
-            if res_cen is not None:
-                loss_cen, acc_cen = res_cen
-                log(
-                    INFO,
-                    "fit progress: (%s, %s, %s, %s)",
-                    current_round,
-                    loss_cen,
-                    acc_cen,
-                    timeit.default_timer() - start_time,
-                )
-                history.add_loss_centralized(rnd=current_round, loss=loss_cen)
-                history.add_accuracy_centralized(rnd=current_round, acc=acc_cen)
+            with self.lock:
+                # Evaluate model using strategy implementation
+                res_cen = self.strategy.evaluate(weights=self.weights)
+                if res_cen is not None:
+                    loss_cen, acc_cen = res_cen
+                    log(
+                        INFO,
+                        "fit progress: (%s, %s, %s, %s)",
+                        current_round,
+                        loss_cen,
+                        acc_cen,
+                        timeit.default_timer() - start_time,
+                    )
+                    history.add_loss_centralized(rnd=current_round, loss=loss_cen)
+                    history.add_accuracy_centralized(rnd=current_round, acc=acc_cen)
 
-            # Evaluate model on a sample of available clients
-            res_fed = self.evaluate(rnd=current_round)
-            if res_fed is not None and res_fed[0] is not None:
-                loss_fed, _ = res_fed
-                history.add_loss_distributed(
-                    rnd=current_round, loss=cast(float, loss_fed)
-                )
+                # Evaluate model on a sample of available clients
+                res_fed = self.evaluate(rnd=current_round)
+                if res_fed is not None and res_fed[0] is not None:
+                    loss_fed, _ = res_fed
+                    history.add_loss_distributed(
+                        rnd=current_round, loss=cast(float, loss_fed)
+                    )
 
-            # Conclude round
-            loss = res_cen[0] if res_cen is not None else None
-            acc = res_cen[1] if res_cen is not None else None
-            should_continue = self.strategy.on_conclude_round(current_round, loss, acc)
-            if not should_continue:
-                break
+                # Conclude round
+                loss = res_cen[0] if res_cen is not None else None
+                acc = res_cen[1] if res_cen is not None else None
+                should_continue = self.strategy.on_conclude_round(current_round, loss, acc)
+                if not should_continue:
+                    break
 
         # Send shutdown signal to all clients
         all_clients = self._client_manager.all()
@@ -134,6 +128,46 @@ class Server:
         elapsed = end_time - start_time
         log(INFO, "[TIME] FL finished in %s", elapsed)
         return history
+
+    def start_fit_round(self, rnd: int) -> Optional[Weights]:    
+        """Start one round of ASYNC fitting"""
+
+        # Get clients and their respective instructions from strategy
+        # client_instruction: List[Tuple[ClientProxy, FitIns]]
+        client_instructions = self.strategy.on_configure_fit(
+            rnd=rnd, weights=self.weights, client_manager=self._client_manager
+        )
+        log(
+            DEBUG,
+            "start_fit_round: strategy sampled %s clients (out of %s)",
+            len(client_instructions),
+            self._client_manager.num_available(),
+        )
+        if not client_instructions:
+            log(INFO, "start_fit_round: no clients sampled, cancel fit")
+            return None
+
+        # Send instructions to each client
+        with concurrent.futures.ThreadPoolExecutor() as executor:
+            for c, ins in client_instructions:
+                executor.submit(self.fit_client_and_update_model, c, ins, rnd)
+
+    def fit_client_and_update_model(
+        self, 
+        client: ClientProxy, 
+        ins: FitIns,
+        rnd: int,
+    ) -> Tuple[ClientProxy, FitRes]:
+        """
+        Refine weights on a single client, and update server's model immediately 
+        after receiving the computation result.
+        """
+        fit_res = client.fit(ins)
+        weights_prime = self.strategy.on_aggregate_fit(rnd, [(client, fit_res)], [])
+        if weights_prime is not None:
+            with self.lock:
+                log(INFO, "Server receives model update from client {}".format(client.cid))
+                self.weights = weights_prime
 
     def evaluate(
         self, rnd: int
@@ -165,41 +199,13 @@ class Server:
         loss_aggregated = self.strategy.on_aggregate_evaluate(rnd, results, failures)
         return loss_aggregated, results_and_failures
 
-    def fit_round(self, rnd: int) -> Optional[Weights]:
-        """Perform a single round of federated averaging."""
-
-        # Get clients and their respective instructions from strategy
-        # client_instruction: List[Tuple[ClientProxy, FitIns]]
-        client_instructions = self.strategy.on_configure_fit(
-            rnd=rnd, weights=self.weights, client_manager=self._client_manager
-        )
-        log(
-            DEBUG,
-            "fit_round: strategy sampled %s clients (out of %s)",
-            len(client_instructions),
-            self._client_manager.num_available(),
-        )
-        if not client_instructions:
-            log(INFO, "fit_round: no clients sampled, cancel fit")
-            return None
-
-        # Collect training results from all clients participating in this round
-        results, failures = fit_clients(client_instructions)
-        log(
-            DEBUG,
-            "fit_round received %s results and %s failures",
-            len(results),
-            len(failures),
-        )
-
-        # Aggregate training results
-        return self.strategy.on_aggregate_fit(rnd, results, failures)
 
     def _get_initial_weights(self) -> Weights:
         """Get initial weights from one of the available clients."""
         random_client = self._client_manager.sample(1)[0]
         parameters_res = random_client.get_parameters()
         return parameters_to_weights(parameters_res.parameters)
+
 
 
 def shutdown(clients: List[ClientProxy]) -> ReconnectResultsAndFailures:
@@ -220,7 +226,6 @@ def shutdown(clients: List[ClientProxy]) -> ReconnectResultsAndFailures:
             results.append(result)
     return results, failures
 
-
 def reconnect_client(
     client: ClientProxy, reconnect: Reconnect
 ) -> Tuple[ClientProxy, Disconnect]:
@@ -228,39 +233,6 @@ def reconnect_client(
     later."""
     disconnect = client.reconnect(reconnect)
     return client, disconnect
-
-
-def fit_clients(
-    client_instructions: List[Tuple[ClientProxy, FitIns]]
-) -> FitResultsAndFailures:
-    """Refine weights concurrently on all selected clients."""
-    with concurrent.futures.ThreadPoolExecutor() as executor:
-        futures = [
-            executor.submit(fit_client, c, ins) for c, ins in client_instructions
-        ]
-        concurrent.futures.wait(futures)
-    # Gather results
-    results: List[Tuple[ClientProxy, FitRes]] = []
-    failures: List[BaseException] = []
-    for future in futures:
-        failure = future.exception()
-        if failure is not None:
-            failures.append(failure)
-        else:
-            # Potential success case
-            result = future.result()
-            if len(result[1].parameters.tensors) > 0:
-                results.append(result)
-            else:
-                failures.append(Exception("Empty client update"))
-    return results, failures
-
-
-def fit_client(client: ClientProxy, ins: FitIns) -> Tuple[ClientProxy, FitRes]:
-    """Refine weights on a single client."""
-    fit_res = client.fit(ins)
-    return client, fit_res
-
 
 def evaluate_clients(
     client_instructions: List[Tuple[ClientProxy, EvaluateIns]]
@@ -290,3 +262,4 @@ def evaluate_client(
     """Evaluate weights on a single client."""
     evaluate_res = client.evaluate(ins)
     return client, evaluate_res
+    

@@ -13,6 +13,11 @@
 # limitations under the License.
 # ==============================================================================
 import flwr as fl
+from flwr.server.serverAsync import ServerAsync
 
 if __name__ == "__main__":
-    fl.server.start_server(config={"num_rounds": 1})
+    # Synchronous server
+    # fl.server.start_server(config={"num_rounds": 1})
+
+    # Async server
+    fl.server.start_server(server=ServerAsync(), config={"num_rounds": 1})
