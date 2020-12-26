@@ -14,6 +14,9 @@ FROM pytorchcpu
 # Start SSH server: https://stackoverflow.com/a/32178958/9057530
 # How CMD works: https://stackoverflow.com/a/42219138/9057530
 # Difference between RUN and CMD: https://stackoverflow.com/q/37461868/9057530
+# The trick here for no-password ssh: the Docker image is built to be the same for the server and all clients,
+# thus the generated ssh key-password pair is the same for all contains. Thus, copying the key to authorized_keys
+# is enough to enable no-password ssh among all contains using this image.
 RUN apt-get install openssh-server -y
 # -f provides the filename to avoids prompt. Check man page.
 RUN ssh-keygen -t rsa -P "" -f "/root/.ssh/id_rsa"
