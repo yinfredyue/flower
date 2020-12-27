@@ -115,13 +115,26 @@ celerybeat.pid
 *.sage.py
 
 # Environments
-.env
-.venv
-env/
-venv/
-ENV/
-env.bak/
-venv.bak/
+# python virtual environment
+# ignore everything except for flwr
+# Reference: https://stackoverflow.com/a/16318111/9057530
+# A pair of rule for every directory in the path
+
+# ignore env/ except env/lib
+env/*
+!env/lib
+
+# ignore env/lib except env/lib/python3.8
+env/lib/*
+!env/lib/python3.8
+
+# ignore env/lib/python3.8 except env/lib/python3.8/site-packages
+env/lib/python3.8/*
+!env/lib/python3.8/site-packages
+
+# ignore env/lib/python3.8/site-packages except env/lib/python3.8/site-packages/flwr
+env/lib/python3.8/site-packages/*
+!env/lib/python3.8/site-packages/flwr
 
 # Spyder project settings
 .spyderproject
@@ -147,3 +160,10 @@ dmypy.json
 # Poetry
 poetry.lock
 *.pkl
+
+# cifar datasets
+**/cifar-10-batches-py/
+**/cifar-10-python.tar.gz
+
+# .DS_Store
+**/.DS_Store
