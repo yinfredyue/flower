@@ -1,3 +1,5 @@
+import sys
+
 from collections import OrderedDict
 
 import torch
@@ -61,7 +63,26 @@ def main():
             return len(testloader), float(loss), float(accuracy)
 
     # Start client
-    fl.client.start_numpy_client_ssp("[::]:8080", client=CifarClient())
+    argv = sys.argv[1:]
+    delay = False
+    min_delay, max_delay = 0, 0
+    try:
+        if len(argv) == 1:
+            min_delay = int(argv[0])
+            max_delay = min_delay
+            delay = True
+        elif len(argv) == 2:
+            delay = True
+            min_delay = int(argv[0])
+            max_delay = int(argv[1])
+            delay = True
+    except:
+        pass
+    if delay:
+        print(f"Start SSP client with delay [{min_delay},{max_delay}]")
+    else:
+        print("Start SSP client without delay")
+    fl.client.start_numpy_client_ssp("[::]:8080", client=CifarClient(), delay=delay, min_delay=min_delay, max_delay=max_delay)
 
 
 def train(net, trainloader, epochs):
