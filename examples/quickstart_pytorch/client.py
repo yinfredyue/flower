@@ -8,6 +8,7 @@ import torch.nn.functional as F
 import torchvision.transforms as transforms
 from torch.utils.data import DataLoader
 from torchvision.datasets import CIFAR10
+from noniid_cifar10 import get_data_loaders
 
 import flwr as fl
 
@@ -82,7 +83,8 @@ def main():
         print(f"Start SSP client with delay [{min_delay},{max_delay}]")
     else:
         print("Start SSP client without delay")
-    fl.client.start_numpy_client_ssp("[::]:8080", client=CifarClient(), delay=delay, min_delay=min_delay, max_delay=max_delay)
+    fl.client.start_numpy_client_ssp("[::]:8080", client=CifarClient(
+    ), delay=delay, min_delay=min_delay, max_delay=max_delay)
 
 
 def train(net, trainloader, epochs):
@@ -114,17 +116,23 @@ def test(net, testloader):
     return loss, accuracy
 
 
-def load_data():
+def load_data(noniid=False):
     """Load CIFAR-10 (training and test set)."""
-    transform = transforms.Compose(
-        [transforms.ToTensor(), transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))]
-    )
-    trainset = CIFAR10(".", train=True, download=True, transform=transform)
-    testset = CIFAR10(".", train=False, download=True, transform=transform)
-    trainloader = DataLoader(trainset, batch_size=32, shuffle=True)
-    testloader = DataLoader(testset, batch_size=32)
-    return trainloader, testloader
-
+    if noniid:
+        # Non-iid
+        train_loaders, test_loaders = get_data_loaders(3, 32, 2, True)
+        print("load_data:", train_loaders, test_loaders)
+        return train_loaders[0], test_loaders[0]
+    else:
+        # iid data, all clients use the same dataset
+        transform = transforms.Compose(
+            [transforms.ToTensor(), transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))]
+        )
+        trainset = CIFAR10(".", train=True, download=True, transform=transform)
+        testset = CIFAR10(".", train=False, download=True, transform=transform)
+        trainloader = DataLoader(trainset, batch_size=32, shuffle=True)
+        testloader = DataLoader(testset, batch_size=32)
+        return trainloader, testloader
 
 if __name__ == "__main__":
     main()
