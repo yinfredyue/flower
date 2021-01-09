@@ -21,7 +21,7 @@ from torchvision.transforms import Compose
 np.warnings.filterwarnings('ignore', category=np.VisibleDeprecationWarning)
 
 # Use the same seed, for debugging
-random.seed(10)
+random.seed(0)
 
 # Characteristics of Non-IID data
 classes_pc = 2
@@ -243,7 +243,7 @@ def get_data_loaders(nclients, batch_size, classes_pc=10, verbose=True):
                                                   batch_size=batch_size, shuffle=True) for x, y in train_split_shuffled]
 
     # create testing dataloaders
-    test_loaders = [torch.utils.data.DataLoader(CustomImageDataset(x, y, transforms_train),
+    test_loaders = [torch.utils.data.DataLoader(CustomImageDataset(x, y, transforms_eval),
                                                   batch_size=batch_size, shuffle=True) for x, y in test_split_shuffled]
 
     return client_loaders, test_loaders

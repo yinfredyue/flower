@@ -40,9 +40,6 @@ def main():
 
     net = Net()
 
-    # Load data (CIFAR-10)
-    trainloader, testloader = load_data()
-
     # Flower client
     class CifarClient(fl.client.NumPyClient):
         def get_parameters(self):
@@ -63,19 +60,34 @@ def main():
             loss, accuracy = test(net, testloader)
             return len(testloader), float(loss), float(accuracy)
 
-    # Start client
+    # Start client, parsing arguments
     argv = sys.argv[1:]
+
+    # num of clients
+    if len(argv) < 2:
+        print("Usage: python client.py idx num_clients [min_delay max_delay]")
+        exit(1)
+
+    idx = int(argv[0])
+    num_clients = int(argv[1])
+    if idx >= num_clients:
+        print("Usage: idx should be zero-indexed")
+        exit(1)
+
+    print(f"I'm client {idx}")
+
+    # delay related
     delay = False
     min_delay, max_delay = 0, 0
     try:
-        if len(argv) == 1:
-            min_delay = int(argv[0])
+        if len(argv) == 3:
+            min_delay = int(argv[2])
             max_delay = min_delay
             delay = True
-        elif len(argv) == 2:
+        elif len(argv) == 4:
             delay = True
-            min_delay = int(argv[0])
-            max_delay = int(argv[1])
+            min_delay = int(argv[2])
+            max_delay = int(argv[3])
             delay = True
     except:
         pass
@@ -83,6 +95,10 @@ def main():
         print(f"Start SSP client with delay [{min_delay},{max_delay}]")
     else:
         print("Start SSP client without delay")
+
+    # Load data (CIFAR-10)
+    trainloader, testloader = load_data(idx, num_clients)
+
     fl.client.start_numpy_client_ssp("[::]:8080", client=CifarClient(
     ), delay=delay, min_delay=min_delay, max_delay=max_delay)
 
@@ -116,13 +132,13 @@ def test(net, testloader):
     return loss, accuracy
 
 
-def load_data(noniid=False):
+def load_data(idx, num_clients, noniid=True):
     """Load CIFAR-10 (training and test set)."""
     if noniid:
         # Non-iid
-        train_loaders, test_loaders = get_data_loaders(3, 32, 2, True)
+        train_loaders, test_loaders = get_data_loaders(num_clients, 32, 5, True)
         print("load_data:", train_loaders, test_loaders)
-        return train_loaders[0], test_loaders[0]
+        return train_loaders[idx], test_loaders[idx]
     else:
         # iid data, all clients use the same dataset
         transform = transforms.Compose(
