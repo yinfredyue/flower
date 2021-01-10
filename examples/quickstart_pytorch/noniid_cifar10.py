@@ -61,7 +61,7 @@ def clients_rand(train_len, nclients):
     client_tmp = []
     sum_ = 0
     #### creating random values for each client ####
-    for i in range(nclients - 1):
+    for i in range(nclients):
         tmp = random.randint(10, 100)
         sum_ += tmp
         client_tmp.append(tmp)
