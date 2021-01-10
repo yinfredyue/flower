@@ -51,10 +51,11 @@ def print_image_data_stats(data_train, labels_train, data_test, labels_test):
         np.min(labels_test), np.max(labels_test)))
 
 
-def clients_rand(train_len, nclients):
+def clients_rand(data_len, nclients, avg_fraction=5):
     """
     train_len: size of the train data
     nclients: number of clients
+    avg_fraction: Let N = # of samples, k = # of clients. Each client is assigned >= N/(k * avg_fraction) samples.
 
     Returns: a list of # of images each client should have.
     """
@@ -68,10 +69,21 @@ def clients_rand(train_len, nclients):
 
     client_tmp = np.array(client_tmp)
     #### using those random values as weights ####
-    clients_dist = ((client_tmp / sum_) * train_len).astype(int)
-    num = train_len - clients_dist.sum()
+    clients_dist = ((client_tmp / sum_) * data_len).astype(int)
+    num = data_len - clients_dist.sum()
     to_ret = list(clients_dist)
     to_ret.append(num)
+
+    # The problem with existing code is that it's possible that one client gets too few samples. E.g. 1, 2, 0.
+    # Solution: if certain client gets too few samples, steal some from the client with the most samples.
+    min_sample_size = int(data_len / nclients / avg_fraction)
+    max_size, max_index = max((val, idx) for (idx, val) in enumerate(to_ret))
+    min_size, min_index = min((val, idx) for (idx, val) in enumerate(to_ret))
+    if min_size < min_sample_size:
+        diff = min_sample_size - min_size
+        to_ret[max_index] -= diff
+        to_ret[min_index] += diff
+
     print("clients_rand ->", to_ret)
     return to_ret
 
@@ -137,9 +149,6 @@ def split_image_data(data, labels, n_clients=100, classes_per_client=10, shuffle
             print_split(clients_split)
 
     clients_split = np.array(clients_split)
-
-    print("split_image_data -> list of length", len(clients_split),
-          [(len(x), len(y)) for (x, y) in clients_split])
     return clients_split
 
 

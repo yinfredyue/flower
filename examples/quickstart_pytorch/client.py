@@ -136,8 +136,7 @@ def load_data(idx, num_clients, noniid=True):
     """Load CIFAR-10 (training and test set)."""
     if noniid:
         # Non-iid
-        train_loaders, test_loaders = get_data_loaders(num_clients, 32, 5, True)
-        print("load_data:", train_loaders, test_loaders)
+        train_loaders, test_loaders = get_data_loaders(num_clients, 32, 5, False)
         return train_loaders[idx], test_loaders[idx]
     else:
         # iid data, all clients use the same dataset
