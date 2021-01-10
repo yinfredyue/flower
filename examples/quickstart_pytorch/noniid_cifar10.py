@@ -62,7 +62,7 @@ def clients_rand(data_len, nclients, avg_fraction=5):
     client_tmp = []
     sum_ = 0
     #### creating random values for each client ####
-    for i in range(nclients):
+    for i in range(nclients - 1):
         tmp = random.randint(10, 100)
         sum_ += tmp
         client_tmp.append(tmp)
