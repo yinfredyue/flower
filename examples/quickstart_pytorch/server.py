@@ -5,6 +5,7 @@ import torch
 import torchvision
 from flwr.server.strategy import FedAvg, Strategy
 import cifar_test as test
+from noniid_cifar10 import get_full_testset
 
 def get_eval_fn(
     testset: torchvision.datasets.CIFAR10,
@@ -25,7 +26,7 @@ def get_eval_fn(
 # Start Flower server for three rounds of federated learning
 if __name__ == "__main__":
     fl.server.start_server_ssp(
-        server_address="[::]:8080", 
-        config={"num_rounds": 20}, 
-        strategy=FedAvg(eval_fn=get_eval_fn(test.testset()))
+        server_address="[::]:8080",
+        config={"num_rounds": 20},
+        strategy=FedAvg(eval_fn=get_eval_fn(get_full_testset()))
     )

@@ -8,7 +8,7 @@ import torch.nn.functional as F
 import torchvision.transforms as transforms
 from torch.utils.data import DataLoader
 from torchvision.datasets import CIFAR10
-from noniid_cifar10 import get_data_loaders
+from noniid_cifar10 import get_data_loaders, get_full_test_dataloader
 
 import flwr as fl
 
@@ -117,7 +117,22 @@ def train(net, trainloader, epochs):
 
 
 def test(net, testloader):
+    # TODO: The accuracy here seems strange
     """Validate the network on the entire test set."""
+    criterion = torch.nn.CrossEntropyLoss()
+    correct, total, loss = 0, 0, 0.0
+    full_testloader = get_full_test_dataloader()
+    with torch.no_grad():
+        for data in full_testloader:
+            images, labels = data[0].to(DEVICE), data[1].to(DEVICE)
+            outputs = net(images)
+            loss += criterion(outputs, labels).item()
+            _, predicted = torch.max(outputs.data, 1)
+            total += labels.size(0)
+            correct += (predicted == labels).sum().item()
+    accuracy = correct / total
+    print(f"Testing on full test set: {len(full_testloader)}, {loss}, {accuracy}")
+
     criterion = torch.nn.CrossEntropyLoss()
     correct, total, loss = 0, 0, 0.0
     with torch.no_grad():
@@ -129,6 +144,7 @@ def test(net, testloader):
             total += labels.size(0)
             correct += (predicted == labels).sum().item()
     accuracy = correct / total
+    print(f"Testing on partial test set: {len(testloader)}, {loss}, {accuracy}")
     return loss, accuracy
 
 

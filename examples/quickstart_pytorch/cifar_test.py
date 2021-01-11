@@ -36,6 +36,7 @@ import torchvision.transforms as transforms
 from torch import Tensor
 
 import flwr as fl
+import noniid_cifar10
 
 # Same as Net in client.py
 class Net(nn.Module):
@@ -74,12 +75,7 @@ class Net(nn.Module):
 
 def testset() -> torchvision.datasets.CIFAR10:
     """Load CIFAR-10 test set."""
-    transform = transforms.Compose(
-        [transforms.ToTensor(), transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))]
-    )
-    return torchvision.datasets.CIFAR10(
-        root=".", train=False, download=True, transform=transform
-    )
+    return noniid_cifar10.get_full_testset()
 
 
 def load_model() -> Net:
@@ -93,9 +89,7 @@ def test(
 ) -> Tuple[float, float]:
     """Validate the network on the entire test set."""
     criterion = nn.CrossEntropyLoss()
-    correct = 0
-    total = 0
-    loss = 0.0
+    correct, total, loss = 0, 0, 0.0
     with torch.no_grad():
         for data in testloader:
             images, labels = data[0].to(device), data[1].to(device)

@@ -34,8 +34,7 @@ def get_cifar10():
     data_train = torchvision.datasets.CIFAR10('.', train=True, download=True)
     data_test = torchvision.datasets.CIFAR10('.', train=False, download=True)
 
-    x_train, y_train = data_train.data.transpose(
-        (0, 3, 1, 2)), np.array(data_train.targets)
+    x_train, y_train = data_train.data.transpose((0, 3, 1, 2)), np.array(data_train.targets)
     x_test, y_test = data_test.data.transpose((0, 3, 1, 2)), np.array(data_test.targets)
 
     return x_train, y_train, x_test, y_test
@@ -107,8 +106,7 @@ def split_image_data(data, labels, n_clients=100, classes_per_client=10, shuffle
 
     ### client distribution ####
     data_per_client = clients_rand(len(data), n_clients)
-    data_per_client_per_class = [np.maximum(
-        1, nd // classes_per_client) for nd in data_per_client]
+    data_per_client_per_class = [np.maximum(1, nd // classes_per_client) for nd in data_per_client]
 
     # sort for labels
     data_idcs = [[] for i in range(n_labels)]
@@ -193,7 +191,7 @@ class CustomImageDataset(Dataset):
         if self.transforms is not None:
             img = self.transforms(img)
 
-        return (img, label)
+        return img, label
 
     def __len__(self):
         return self.inputs.shape[0]
@@ -203,8 +201,6 @@ def get_default_data_transforms(train=True, verbose=True):
     transforms_train = {
         'cifar10': transforms.Compose([
             transforms.ToPILImage(),
-            # transforms.RandomCrop(32, padding=4),
-            # transforms.RandomHorizontalFlip(),
             transforms.ToTensor(),
             transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))]),
     }
@@ -221,7 +217,7 @@ def get_default_data_transforms(train=True, verbose=True):
             print(' -', transformation)
         print()
 
-    return (transforms_train['cifar10'], transforms_eval['cifar10'])
+    return transforms_train['cifar10'], transforms_eval['cifar10']
 
 
 def get_data_loaders(nclients, batch_size, classes_pc=10, verbose=True):
@@ -233,29 +229,47 @@ def get_data_loaders(nclients, batch_size, classes_pc=10, verbose=True):
     # data preprocessing & normalization
     transforms_train, transforms_eval = get_default_data_transforms(verbose=False)
 
+    # 1. Create training dataloaders for clients
     # Split training data
     train_split = split_image_data(x_train, y_train, n_clients=nclients,
-                             classes_per_client=classes_pc, verbose=verbose)
-
-    # Split testing data
-    test_split = split_image_data(x_test, y_test, n_clients=nclients,
                              classes_per_client=classes_pc, verbose=verbose)
 
     # shuffle split train data
     train_split_shuffled = shuffle_list(train_split)
 
-    # shuffle split test data
-    test_split_shuffled = shuffle_list(test_split)
-
     # create training dataloaders
     client_loaders = [torch.utils.data.DataLoader(CustomImageDataset(x, y, transforms_train),
                                                   batch_size=batch_size, shuffle=True) for x, y in train_split_shuffled]
+
+    # 2. Create testing dataloaders for clients
+    # Split testing data
+    test_split = split_image_data(x_test, y_test, n_clients=nclients,
+                                  classes_per_client=classes_pc, verbose=verbose)
+
+    # shuffle split test data
+    test_split_shuffled = shuffle_list(test_split)
 
     # create testing dataloaders
     test_loaders = [torch.utils.data.DataLoader(CustomImageDataset(x, y, transforms_eval),
                                                   batch_size=batch_size, shuffle=True) for x, y in test_split_shuffled]
 
     return client_loaders, test_loaders
+
+
+def get_full_testset():
+    _, _, x_test, y_test = get_cifar10()
+
+    # data preprocessing & normalization
+    _, transforms_eval = get_default_data_transforms(verbose=False)
+
+    # Create dataset
+    dataset = CustomImageDataset(x_test, y_test, transforms_eval)
+
+    return dataset
+
+
+def get_full_test_dataloader():
+    return torch.utils.data.DataLoader(get_full_testset(), batch_size=32, shuffle=False)
 
 
 if __name__ == "__main__":
