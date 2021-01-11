@@ -6,6 +6,7 @@ import torchvision
 from flwr.server.strategy import FedAvg, Strategy
 import cifar_test as test
 from noniid_cifar10 import get_full_testset
+import argparse
 
 def get_eval_fn(
     testset: torchvision.datasets.CIFAR10,
@@ -23,9 +24,34 @@ def get_eval_fn(
 
     return evaluate
 
+
+def check_positive(value):
+    ivalue = int(value)
+    if ivalue <= 0:
+        raise argparse.ArgumentTypeError("%s is an invalid positive int value" % value)
+    return ivalue
+
+
 # Start Flower server for three rounds of federated learning
 if __name__ == "__main__":
+    # Parse arguments
+    parser = argparse.ArgumentParser(description="server")
+    parser.add_argument(
+        "--num_clients",
+        type=check_positive,
+        required=True,
+    )
+    parser.add_argument(
+        "--staleness_bound",
+        type=check_positive,
+        required=True,
+    )
+    args = parser.parse_args()
+    print(args)
+
     fl.server.start_server_ssp(
+        staleness_bound=args.staleness_bound,
+        num_clients=args.num_clients,
         server_address="[::]:8080",
         config={"num_rounds": 20},
         strategy=FedAvg(eval_fn=get_eval_fn(get_full_testset()))

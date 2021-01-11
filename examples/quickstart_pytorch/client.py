@@ -11,6 +11,7 @@ from torchvision.datasets import CIFAR10
 from noniid_cifar10 import get_data_loaders, get_full_test_dataloader
 
 import flwr as fl
+import argparse
 
 DEVICE = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
@@ -60,47 +61,66 @@ def main():
             loss, accuracy = test(net, testloader)
             return len(testloader), float(loss), float(accuracy)
 
-    # Start client, parsing arguments
-    argv = sys.argv[1:]
+    # Parse arguments
+    parser = argparse.ArgumentParser(description="client")
+    parser.add_argument(
+        "--num_clients",
+        type=check_positive,
+        required=True,
+    )
+    parser.add_argument(
+        "--idx",
+        type=int,
+        required=True,
+    )
+    parser.add_argument(
+        "--staleness_bound",
+        type=check_positive,
+        required=True,
+    )
+    parser.add_argument(
+        "--min_delay",
+        type=check_positive,
+        default=0,
+        required=False,
+    )
+    parser.add_argument(
+        "--max_delay",
+        type=check_positive,
+        default=0,
+        required=False,
+    )
+    args = parser.parse_args()
+    print(args)
 
-    # num of clients
-    if len(argv) < 2:
-        print("Usage: python client.py idx num_clients [min_delay max_delay]")
-        exit(1)
-
-    idx = int(argv[0])
-    num_clients = int(argv[1])
-    if idx >= num_clients:
+    if args.idx >= args.num_clients:
         print("Usage: idx should be zero-indexed")
         exit(1)
 
-    print(f"I'm client {idx}")
+    print(f"I'm client {args.idx}")
 
     # delay related
     delay = False
-    min_delay, max_delay = 0, 0
-    try:
-        if len(argv) == 3:
-            min_delay = int(argv[2])
-            max_delay = min_delay
-            delay = True
-        elif len(argv) == 4:
-            delay = True
-            min_delay = int(argv[2])
-            max_delay = int(argv[3])
-            delay = True
-    except:
-        pass
+    args.max_delay = max(args.max_delay, args.min_delay)
+    if args.min_delay > 0:
+        delay = True
+
     if delay:
-        print(f"Start SSP client with delay [{min_delay},{max_delay}]")
+        print(f"Start SSP client with delay [{args.min_delay},{args.max_delay}]")
     else:
         print("Start SSP client without delay")
 
     # Load data (CIFAR-10)
-    trainloader, testloader = load_data(idx, num_clients)
+    trainloader, testloader = load_data(args.idx, args.num_clients)
 
-    fl.client.start_numpy_client_ssp("[::]:8080", client=CifarClient(
-    ), delay=delay, min_delay=min_delay, max_delay=max_delay)
+    fl.client.start_numpy_client_ssp(
+        "[::]:8080",
+        CifarClient(),
+        args.staleness_bound,
+        delay=delay,
+        min_delay=args.min_delay,
+        max_delay=args.max_delay,
+    )
 
 
 def train(net, trainloader, epochs):
@@ -164,6 +184,12 @@ def load_data(idx, num_clients, noniid=True):
         trainloader = DataLoader(trainset, batch_size=32, shuffle=True)
         testloader = DataLoader(testset, batch_size=32)
         return trainloader, testloader
+
+def check_positive(value):
+    ivalue = int(value)
+    if ivalue <= 0:
+        raise argparse.ArgumentTypeError("%s is an invalid positive int value" % value)
+    return ivalue
 
 if __name__ == "__main__":
     main()
