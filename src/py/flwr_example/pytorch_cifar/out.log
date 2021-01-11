@@ -1,0 +1,12 @@
+INFO flower 2021-01-11 10:38:06,672 | server.py:100 | fit progress: (5, 415.6486111879349, 0.5199, 103.544182968)
+INFO flower 2021-01-11 10:38:06,672 | server.py:138 | evaluate: no clients sampled, cancel federated evaluation
+INFO flower 2021-01-11 10:38:06,672 | server.py:126 | [TIME] FL finished in 103.54432218
+INFO flower 2021-01-11 10:38:06,672 | app.py:90 | app_fit: losses_distributed []
+INFO flower 2021-01-11 10:38:06,672 | app.py:91 | app_fit: accuracies_distributed []
+INFO flower 2021-01-11 10:38:06,673 | app.py:92 | app_fit: losses_centralized [(0, 721.3722479343414), (1, 608.5862283706665), (2, 501.9464784860611), (3, 464.06798589229584), (4, 434.4065810441971), (5, 415.6486111879349)]
+INFO flower 2021-01-11 10:38:06,673 | app.py:93 | app_fit: accuracies_centralized [(0, 0.0999), (1, 0.2887), (2, 0.4103), (3, 0.4646), (4, 0.4996), (5, 0.5199)]
+DEBUG flower 2021-01-11 10:38:06,674 | server.py:140 | evaluate: strategy sampled 2 clients
+DEBUG flower 2021-01-11 10:38:09,091 | server.py:149 | evaluate received 2 results and 0 failures
+INFO flower 2021-01-11 10:38:09,091 | app.py:102 | app_evaluate: federated loss: 415.64862060546875
+INFO flower 2021-01-11 10:38:09,091 | app.py:103 | app_evaluate: results [('ipv6:[::1]:58502', EvaluateRes(num_examples=10000, loss=415.64862060546875, accuracy=0.5199000239372253)), ('ipv6:[::1]:58503', EvaluateRes(num_examples=10000, loss=415.64862060546875, accuracy=0.5199000239372253))]
+INFO flower 2021-01-11 10:38:09,091 | app.py:108 | app_evaluate: failures []

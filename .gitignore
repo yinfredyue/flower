@@ -132,9 +132,11 @@ env/lib/*
 env/lib/python3.8/*
 !env/lib/python3.8/site-packages
 
-# ignore env/lib/python3.8/site-packages except env/lib/python3.8/site-packages/flwr
+# ignore env/lib/python3.8/site-packages except:
+# env/lib/python3.8/site-packages/flwr
 env/lib/python3.8/site-packages/*
 !env/lib/python3.8/site-packages/flwr
+!env/lib/python3.8/site-packages/flwr_example
 
 # Spyder project settings
 .spyderproject
