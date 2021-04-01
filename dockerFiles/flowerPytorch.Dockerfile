@@ -25,10 +25,6 @@ RUN ssh-keygen -t rsa -P "" -f "/root/.ssh/id_rsa"
 RUN cat /root/.ssh/id_rsa.pub >> /root/.ssh/authorized_keys
 EXPOSE 22 
 
-WORKDIR /app/
-COPY ./src/ /app/src/
-COPY ./examples/ /app/examples/
-
 # Install virtualenv
 RUN pip install virtualenv
 RUN virtualenv env
@@ -56,7 +52,34 @@ RUN rm /tmp/install/torchvision-0.7.0+cpu-cp37-cp37m-linux_x86_64.whl
 RUN pip install flwr
 COPY ./env/lib/python3.8/site-packages/flwr/ /app/env/lib/python3.7/site-packages/flwr/
 
+WORKDIR /app/
+COPY ./src/ /app/src/
+COPY ./examples/ /app/examples/
+
+WORKDIR /app/examples/quickstart_pytorch/
+
 ENTRYPOINT service ssh start && bash
 
 # To avoid the prompt of trust, when doing ssh, add an argument:
 # ssh -o StrictHostKeyChecking=no root@ip
+
+
+# In docker
+# $ ./dockerFiles/rebuild.sh
+# To run server
+# $ docker run --rm -ti --name server flowerpytorch:latest /bin/bash
+# $ python server.py --num_clients 2 --staleness_bound 2 --rounds 3
+
+# To run client1
+# $ docker run --rm -ti --name client0 flowerpytorch:latest /bin/bash
+# $ python client.py --num_clients 2 --staleness_bound 2 --server_ip 172.17.0.2:8080 --idx 0
+
+# To run client2
+# $ docker run --rm -ti --name client1 flowerpytorch:latest /bin/bash
+# $ python client.py --num_clients 2 --staleness_bound 2 --server_ip 172.17.0.2:8080 --idx 1
+
+
+# Outside docker
+# $ python server.py --num_clients 2 --staleness_bound 2 --rounds 3
+# $ python client.py --num_clients 2 --staleness_bound 2 --idx 0
+# $ python client.py --num_clients 2 --staleness_bound 2 --idx 1
