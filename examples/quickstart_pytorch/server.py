@@ -33,6 +33,7 @@ def check_positive(value):
 
 
 # Start Flower server for three rounds of federated learning
+# Example: python server.py --num_clients 2 --staleness_bound 2 --rounds 3
 if __name__ == "__main__":
     # Parse arguments
     parser = argparse.ArgumentParser(description="server")

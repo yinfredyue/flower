@@ -1,11 +1,13 @@
-FROM pytorchcpu
-
-# Use pytorchcpu as base image. Then copies /src into the container.
-# This avoids rebuilding dependencies.
+FROM python:3.7.9-slim-stretch
 
 # To build this image:
 # $ cd flower/
 # $ docker build --tag flowerpytorch:latest -f ./dockerFiles/flowerPytorch.Dockerfile .
+
+RUN apt-get update
+
+# Install vim
+RUN apt-get install vim -y
 
 # SSH related
 # Useful reference:
@@ -23,9 +25,37 @@ RUN ssh-keygen -t rsa -P "" -f "/root/.ssh/id_rsa"
 RUN cat /root/.ssh/id_rsa.pub >> /root/.ssh/authorized_keys
 EXPOSE 22 
 
-WORKDIR /app/src/py/
-
+WORKDIR /app/
 COPY ./src/ /app/src/
+COPY ./examples/ /app/examples/
+
+# Install virtualenv
+RUN pip install virtualenv
+RUN virtualenv env
+
+# Enter virtual env: https://pythonspeed.com/articles/activate-virtualenv-dockerfile/
+ENV VIRTUAL_ENV=/app/env/
+RUN python3 -m venv $VIRTUAL_ENV
+ENV PATH="$VIRTUAL_ENV/bin:$PATH"
+
+# In virtualvenv now
+# 1. Install torch==1.6.0+cpu and torchvision==0.7.0+cpu using local wheel
+# Downloaded from https://download.pytorch.org/whl/torch_stable.html
+COPY ./dockerFiles/torch-1.6.0+cpu-cp37-cp37m-linux_x86_64.whl /tmp/install/
+COPY ./dockerFiles/torchvision-0.7.0+cpu-cp37-cp37m-linux_x86_64.whl /tmp/install/
+RUN pip install /tmp/install/torch-1.6.0+cpu-cp37-cp37m-linux_x86_64.whl
+RUN pip install /tmp/install/torchvision-0.7.0+cpu-cp37-cp37m-linux_x86_64.whl
+RUN rm /tmp/install/torch-1.6.0+cpu-cp37-cp37m-linux_x86_64.whl
+RUN rm /tmp/install/torchvision-0.7.0+cpu-cp37-cp37m-linux_x86_64.whl
+
+# 2. Install flwr with pip (to install numpy, grpc, and other dependencies), 
+# then replace with our implementation. 
+# I use Python3.8 on my machine, but I cannot find any Python3.8 docker image
+# that supports installing PyTorch easily with downloaded wheel. So remember to
+# change the directory from 3.8 (locally) to 3.7 (in the docker image).
+RUN pip install flwr
+COPY ./env/lib/python3.8/site-packages/flwr/ /app/env/lib/python3.7/site-packages/flwr/
+
 ENTRYPOINT service ssh start && bash
 
 # To avoid the prompt of trust, when doing ssh, add an argument:
