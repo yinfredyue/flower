@@ -1,1 +1,0 @@
-docker build --tag flowerpytorch:latest -f ./dockerFiles/flowerPytorch.Dockerfile .

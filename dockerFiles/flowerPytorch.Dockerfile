@@ -4,7 +4,7 @@ FROM python:3.7.9-slim-stretch
 # $ cd flower/
 # $ docker build --tag flowerpytorch:latest -f ./dockerFiles/flowerPytorch.Dockerfile .
 
-RUN apt-get update
+RUN apt-get update && apt-get upgrade -y
 
 # Install vim
 RUN apt-get install vim -y
@@ -19,11 +19,19 @@ RUN apt-get install vim -y
 # The trick here for no-password ssh: the Docker image is built to be the same for the server and all clients,
 # thus the generated ssh key-password pair is the same for all contains. Thus, copying the key to authorized_keys
 # is enough to enable no-password ssh among all contains using this image.
+# ssh-keygen -f provides the filename to avoids prompt. Check man page.
+
+# inter-container passwordless ssh
 RUN apt-get install openssh-server -y
-# -f provides the filename to avoids prompt. Check man page.
-RUN ssh-keygen -t rsa -P "" -f "/root/.ssh/id_rsa"
+RUN ssh-keygen -t rsa -P "" -f "/root/.ssh/id_rsa" 
 RUN cat /root/.ssh/id_rsa.pub >> /root/.ssh/authorized_keys
-EXPOSE 22 
+
+# From server to container
+ARG SSH_PUB_KEY
+RUN echo "${SSH_PUB_KEY}}" >> /root/.ssh/authorized_keys
+
+# Expose port
+EXPOSE 22
 
 # Install virtualenv
 RUN pip install virtualenv
@@ -35,14 +43,8 @@ RUN python3 -m venv $VIRTUAL_ENV
 ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 
 # In virtualvenv now
-# 1. Install torch==1.6.0+cpu and torchvision==0.7.0+cpu using local wheel
-# Downloaded from https://download.pytorch.org/whl/torch_stable.html
-COPY ./dockerFiles/torch-1.6.0+cpu-cp37-cp37m-linux_x86_64.whl /tmp/install/
-COPY ./dockerFiles/torchvision-0.7.0+cpu-cp37-cp37m-linux_x86_64.whl /tmp/install/
-RUN pip install /tmp/install/torch-1.6.0+cpu-cp37-cp37m-linux_x86_64.whl
-RUN pip install /tmp/install/torchvision-0.7.0+cpu-cp37-cp37m-linux_x86_64.whl
-RUN rm /tmp/install/torch-1.6.0+cpu-cp37-cp37m-linux_x86_64.whl
-RUN rm /tmp/install/torchvision-0.7.0+cpu-cp37-cp37m-linux_x86_64.whl
+RUN pip install torch==1.8.1+cpu torchvision==0.9.1+cpu torchaudio==0.8.1 \
+    -f https://download.pytorch.org/whl/torch_stable.html
 
 # 2. Install flwr with pip (to install numpy, grpc, and other dependencies), 
 # then replace with our implementation. 
@@ -52,10 +54,7 @@ RUN rm /tmp/install/torchvision-0.7.0+cpu-cp37-cp37m-linux_x86_64.whl
 RUN pip install flwr
 COPY ./env/lib/python3.8/site-packages/flwr/ /app/env/lib/python3.7/site-packages/flwr/
 
-WORKDIR /app/
-COPY ./src/ /app/src/
 COPY ./examples/ /app/examples/
-
 WORKDIR /app/examples/quickstart_pytorch/
 
 ENTRYPOINT service ssh start && bash
@@ -64,19 +63,17 @@ ENTRYPOINT service ssh start && bash
 # ssh -o StrictHostKeyChecking=no root@ip
 
 
-# In docker
-# $ ./dockerFiles/rebuild.sh
 # To run server
 # $ docker run --rm -ti --name server flowerpytorch:latest /bin/bash
 # $ python server.py --num_clients 2 --staleness_bound 2 --rounds 3
 
 # To run client1
 # $ docker run --rm -ti --name client0 flowerpytorch:latest /bin/bash
-# $ python client.py --num_clients 2 --staleness_bound 2 --server_ip 172.17.0.2:8080 --idx 0
+# $ python client.py --num_clients 2 --staleness_bound 2 --server_ip 172.17.0.3:8080 --idx 0
 
 # To run client2
 # $ docker run --rm -ti --name client1 flowerpytorch:latest /bin/bash
-# $ python client.py --num_clients 2 --staleness_bound 2 --server_ip 172.17.0.2:8080 --idx 1
+# $ python client.py --num_clients 2 --staleness_bound 2 --server_ip 172.17.0.3:8080 --idx 1
 
 
 # Outside docker
