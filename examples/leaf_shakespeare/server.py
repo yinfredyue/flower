@@ -52,6 +52,6 @@ if __name__ == "__main__":
         staleness_bound=args.staleness_bound,
         num_clients=args.num_clients,
         server_address="[::]:8080",
-        config={"num_rounds": 30},
+        config={"num_rounds": args.rounds},
         strategy=FedAvg(eval_fn=get_eval_fn())
     )

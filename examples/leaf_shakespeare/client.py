@@ -10,7 +10,6 @@ from load_data import load_data
 from tf_utils import build_dataset, custom_fit, keras_evaluate, stacked_lstm
 import argparse
 
-
 def main():
     """Create model, load data, define Flower client, start Flower client."""
 
@@ -25,7 +24,7 @@ def main():
             delay_factor: float,
             num_classes: int,
         ):
-            super().__init__(cid)
+            super().__init__()
             self.model = model
             self.cid = cid
 
@@ -54,12 +53,11 @@ def main():
         def fit(self, parameters, config):
             weights: fl.common.Weights = parameters
 
-            # Read training configuration
-            epoch_global = int(config["epoch_global"])
-            epochs = int(config["epochs"])
-            batch_size = int(config["batch_size"])
-            timeout = int(config["timeout"])
-            partial_updates = bool(int(config["partial_updates"]))
+            # training configuration
+            epochs = 1
+            batch_size = 256
+            timeout = 600
+            partial_updates = False
 
             # Use provided weights to update the local model
             self.model.set_weights(weights)

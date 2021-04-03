@@ -21,13 +21,13 @@ from typing import Callable, List, Optional, Tuple
 
 import numpy as np
 import tensorflow as tf
-from tensorflow_core.contrib import rnn
+from tensorflow.contrib import rnn
 
 import flwr
 from flwr.common.logger import log
 
+tf.enable_eager_execution()
 
-# pylint: disable-msg=unused-argument,invalid-name,too-many-arguments,too-many-locals
 def custom_fit(
     model: tf.keras.Model,
     dataset: tf.data.Dataset,
@@ -97,7 +97,7 @@ def custom_fit(
 def loss(
     model: tf.keras.Model, x: tf.Tensor, y: tf.Tensor, training: bool
 ) -> tf.Tensor:
-    """Calculate categorical crossentropy loss."""
+    """Calculate categorical cross-entropy loss."""
     loss_object = tf.keras.losses.CategoricalCrossentropy(from_logits=False)
     y_ = model(x, training=training)
     return loss_object(y_true=y, y_pred=y_)
@@ -184,7 +184,7 @@ def build_dataset(
     dataset = dataset.map(
         lambda x, y: (
             tf.cast(x, tf.float32) / 255.0,
-            tf.one_hot(indices=tf.cast(y, tf.int32), depth=num_classes),
+            y,
         ),
         num_parallel_calls=tf.data.experimental.AUTOTUNE,
     )
@@ -241,16 +241,15 @@ def stacked_lstm(
     kernel_initializer = tf.keras.initializers.glorot_uniform()
 
     # Architecture
-    inputs = tf.keras.layers.Input(shape=input_len)  # input_len = 80
+    inputs = tf.keras.layers.Input(shape=(input_len,))
     embedding = tf.keras.layers.Embedding(
         input_dim=num_classes, output_dim=embedding_dim
     )(inputs)
-    lstm = tf.keras.layers.LSTM(units=hidden_size)(embedding)
+    lstm = tf.keras.layers.LSTM(units=hidden_size, return_sequences=True)(embedding)
     lstm = tf.keras.layers.LSTM(units=hidden_size)(lstm)
-    # rnn = tf.keras.layers.RNN()
     outputs = tf.keras.layers.Dense(
         num_classes, kernel_initializer=kernel_initializer, activation="softmax"
-    )(rnn)
+    )(lstm)
 
     model = tf.keras.Model(inputs=inputs, outputs=outputs)
 
