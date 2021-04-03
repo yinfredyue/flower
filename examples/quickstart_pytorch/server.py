@@ -33,6 +33,7 @@ def check_positive(value):
 
 
 # Start Flower server for three rounds of federated learning
+# Example: python server.py --num_clients 2 --staleness_bound 2 --rounds 3
 if __name__ == "__main__":
     # Parse arguments
     parser = argparse.ArgumentParser(description="server")
@@ -58,6 +59,6 @@ if __name__ == "__main__":
         staleness_bound=args.staleness_bound,
         num_clients=args.num_clients,
         server_address="[::]:8080",
-        config={"num_rounds": 30},
+        config={"num_rounds": args.rounds},
         strategy=FedAvg(eval_fn=get_eval_fn(get_full_testset()))
     )
