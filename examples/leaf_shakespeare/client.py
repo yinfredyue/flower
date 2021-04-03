@@ -1,4 +1,4 @@
-from logging import DEBUG
+from logging import DEBUG, INFO
 from typing import Tuple
 
 import numpy as np
@@ -27,6 +27,8 @@ def main():
             super().__init__()
             self.model = model
             self.cid = cid
+
+            log(INFO, u"\u001b[32mClient has %d train samples, %d test samples\u001b[0m", len(xy_train[0]), len(xy_test[0]))
 
             self.ds_train = build_dataset(
                 xy_train[0],
@@ -76,11 +78,11 @@ def main():
 
             # Return empty update if local update could not be completed in time
             if not completed and not partial_updates:
-                updated_parameters = fl.common.weights_to_parameters([])
+                updated_parameters = []
                 return updated_parameters, num_examples
 
             # Return the refined weights and the number of examples used for training
-            updated_parameters = fl.common.weights_to_parameters(self.model.get_weights())
+            updated_parameters = self.model.get_weights()
             return updated_parameters, num_examples
 
         def evaluate(self, parameters, config):
@@ -131,6 +133,12 @@ def main():
         default=0,
         required=False,
     )
+    parser.add_argument(
+        "--server_ip",
+        type=str,
+        default="[::]:8080",
+        required=False,
+    )
     args = parser.parse_args()
     print(args)
 
@@ -154,8 +162,8 @@ def main():
 
     # load dataset
     xy_train, xy_test = load_data(
-        "dataset/data/train",
-        "dataset/data/test",
+        "shakespeare/data/train",
+        "shakespeare/data/test",
         args.idx,
     )
 
@@ -166,7 +174,7 @@ def main():
     )
 
     fl.client.start_numpy_client_ssp(
-        "[::]:8080",
+        args.server_ip,
         client,
         args.staleness_bound,
         delay=delay,
