@@ -84,7 +84,7 @@ def custom_fit(
         train_accuracy_results.append(epoch_accuracy.result())
         log(
             INFO,
-            "Epoch {:03d}: Loss: {:.3f}, Accuracy: {:.3%}".format(
+            u"\u001b[32;1mEpoch {:03d}: Loss: {:.3f}, Accuracy: {:.3%}\u001b[0m".format(
                 epoch, epoch_loss_avg.result(), epoch_accuracy.result()
             ),
         )
