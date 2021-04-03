@@ -17,6 +17,7 @@ DEVICE = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
 
 def main():
+    # python client.py --num_clients 2 --staleness_bound 2 --server_ip 172.17.0.4:8080 --idx 0
     """Create model, load data, define Flower client, start Flower client."""
 
     # Model (simple CNN adapted from 'PyTorch: A 60 Minute Blitz')
@@ -90,6 +91,12 @@ def main():
         default=0,
         required=False,
     )
+    parser.add_argument(
+        "--server_ip",
+        type=str,
+        default="[::]:8080",
+        required=False,
+    )
     args = parser.parse_args()
     print(args)
 
@@ -114,7 +121,7 @@ def main():
     trainloader, testloader = load_data(args.idx, args.num_clients)
 
     fl.client.start_numpy_client_ssp(
-        "[::]:8080",
+        args.server_ip,
         CifarClient(),
         args.staleness_bound,
         delay=delay,
