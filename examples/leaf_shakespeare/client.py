@@ -1,4 +1,4 @@
-from logging import DEBUG
+from logging import DEBUG, INFO
 from typing import Tuple
 
 import numpy as np
@@ -28,6 +28,8 @@ def main():
             self.model = model
             self.cid = cid
 
+            log(INFO, u"\u001b[32mClient has %d train samples, %d test samples\u001b[0m", len(xy_train[0]), len(xy_test[0]))
+
             self.ds_train = build_dataset(
                 xy_train[0],
                 xy_train[1],
@@ -54,7 +56,7 @@ def main():
             weights: fl.common.Weights = parameters
 
             # training configuration
-            epochs = 1
+            epochs = 3
             batch_size = 256
             timeout = 600
             partial_updates = False
@@ -76,11 +78,11 @@ def main():
 
             # Return empty update if local update could not be completed in time
             if not completed and not partial_updates:
-                updated_parameters = fl.common.weights_to_parameters([])
+                updated_parameters = []
                 return updated_parameters, num_examples
 
             # Return the refined weights and the number of examples used for training
-            updated_parameters = fl.common.weights_to_parameters(self.model.get_weights())
+            updated_parameters = self.model.get_weights()
             return updated_parameters, num_examples
 
         def evaluate(self, parameters, config):
