@@ -35,6 +35,7 @@ EXPOSE 22
 
 # Install virtualenv
 RUN pip install virtualenv
+# TODO: Unnecessary?
 RUN virtualenv env
 
 # Enter virtual env: https://pythonspeed.com/articles/activate-virtualenv-dockerfile/
@@ -46,6 +47,9 @@ ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 RUN pip install torch==1.8.1+cpu torchvision==0.9.1+cpu torchaudio==0.8.1 \
     -f https://download.pytorch.org/whl/torch_stable.html
 
+RUN pip install tensorflow==1.15
+RUN apt install wget unzip -y
+
 # 2. Install flwr with pip (to install numpy, grpc, and other dependencies), 
 # then replace with our implementation. 
 # I use Python3.8 on my machine, but I cannot find any Python3.8 docker image
@@ -54,8 +58,10 @@ RUN pip install torch==1.8.1+cpu torchvision==0.9.1+cpu torchaudio==0.8.1 \
 RUN pip install flwr
 COPY ./env/lib/python3.8/site-packages/flwr/ /app/env/lib/python3.7/site-packages/flwr/
 
+RUN pip install numpy==1.16.4
+
 COPY ./examples/ /app/examples/
-WORKDIR /app/examples/quickstart_pytorch/
+WORKDIR /app/examples/leaf_shakespeare/
 
 ENTRYPOINT service ssh start && bash
 

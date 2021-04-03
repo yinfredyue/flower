@@ -56,7 +56,7 @@ def main():
             weights: fl.common.Weights = parameters
 
             # training configuration
-            epochs = 3
+            epochs = 1
             batch_size = 256
             timeout = 600
             partial_updates = False
@@ -133,6 +133,12 @@ def main():
         default=0,
         required=False,
     )
+    parser.add_argument(
+        "--server_ip",
+        type=str,
+        default="[::]:8080",
+        required=False,
+    )
     args = parser.parse_args()
     print(args)
 
@@ -168,7 +174,7 @@ def main():
     )
 
     fl.client.start_numpy_client_ssp(
-        "[::]:8080",
+        args.server_ip,
         client,
         args.staleness_bound,
         delay=delay,
