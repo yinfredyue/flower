@@ -156,8 +156,8 @@ def main():
 
     # load dataset
     xy_train, xy_test = load_data(
-        "dataset/data/train",
-        "dataset/data/test",
+        "shakespeare/data/train",
+        "shakespeare/data/test",
         args.idx,
     )
 
