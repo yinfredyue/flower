@@ -1,4 +1,23 @@
-names=`kubectl get pods --no-headers | awk '{print $1}'`
+# This file runs one test.
+# You must provide 4 arguments.
+
+if [ $# -ne 4 ] 
+then
+    echo "invalid number of arguments"
+    exit 1
+fi
+
+total_pods=$1
+staleness=$2
+rounds=$3
+max_delay=$4
+echo "Test config:"
+echo "Total pods" $total_pods
+echo "Staleness: " $staleness
+echo "Rounds: " $rounds
+echo "Max delay: " $max_delay
+
+names=`kubectl get pods --no-headers | head -n $total_pods | awk '{print $1}'`
 echo "Container names:" $names
 
 num_containers=`echo "$(wc -w <<< $names)" | bc`
@@ -15,20 +34,21 @@ echo "IPs of all containers:" $ips
 echo "Server IP:" $serveraddr
 
 src_dir="/app/examples/quickstart_pytorch"
-staleness=2
-rounds=3
 
 count=0
 for name in $names;
 do
+    # Create log directory
+    kubectl exec -it $name -- bash -c "mkdir -p ${src_dir}/log"
+
     if [ $count -eq 0 ]
     then
         # Start server
         echo "Start server"
 
         # Important: the `&` should be outside the quotes. We want `kutectl exec` command to run in the background.
-        kubectl exec -it $name -- bash -c "mkdir -p ${src_dir}/log"
-        kubectl exec -it $name -- bash -c "python3 ${src_dir}/server.py --num_clients $num_clients --staleness_bound $staleness --rounds $rounds &> ${src_dir}/log/server.log" &
+        kubectl exec $name -- bash -c "python3 ${src_dir}/server.py --num_clients $num_clients --staleness_bound $staleness --rounds $rounds &> ${src_dir}/log/server.log" &
+    
         sleep 5
     else
         # Start client
@@ -36,8 +56,7 @@ do
         echo "Start client $idx"
 
         # Important: the `&` should be outside the quotes.
-        kubectl exec -it $name -- bash -c "mkdir -p ${src_dir}/log"
-        kubectl exec -it $name -- bash -c "python3 ${src_dir}/client.py --num_clients $num_clients --staleness_bound $staleness --server_ip $serveraddr --idx $idx &> ${src_dir}/log/client${idx}.log" &
+        kubectl exec $name -- bash -c "python3 ${src_dir}/client.py --num_clients $num_clients --staleness_bound $staleness --server_ip $serveraddr --idx $idx &> ${src_dir}/log/client${idx}.log" &
     fi
     count=$((count+1))
 done
