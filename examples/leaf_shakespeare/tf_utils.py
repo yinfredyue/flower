@@ -21,7 +21,6 @@ from typing import Callable, List, Optional, Tuple
 
 import numpy as np
 import tensorflow as tf
-from tensorflow.contrib import rnn
 
 import flwr
 from flwr.common.logger import log
@@ -64,7 +63,7 @@ def custom_fit(
 
             # Track progress
             epoch_loss_avg.update_state(loss_value)  # Add the current batch loss
-            epoch_accuracy.update_state(y, model(x, training=True))
+            epoch_accuracy.update_state(y, model(x, training=False))
 
             # Track the number of examples used for training
             num_examples += x.shape[0]

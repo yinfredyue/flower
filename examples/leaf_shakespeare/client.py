@@ -76,11 +76,11 @@ def main():
 
             # Return empty update if local update could not be completed in time
             if not completed and not partial_updates:
-                updated_parameters = fl.common.weights_to_parameters([])
+                updated_parameters = []
                 return updated_parameters, num_examples
 
             # Return the refined weights and the number of examples used for training
-            updated_parameters = fl.common.weights_to_parameters(self.model.get_weights())
+            updated_parameters = self.model.get_weights()
             return updated_parameters, num_examples
 
         def evaluate(self, parameters, config):
