@@ -12,7 +12,7 @@ num_pods=$1
 ips=`kubectl get pods -o wide --no-headers | head -n $num_pods | awk '{print $6}'`
 echo "Container IPs:" $ips
 
-log_dir=/app/examples/quickstart_pytorch/log/
+log_dir=/app/examples/shakespeare_lstm/log/
 
 mkdir -p ./log
 

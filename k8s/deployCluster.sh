@@ -10,13 +10,15 @@ cd "${relativeScriptPath}/"
 NAMESPACE=flower-fyp
 
 kubectl delete -f fl-ubuntu.yaml --namespace=$NAMESPACE
+sleep 10
+
 kubectl apply -f fl-ubuntu.yaml -n $NAMESPACE
 
 echo "Container being set up..."
 
 for i in {1..6}
 do
-    sleep 10
+    sleep 20
     kubectl get pods -o wide
 done
 

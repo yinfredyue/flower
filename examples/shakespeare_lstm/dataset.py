@@ -55,6 +55,9 @@ def load_data(
 ) -> Tuple[Tuple[np.ndarray, np.ndarray], Tuple[np.ndarray, np.ndarray]]:
     clients, groups, train_data, test_data = read_data(train_data_dir, test_data_dir)
 
+    # Avoid index out of range
+    client_id = client_id % len(clients)
+
     client_name = clients[client_id]
     train_data = train_data[client_name]
     test_data = test_data[client_name]

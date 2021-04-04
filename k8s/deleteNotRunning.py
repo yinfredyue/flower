@@ -5,9 +5,6 @@ import subprocess
 names = subprocess.getoutput("kubectl get pods -o wide --no-headers | awk '{print $1}'").split()
 states = subprocess.getoutput("kubectl get pods -o wide --no-headers | awk '{print $2}'").split()
 
-print(names)
-print(states)
-
 for i in range(len(names)):
     name = names[i]
     state = states[i]
