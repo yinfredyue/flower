@@ -2,11 +2,11 @@ from logging import DEBUG, INFO
 from typing import Tuple
 
 import numpy as np
-import tensorflow as tf
+# import tensorflow as tf
 
 import flwr as fl
 from flwr.common.logger import log
-from load_data import load_data
+import load_data
 from tf_utils import build_dataset, custom_fit, keras_evaluate, stacked_lstm
 import argparse
 
@@ -161,7 +161,7 @@ def main():
 
 
     # load dataset
-    xy_train, xy_test = load_data(
+    xy_train, xy_test = load_data.load_data(
         "shakespeare/data/train",
         "shakespeare/data/test",
         args.idx,
@@ -182,6 +182,7 @@ def main():
         max_delay=args.max_delay,
     )
 
+
 def check_positive(value):
     ivalue = int(value)
     if ivalue <= 0:
@@ -189,4 +190,6 @@ def check_positive(value):
     return ivalue
 
 if __name__ == "__main__":
-    main()
+    print(load_data.letter_to_vec("a"))
+    print(load_data.word_to_indices("abc"))
+    # main()

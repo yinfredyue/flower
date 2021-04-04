@@ -58,7 +58,7 @@ def custom_fit(
         batch_begin = timeit.default_timer()
         for x, y in ds_train:
             # Optimize the model
-            loss_value, grads = grad(model, x, y)
+            loss_value, grads = grad(model, x, y) # Compute loss and gradient
             optimizer.apply_gradients(zip(grads, model.trainable_variables))
 
             # Track progress
@@ -241,6 +241,11 @@ def stacked_lstm(
 
     # Architecture
     inputs = tf.keras.layers.Input(shape=(input_len,))
+
+    # What's an embedding layer:
+    # It's the Word2Vec matrix which maps words into vector space.
+    # input_dim is the dimension of one-hot encoding;
+    # output_dim is the dimension of vector space.
     embedding = tf.keras.layers.Embedding(
         input_dim=num_classes, output_dim=embedding_dim
     )(inputs)
