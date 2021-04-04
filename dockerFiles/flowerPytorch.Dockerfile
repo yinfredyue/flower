@@ -58,10 +58,8 @@ RUN apt install wget unzip -y
 RUN pip install flwr
 COPY ./env/lib/python3.8/site-packages/flwr/ /app/env/lib/python3.7/site-packages/flwr/
 
-RUN pip install numpy==1.16.4
-
 COPY ./examples/ /app/examples/
-WORKDIR /app/examples/leaf_shakespeare/
+WORKDIR /app/examples/
 
 ENTRYPOINT service ssh start && bash
 
@@ -71,15 +69,15 @@ ENTRYPOINT service ssh start && bash
 
 # To run server
 # $ docker run --rm -ti --name server flowerpytorch:latest /bin/bash
-# $ python server.py --num_clients 2 --staleness_bound 2 --rounds 3
+# $ cd shakespeare_lstm/ && python server.py --num_clients 2 --staleness_bound 2 --rounds 3
 
 # To run client1
 # $ docker run --rm -ti --name client0 flowerpytorch:latest /bin/bash
-# $ python client.py --num_clients 2 --staleness_bound 2 --server_ip 172.17.0.3:8080 --idx 0
+# $ cd shakespeare_lstm/ && python client.py --num_clients 2 --staleness_bound 2 --server_ip 172.17.0.2:8080 --idx 0
 
 # To run client2
 # $ docker run --rm -ti --name client1 flowerpytorch:latest /bin/bash
-# $ python client.py --num_clients 2 --staleness_bound 2 --server_ip 172.17.0.3:8080 --idx 1
+# $ cd shakespeare_lstm/ && python client.py --num_clients 2 --staleness_bound 2 --server_ip 172.17.0.2:8080 --idx 1
 
 
 # Outside docker
