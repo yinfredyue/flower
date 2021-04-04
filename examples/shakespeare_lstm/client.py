@@ -51,7 +51,7 @@ def get_target_seq(x, y) -> torch.Tensor:
     return seq
 
 
-def train(model, x_train, y_train, lr=0.002, epochs=1, n=300):
+def train(model, x_train, y_train, lr=0.002, epochs=1, n=50):
     print(f"train: {len(x_train)} samples")
     loss_fn = nn.CrossEntropyLoss()
     optimizer = torch.optim.Adam(model.parameters(), lr)
@@ -154,6 +154,7 @@ def parse_args(parser: argparse.ArgumentParser):
         required=False,
     )
     args = parser.parse_args()
+    print(args)
     return args
 
 
