@@ -4,6 +4,7 @@ import subprocess
 import argparse
 import time
 
+# python3 many_tests.py --containers 32 --staleness 1 2 --rounds 1 --max_delay 10 --script ./one_test_shake.sh --name shake 
 parser = argparse.ArgumentParser(description='Run many tests')
 parser.add_argument('--containers', '-c', nargs='+', default=[32], type=int, help="number of containers")
 parser.add_argument('--staleness', '-s', nargs='+', type=int, help="a number of values, separated by space")
@@ -31,9 +32,10 @@ for c in args.containers:
 
                 # Rename directory
                 new_log_dir_name = f"log-n{c}-s{s}-d{d}-r{r}-{args.name}"
-                subprocess.getoutput("mv log/ {new_log_dir_name}/")
+                subprocess.getoutput("mv log/ ${new_log_dir_name}/")
 
                 # Remove log
+                print("Cleaning log...")
                 subprocess.getoutput("bash clean_log.sh")
 
 
