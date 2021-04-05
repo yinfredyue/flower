@@ -5,6 +5,11 @@ import argparse
 import time
 
 # python3 many_tests.py --containers 32 --staleness 1 2 --rounds 1 --max_delay 10 --script ./one_test_shake.sh --name shake 
+
+# Keep running even after close terminal:
+# https://unix.stackexchange.com/a/4006
+# $ nohup ... &
+# $ disown
 parser = argparse.ArgumentParser(description='Run many tests')
 parser.add_argument('--containers', '-c', nargs='+', default=[32], type=int, help="number of containers")
 parser.add_argument('--staleness', '-s', nargs='+', type=int, help="a number of values, separated by space")
