@@ -12,6 +12,7 @@ import random
 import numpy as np
 import torch
 import torchvision
+import time
 from torchvision import datasets, transforms
 from torch.utils.data.dataset import Dataset
 from torchvision import transforms
@@ -29,13 +30,24 @@ num_clients = 5
 batch_size = 32
 
 
-def get_cifar10():
+def get_cifar10(data_fraction=1):
     """Return CIFAR10 train/test data and labels as numpy arrays"""
     data_train = torchvision.datasets.CIFAR10('.', train=True, download=True)
     data_test = torchvision.datasets.CIFAR10('.', train=False, download=True)
 
     x_train, y_train = data_train.data.transpose((0, 3, 1, 2)), np.array(data_train.targets)
     x_test, y_test = data_test.data.transpose((0, 3, 1, 2)), np.array(data_test.targets)
+
+    num_train_samples = int(x_train.shape[0] * data_fraction)
+    num_test_samples = int(x_test.shape[0] * data_fraction)
+    
+    train_slice_start = random.randint(0, x_train.shape[0] - num_train_samples)
+    test_slice_start = random.randint(0, x_test.shape[0] - num_test_samples)
+    
+    x_train = x_train[train_slice_start:(train_slice_start + num_train_samples)]
+    y_train = y_train[train_slice_start:(train_slice_start + num_train_samples)]
+    x_test = x_test[test_slice_start:(test_slice_start + num_test_samples)]
+    y_test = y_test[test_slice_start:(test_slice_start + num_test_samples)]
 
     return x_train, y_train, x_test, y_test
 
@@ -83,7 +95,7 @@ def clients_rand(data_len, nclients, avg_fraction=5):
         to_ret[max_index] -= diff
         to_ret[min_index] += diff
 
-    print("clients_rand ->", to_ret)
+    # print("clients_rand ->", to_ret)
     return to_ret
 
 
@@ -220,8 +232,8 @@ def get_default_data_transforms(train=True, verbose=True):
     return transforms_train['cifar10'], transforms_eval['cifar10']
 
 
-def get_data_loaders(nclients, batch_size, classes_pc=10, verbose=True):
-    x_train, y_train, x_test, y_test = get_cifar10()
+def get_data_loaders(nclients, batch_size, data_fraction=1, classes_pc=10, verbose=True):
+    x_train, y_train, x_test, y_test = get_cifar10(data_fraction)
 
     if verbose:
         print_image_data_stats(x_train, y_train, x_test, y_test)
@@ -256,8 +268,8 @@ def get_data_loaders(nclients, batch_size, classes_pc=10, verbose=True):
     return client_loaders, test_loaders
 
 
-def get_full_testset():
-    _, _, x_test, y_test = get_cifar10()
+def get_full_testset(data_fraction=1):
+    _, _, x_test, y_test = get_cifar10(data_fraction)
 
     # data preprocessing & normalization
     _, transforms_eval = get_default_data_transforms(verbose=False)
@@ -268,8 +280,8 @@ def get_full_testset():
     return dataset
 
 
-def get_full_test_dataloader():
-    return torch.utils.data.DataLoader(get_full_testset(), batch_size=32, shuffle=False)
+def get_full_test_dataloader(data_fraction=1):
+    return torch.utils.data.DataLoader(get_full_testset(data_fraction), batch_size=32, shuffle=False)
 
 
 if __name__ == "__main__":
