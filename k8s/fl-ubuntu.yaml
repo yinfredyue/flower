@@ -5,7 +5,7 @@ metadata:
   labels:
     app: fl
 spec:
-  replicas: 64
+  replicas: 32
   selector:
     matchLabels:
       app: fl
@@ -29,8 +29,8 @@ spec:
           # request is the limit guarantted.
           # limits is the upperbound of resources.
           limits:
-            cpu: "4"
-            memory: "4096Mi"
+            cpu: "2"
+            memory: "8192Mi"
           requests:
             cpu: "2"
             memory: "4096Mi"
