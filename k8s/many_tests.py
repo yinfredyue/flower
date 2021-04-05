@@ -11,7 +11,6 @@ parser.add_argument('--rounds', '-r', nargs='+', default=[20], type=int)
 parser.add_argument('--max_delay', nargs='+', default=[10], type=int)
 parser.add_argument('--script', type=str, required=True)
 parser.add_argument('--name', type=str, required=True)
-parser.add_argument('--sleep_sec', type=int, required=True, help="Keep this the same as --request-timeout!!!")
 parser.add_argument
 args = parser.parse_args()
 
@@ -20,22 +19,22 @@ for c in args.containers:
         for r in args.rounds:
             for d in args.max_delay:
                 # Run test
-                test_cmd = f'{args.script} {c} {s} {r} {d}'
+                test_cmd = f'bash {args.script} {c} {s} {r} {d}'
                 print("Running:", test_cmd)
-                subprocess.getoutput(test_cmd)
-
-                # Wait task finish
-                time.sleep(args.sleep_sec)
+                output = subprocess.getoutput(test_cmd)
+                print("Res: ", output)
 
                 # Collect log
-                subprocess.getoutput(f"collectLog.sh {c}")
+                print("Start collecting log...")
+                output = subprocess.getoutput(f"bash collectLog.sh {c}")
+                print(output)
 
                 # Rename directory
                 new_log_dir_name = f"log-n{c}-s{s}-d{d}-r{r}-{args.name}"
                 subprocess.getoutput("mv log/ {new_log_dir_name}/")
 
                 # Remove log
-                subprocess.getoutput("clean_log.sh")
+                subprocess.getoutput("bash clean_log.sh")
 
 
-                
+

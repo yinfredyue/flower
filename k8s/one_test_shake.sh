@@ -1,7 +1,7 @@
 # This file runs one test.
 # You must provide 4 arguments.
 
-if [ $# -ne 4 ] 
+if [ $# -ne 4 ]
 then
     echo "invalid number of arguments"
     exit 1
@@ -17,7 +17,7 @@ echo "Staleness: " $staleness
 echo "Rounds: " $rounds
 echo "Max delay: " $max_delay
 
-timeout=3600
+timeout=7200 # 2 hours
 
 names=`kubectl get pods --no-headers | head -n $total_pods | awk '{print $1}'`
 echo "Container names:" $names
