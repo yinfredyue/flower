@@ -8,7 +8,8 @@ import flwr as fl
 import argparse
 
 DEVICE = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
-MODEL = ResNet18()
+MODEL = VGG11()
+DATA_FRACTION = 0.1
 
 def main():
     # python client.py --num_clients 2 --staleness_bound 2 --server_ip 172.17.0.4:8080 --idx 0
@@ -155,7 +156,11 @@ def load_data(idx, num_clients, noniid=True):
     """Load CIFAR-10 (training and test set)."""
     if noniid:
         # Non-iid
-        train_loaders, test_loaders = get_data_loaders(num_clients, 32, 5, False)
+        train_loaders, test_loaders = get_data_loaders(num_clients, 32, DATA_FRACTION, 5, False)
+        print(u"\u001b[32;1m"
+              f"Client {idx}: {len(train_loaders[idx].dataset)} train samples, "
+              f"{len(test_loaders[idx].dataset)} test samples"
+              u"\u001b[0m")
         return train_loaders[idx], test_loaders[idx]
     else:
         # iid data, all clients use the same dataset

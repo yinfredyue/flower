@@ -118,9 +118,9 @@ class ResNet50(ResNet):
         super(ResNet50, self).__init__(Bottleneck, [3, 4, 6, 3])
 
 
-def ResNet101():
-    return ResNet(Bottleneck, [3, 4, 23, 3])
-
-
-def ResNet152():
-    return ResNet(Bottleneck, [3, 8, 36, 3])
+# def ResNet101():
+#     return ResNet(Bottleneck, [3, 4, 23, 3])
+#
+#
+# def ResNet152():
+#     return ResNet(Bottleneck, [3, 8, 36, 3])

@@ -10,7 +10,8 @@ from noniid_cifar10 import get_full_testset
 import argparse
 
 DEVICE = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
-MODEL = ResNet18()
+MODEL = VGG11()
+DATA_FRACTION = 0.1
 
 def get_eval_fn(
     testset: torchvision.datasets.CIFAR10,
@@ -63,5 +64,5 @@ if __name__ == "__main__":
         num_clients=args.num_clients,
         server_address="[::]:8080",
         config={"num_rounds": args.rounds},
-        strategy=FedAvg(eval_fn=get_eval_fn(get_full_testset()))
+        strategy=FedAvg(eval_fn=get_eval_fn(get_full_testset(DATA_FRACTION)))
     )
