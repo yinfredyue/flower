@@ -4,6 +4,7 @@ data/
 doc/source/api_documentation
 doc/source/_build
 
+
 # pip Wheel
 *.whl
 
@@ -126,17 +127,17 @@ env/*
 
 # ignore env/lib except env/lib/python3.8
 env/lib/*
-!env/lib/python3.8
+!env/lib/python3.*
 
 # ignore env/lib/python3.8 except env/lib/python3.8/site-packages
-env/lib/python3.8/*
-!env/lib/python3.8/site-packages
+env/lib/python3.*/*
+!env/lib/python3.*/site-packages
 
 # ignore env/lib/python3.8/site-packages except:
 # env/lib/python3.8/site-packages/flwr
-env/lib/python3.8/site-packages/*
-!env/lib/python3.8/site-packages/flwr
-!env/lib/python3.8/site-packages/flwr_example
+env/lib/python3.*/site-packages/*
+!env/lib/python3.*/site-packages/flwr
+!env/lib/python3.*/site-packages/flwr_example
 
 # Spyder project settings
 .spyderproject
@@ -172,3 +173,7 @@ poetry.lock
 
 # PyCharm
 .idea
+
+# Leaf dataset
+examples/leaf_shakespeare_tensorflow/dataset/data
+examples/leaf_shakespeare_tensorflow/dataset/meta

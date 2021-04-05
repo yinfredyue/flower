@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fl
+  labels:
+    app: fl
+spec:
+  replicas: 64
+  selector:
+    matchLabels:
+      app: fl
+  template:
+    metadata:
+      labels:
+        app: fl
+    spec:
+      imagePullSecrets:
+      - name: flkey
+      containers:
+      - name: ubuntu-fl
+        # By default, k8s can only use image hosted on private/public registry.
+        # So we have a local hub.
+        image: 10.1.2.64:5000/fl-ubuntu:latest
+        command: [ "/bin/bash", "-ce", "tail -f /dev/null" ]
+        ports:
+          - containerPort: 22
+          - containerPort: 8080
+        resources:
+          # request is the limit guarantted.
+          # limits is the upperbound of resources.
+          limits:
+            cpu: "4"
+            memory: "4096Mi"
+          requests:
+            cpu: "2"
+            memory: "4096Mi"
