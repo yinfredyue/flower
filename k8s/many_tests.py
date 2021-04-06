@@ -4,11 +4,16 @@ import subprocess
 import argparse
 import time
 
-# python3 many_tests.py --containers 32 --staleness 1 2 --rounds 1 --max_delay 10 --script ./one_test_shake.sh --name shake
+# python3 many_tests.py --containers 32 --staleness 1 2 --rounds 1 --max_delay 10 --script ./one_test_shake.sh --name shakespeare_lstm
 
 # Keep running even after close terminal:
 # https://unix.stackexchange.com/a/4006
 # $ nohup ... &
+# $ disown
+
+# python3 many_tests.py --containers 32 --staleness 1 --rounds 1 --max_delay 10 --script ./one_test_cifar.sh --name quickstart_pytorch
+
+# $ nohup bash -c "python3 many_tests.py --containers 32 --staleness 1 2 5 10 25 50 --rounds 50 --max_delay 10 --script ./one_test_shake.sh --name shakespeare_lstm; python3 many_tests.py --containers 16 --staleness 1 2 5 10 25 50 --rounds 50 --max_delay 10 --script ./one_test_cifar.sh --name quickstart_pytorch" & 
 # $ disown
 parser = argparse.ArgumentParser(description='Run many tests')
 parser.add_argument('--containers', '-c', nargs='+', default=[32], type=int, help="number of containers")
@@ -32,7 +37,7 @@ for c in args.containers:
 
                 # Collect log
                 print("Start collecting log...")
-                output = subprocess.getoutput(f"bash collectLog.sh {c}")
+                output = subprocess.getoutput(f"bash collectLog.sh {c} {args.name}")
                 print(output)
 
                 # Rename directory
