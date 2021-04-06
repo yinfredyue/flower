@@ -5,7 +5,8 @@ import csv
 # Usage: python plot.py
 # Specify the csv file names in data_files
 
-data_files = ['s1', 's2', 's4', 's8', 's16']
+# data_files = ['s1', 's2', 's5', 's10', 's25', 's50']
+data_files = ['s5', 's50']
 data = {}
 
 for file in data_files:

@@ -51,10 +51,16 @@ def get_target_seq(x, y) -> torch.Tensor:
     return seq
 
 
-def train(model, x_train, y_train, lr=0.002, epochs=1, n=50):
+def train(model, x_train, y_train, lr=0.002, epochs=1):
     print(f"train: {len(x_train)} samples")
     loss_fn = nn.CrossEntropyLoss()
     optimizer = torch.optim.Adam(model.parameters(), lr)
+
+    # Subsample again, to reduce the amount of train data:
+    subsample_rate = 0.01
+    # sf=0.05, 0.01
+    n = int(len(x_train) * 0.01)
+    print(f"n={n}")
 
     for _ in range(epochs):
         hidden_state = None

@@ -10,8 +10,8 @@ TEST_DIR="./shakespeare/data/test/"
 
 """
 data saved from leaf:https://github.com/TalwalkarLab/leaf/tree/master/data/shakespeare
-using: ./preprocess.sh -s niid --sf 1.0 -k 0 -t sample -tf 0.8 (full-sized dataset)
-   or: ./preprocess.sh -s niid --sf 0.1 -k 100 -t sample -tf 0.8 (smaller dataset)
+using: ./preprocess.sh -s niid --sf 1.0 -k 0 -t sample -tf 0.8
+   or: ./preprocess.sh -s niid --sf 0.05 -k 10 -t sample -tf 0.8
 for full datasets and 0.8 split for train and test data 
 and saved in dataset/ 
 """
