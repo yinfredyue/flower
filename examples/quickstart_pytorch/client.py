@@ -5,13 +5,14 @@ from models import *
 from noniid_cifar10 import get_data_loaders, get_full_test_dataloader
 
 import flwr as fl
-from flwr.common.switchpoint import TestStrategy
-from logging import log, DEBUG
+from flwr.common.switchpoint import TestStrategy, AccuracyVariance
+from flwr.common.logger import log
 import argparse
 
 DEVICE = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 MODEL = VGG11()
 DATA_FRACTION = 0.1
+BATCH_SIZE=32
 
 def main():
     # python client.py --num_clients 2 --staleness_bound 2 --idx 0
@@ -83,7 +84,7 @@ def main():
         delay=delay,
         min_delay=args.min_delay,
         max_delay=args.max_delay,
-        switchpoint_strategy=TestStrategy(),
+        switchpoint_strategy=AccuracyVariance(last_k_data=2, var_threshold=0.5, clear_on_switch=False),
     )
 
 # Flower client
@@ -131,16 +132,13 @@ def train(net, train_loader, epochs):
             loss.backward()
             optimizer.step()
 
-            pred_labels = []
-            for pred in output:
-                pred_labels.append(torch.argmax(pred).item())
-
-            correct += (torch.tensor(pred_labels) == labels).float().sum()
+            _, pred_labels = torch.max(output, dim=1)
+            correct += (pred_labels == labels).sum().item()
             running_loss += loss.item()
 
-        accuracy = correct / len(train_loader)
+        accuracy = correct / (len(train_loader) * BATCH_SIZE)
 
-    log(DEBUG, f"loss={running_loss}, acc={accuracy}")
+    print(f"loss={running_loss}, acc={accuracy}")
     return running_loss, accuracy
 
 
@@ -176,11 +174,11 @@ def test(net, test_loader):
     return loss, accuracy
 
 
-def load_data(idx, num_clients, noniid=True):
+def load_data(idx, num_clients, batch_size=32, noniid=True):
     """Load CIFAR-10 (training and test set)."""
     if noniid:
         # Non-iid
-        train_loaders, test_loaders = get_data_loaders(num_clients, 32, DATA_FRACTION, 5, False)
+        train_loaders, test_loaders = get_data_loaders(num_clients, batch_size, DATA_FRACTION, 5, False)
         print(u"\u001b[32;1m"
               f"Client {idx}: {len(train_loaders[idx].dataset)} train samples, "
               f"{len(test_loaders[idx].dataset)} test samples"
@@ -193,8 +191,8 @@ def load_data(idx, num_clients, noniid=True):
         )
         train_set = CIFAR10(".", train=True, download=True, transform=transform)
         test_set = CIFAR10(".", train=False, download=True, transform=transform)
-        train_loader = DataLoader(train_set, batch_size=32, shuffle=True)
-        test_loader = DataLoader(test_set, batch_size=32)
+        train_loader = DataLoader(train_set, batch_size=batch_size, shuffle=True)
+        test_loader = DataLoader(test_set, batch_size=batch_size)
         return train_loader, test_loader
 
 def check_positive(value):
