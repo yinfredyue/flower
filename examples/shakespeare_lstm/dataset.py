@@ -68,29 +68,23 @@ def load_data(
     y_test = test_data["y"]
 
     x_train = [word_to_indices(word) for word in x_train]
-    x_train = np.array(x_train)
     x_test = [word_to_indices(word) for word in x_test] # One hot encoding
-    x_test = np.array(x_test)
 
     y_train = [letter_to_vec(c) for c in y_train]
-    y_train = np.array(y_train)
     y_test = [letter_to_vec(c) for c in y_test] # One hot encoding
-    y_test = np.array(y_test)
 
-    return (x_train, y_train), (x_test, y_test)
+    return (np.array(x_train), np.array(y_train)), (np.array(x_test), np.array(y_test))
 
 
-def load_data_iid(train_data_dir, test_data_dir) -> Tuple[Tuple[np.ndarray, np.ndarray], Tuple[np.ndarray, np.ndarray]]:
+def load_data_iid(train_data_dir, test_data_dir, num_clients) -> Tuple[Tuple[np.ndarray, np.ndarray], Tuple[np.ndarray, np.ndarray]]:
     clients, groups, train_data_total, test_data_total = read_data(train_data_dir, test_data_dir)
-
-    n = len(clients)
 
     x_train_res = []
     y_train_res = []
     x_test_res = []
     y_test_res = []
 
-    for client_name in clients:
+    for client_name in clients[:num_clients]:
         train_data = train_data_total[client_name]
         test_data = test_data_total[client_name]
 
@@ -101,21 +95,17 @@ def load_data_iid(train_data_dir, test_data_dir) -> Tuple[Tuple[np.ndarray, np.n
         y_test = test_data["y"]
 
         x_train = [word_to_indices(word) for word in x_train]
-        x_train = np.array(x_train)
         x_test = [word_to_indices(word) for word in x_test]  # One hot encoding
-        x_test = np.array(x_test)
 
         y_train = [letter_to_vec(c) for c in y_train]
-        y_train = np.array(y_train)
         y_test = [letter_to_vec(c) for c in y_test]  # One hot encoding
-        y_test = np.array(y_test)
         ##
 
-        len1 = len(x_train) // n
+        len1 = len(x_train) // num_clients
         x_train_res.extend(x_train[:len1])
         y_train_res.extend(y_train[:len1])
 
-        len2 = len(x_test) // n
+        len2 = len(x_test) // num_clients
         x_test_res.extend(x_test[:len2])
         y_test_res.extend(y_test[:len2])
 

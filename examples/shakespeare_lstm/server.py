@@ -9,7 +9,7 @@ import client
 from flwr.server.strategy import FedAvg, Strategy
 import argparse
 
-def get_eval_fn() -> Callable[[fl.common.Weights], Optional[Tuple[float, float]]]:
+def get_eval_fn(num_clients) -> Callable[[fl.common.Weights], Optional[Tuple[float, float]]]:
     """Return an evaluation function for centralized evaluation."""
 
     def evaluate(weights: fl.common.Weights) -> Optional[Tuple[float, float]]:
@@ -17,7 +17,7 @@ def get_eval_fn() -> Callable[[fl.common.Weights], Optional[Tuple[float, float]]
         model = RNN()
         model.set_weights(weights)
         model.to(device)
-        _, (x_test, y_test) = load_data_iid(TRAIN_DIR, TEST_DIR)
+        _, (x_test, y_test) = load_data_iid(TRAIN_DIR, TEST_DIR, num_clients)
         return client.test(model, x_test, y_test)
 
     return evaluate
@@ -58,5 +58,5 @@ if __name__ == "__main__":
         num_clients=args.num_clients,
         server_address="[::]:8080",
         config={"num_rounds": args.rounds},
-        strategy=FedAvg(eval_fn=get_eval_fn())
+        strategy=FedAvg(eval_fn=get_eval_fn(args.num_clients))
     )
