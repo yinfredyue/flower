@@ -5,6 +5,8 @@ import torch
 import torch.nn as nn
 
 import flwr as fl
+from flwr.common.switchpoint import TestStrategy
+from logging import log, DEBUG
 import argparse
 from model import RNN
 import numpy as np
@@ -30,8 +32,8 @@ class ShakespeareClient(fl.client.NumPyClient):
 
     def fit(self, parameters, config):
         self.set_parameters(parameters)
-        train(self.model, self.x_train, self.y_train)
-        return self.get_parameters(), len(self.x_train)
+        loss, acc = train(self.model, self.x_train, self.y_train)
+        return self.get_parameters(), len(self.x_train), loss, acc
 
     def evaluate(self, parameters, config):
         self.set_parameters(parameters)
@@ -62,11 +64,16 @@ def train(model, x_train, y_train, lr=0.002, epochs=1):
     n = int(len(x_train) * 0.01)
     print(f"n={n}")
 
+    # running_loss and accuracy should record statistics in last epoch
+    running_loss = 0
+    accuracy = 0
     for _ in range(epochs):
         hidden_state = None
         running_loss = 0
 
         i = 0
+        correct = 0
+
         for x, y in zip(x_train, y_train):
             target_seq = get_target_seq(x, y)
             x = to_tensor(x)
@@ -80,12 +87,19 @@ def train(model, x_train, y_train, lr=0.002, epochs=1):
             loss.backward()
             optimizer.step()
 
-            i += 1
-            if i % 100 == 0:
-                print(f"train: done {i}")
-            if i == n:
-                return
+            y_idx = one_hot_to_idx(y)
+            pred_char_output = output[len(output)-1]
+            pred = torch.argmax(pred_char_output).item()
+            correct += (y_idx == pred)
 
+            i += 1
+            if i == n:
+                break
+
+        accuracy = correct / n
+
+    log(DEBUG, f"loss={running_loss}, acc={accuracy}")
+    return running_loss, accuracy
 
 
 def test(model, x_test, y_test):
@@ -195,6 +209,7 @@ def main():
         delay=delay,
         min_delay=args.min_delay,
         max_delay=args.max_delay,
+        switchpoint_strategy=TestStrategy(),
     )
 
 if __name__ == "__main__":

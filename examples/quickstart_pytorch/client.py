@@ -5,6 +5,8 @@ from models import *
 from noniid_cifar10 import get_data_loaders, get_full_test_dataloader
 
 import flwr as fl
+from flwr.common.switchpoint import TestStrategy
+from logging import log, DEBUG
 import argparse
 
 DEVICE = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
@@ -12,6 +14,7 @@ MODEL = VGG11()
 DATA_FRACTION = 0.1
 
 def main():
+    # python client.py --num_clients 2 --staleness_bound 2 --idx 0
     # python client.py --num_clients 2 --staleness_bound 2 --server_ip 172.17.0.4:8080 --idx 0
     """Create model, load data, define Flower client, start Flower client."""
 
@@ -80,6 +83,7 @@ def main():
         delay=delay,
         min_delay=args.min_delay,
         max_delay=args.max_delay,
+        switchpoint_strategy=TestStrategy(),
     )
 
 # Flower client
@@ -98,8 +102,8 @@ class CifarClient(fl.client.NumPyClient):
 
     def fit(self, parameters, config):
         self.set_parameters(parameters)
-        train(self.net, self.train_loader, epochs=1)
-        return self.get_parameters(), len(self.train_loader)
+        loss, acc = train(self.net, self.train_loader, epochs=1)
+        return self.get_parameters(), len(self.train_loader), loss, acc
 
     def evaluate(self, parameters, config):
         self.set_parameters(parameters)
@@ -111,13 +115,33 @@ def train(net, train_loader, epochs):
     """Train the network on the training set."""
     criterion = torch.nn.CrossEntropyLoss()
     optimizer = torch.optim.SGD(net.parameters(), lr=0.001, momentum=0.9)
+
+    # running_loss and accuracy should record statistics in last epoch
+    running_loss = 0
+    accuracy = 0
     for _ in range(epochs):
+        correct = 0
+
+        running_loss = 0
         for images, labels in train_loader:
             images, labels = images.to(DEVICE), labels.to(DEVICE)
             optimizer.zero_grad()
-            loss = criterion(net(images), labels)
+            output = net(images)
+            loss = criterion(output, labels)
             loss.backward()
             optimizer.step()
+
+            pred_labels = []
+            for pred in output:
+                pred_labels.append(torch.argmax(pred).item())
+
+            correct += (torch.tensor(pred_labels) == labels).float().sum()
+            running_loss += loss.item()
+
+        accuracy = correct / len(train_loader)
+
+    log(DEBUG, f"loss={running_loss}, acc={accuracy}")
+    return running_loss, accuracy
 
 
 def test(net, test_loader):

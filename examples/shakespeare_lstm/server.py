@@ -7,6 +7,7 @@ from model import RNN
 import client
 
 from flwr.server.strategy import FedAvg, Strategy
+from flwr.common.switchpoint import TestStrategy
 import argparse
 
 def get_eval_fn(num_clients) -> Callable[[fl.common.Weights], Optional[Tuple[float, float]]]:
@@ -58,5 +59,6 @@ if __name__ == "__main__":
         num_clients=args.num_clients,
         server_address="[::]:8080",
         config={"num_rounds": args.rounds},
-        strategy=FedAvg(eval_fn=get_eval_fn(args.num_clients))
+        strategy=FedAvg(eval_fn=get_eval_fn(args.num_clients)),
+        switchpoint_strategy=TestStrategy(),
     )
