@@ -8,7 +8,7 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 
 class RNN(nn.Module):
-    def __init__(self, input_size=NUM_LETTERS, output_size=NUM_LETTERS, hidden_size=512, num_layers=3, rnn_type="gru", drop_prob=0.5):
+    def __init__(self, input_size=NUM_LETTERS, output_size=NUM_LETTERS, hidden_size=512, num_layers=1, rnn_type="gru", drop_prob=0.5):
 
         super(RNN, self).__init__()
         self.rnn_type = rnn_type
