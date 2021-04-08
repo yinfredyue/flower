@@ -6,7 +6,6 @@ import torch.nn as nn
 
 import flwr as fl
 from flwr.common.switchpoint import TestStrategy
-from logging import log, DEBUG
 import argparse
 from model import RNN
 import numpy as np
@@ -98,7 +97,7 @@ def train(model, x_train, y_train, lr=0.002, epochs=1):
 
         accuracy = correct / n
 
-    log(DEBUG, f"loss={running_loss}, acc={accuracy}")
+    print(f"loss={running_loss}, acc={accuracy}")
     return running_loss, accuracy
 
 
