@@ -4,7 +4,7 @@ from typing import Callable, Dict, Optional, Tuple
 import torch
 import torchvision
 from flwr.server.strategy import FedAvg, Strategy
-from flwr.common.switchpoint import TestStrategy
+from flwr.common.switchpoint import TestStrategy, AccuracyVariance
 import cifar_test as test
 from models import *
 from noniid_cifar10 import get_full_testset
@@ -61,10 +61,10 @@ if __name__ == "__main__":
     print(args)
 
     fl.server.start_server_ssp(
-        staleness_bound=args.staleness_bound,
+        staleness_bound=args.staleness_bound if args.staleness_bound != 1000 else args.num_clients,
         num_clients=args.num_clients,
         server_address="[::]:8080",
         config={"num_rounds": args.rounds},
         strategy=FedAvg(eval_fn=get_eval_fn(get_full_testset(DATA_FRACTION))),
-        switchpoint_strategy=TestStrategy()
+        switchpoint_strategy=None if args.staleness_bound != 1000 else AccuracyVariance(5, 0.0001)
     )

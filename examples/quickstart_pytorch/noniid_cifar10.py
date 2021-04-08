@@ -244,26 +244,26 @@ def get_data_loaders(nclients, batch_size, data_fraction=1, classes_pc=10, verbo
     # 1. Create training dataloaders for clients
     # Split training data
     train_split = split_image_data(x_train, y_train, n_clients=nclients,
-                             classes_per_client=classes_pc, verbose=verbose)
+                             classes_per_client=classes_pc, verbose=verbose, shuffle=False)
 
     # shuffle split train data
     train_split_shuffled = shuffle_list(train_split)
 
     # create training dataloaders
     client_loaders = [torch.utils.data.DataLoader(CustomImageDataset(x, y, transforms_train),
-                                                  batch_size=batch_size, shuffle=True) for x, y in train_split_shuffled]
+                                                  batch_size=batch_size, shuffle=False) for x, y in train_split]
 
     # 2. Create testing dataloaders for clients
     # Split testing data
     test_split = split_image_data(x_test, y_test, n_clients=nclients,
-                                  classes_per_client=classes_pc, verbose=verbose)
+                                  classes_per_client=classes_pc, verbose=verbose, shuffle=False)
 
     # shuffle split test data
     test_split_shuffled = shuffle_list(test_split)
 
     # create testing dataloaders
     test_loaders = [torch.utils.data.DataLoader(CustomImageDataset(x, y, transforms_eval),
-                                                  batch_size=batch_size, shuffle=True) for x, y in test_split_shuffled]
+                                                  batch_size=batch_size, shuffle=False) for x, y in test_split]
 
     return client_loaders, test_loaders
 
