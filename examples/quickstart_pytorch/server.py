@@ -11,8 +11,8 @@ from noniid_cifar10 import get_full_testset
 import argparse
 
 DEVICE = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
-MODEL = VGG11()
-DATA_FRACTION = 0.1
+MODEL = LeNet()
+DATA_FRACTION = 1.0
 
 def get_eval_fn(
     testset: torchvision.datasets.CIFAR10,
@@ -61,7 +61,7 @@ if __name__ == "__main__":
     print(args)
 
     fl.server.start_server_ssp(
-        staleness_bound=args.staleness_bound if args.staleness_bound != 1000 else args.num_clients,
+        staleness_bound=args.staleness_bound if args.staleness_bound != 1000 else 30,
         num_clients=args.num_clients,
         server_address="[::]:8080",
         config={"num_rounds": args.rounds},

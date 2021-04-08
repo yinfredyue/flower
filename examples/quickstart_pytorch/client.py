@@ -7,11 +7,13 @@ from noniid_cifar10 import get_data_loaders, get_full_test_dataloader
 import flwr as fl
 from flwr.common.switchpoint import TestStrategy, AccuracyVariance
 from flwr.common.logger import log
+from logging import DEBUG
 import argparse
+from flwr.common.chaos import is_straggler
 
 DEVICE = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
-MODEL = VGG11()
-DATA_FRACTION = 0.1
+MODEL = LeNet()
+DATA_FRACTION = 1.0
 BATCH_SIZE=32
 
 def main():
@@ -65,14 +67,22 @@ def main():
 
     # delay related
     delay = False
-    args.max_delay = max(args.max_delay, args.min_delay)
+    min_delay = 0
+    max_delay = max(args.max_delay, args.min_delay)
     if args.min_delay > 0:
         delay = True
 
+    # take over delay here if not specified
+    if not delay:
+        if is_straggler(args.idx, args.num_clients, 0.5):
+            delay = True
+            min_delay = 100
+            max_delay = 200
+
     if delay:
-        print(f"Start SSP client with delay [{args.min_delay},{args.max_delay}]")
+        log(DEBUG, f"Start SSP client with delay [{min_delay},{max_delay}]")
     else:
-        print("Start SSP client without delay")
+        log(DEBUG, "Start SSP client without delay")
 
     # Load data (CIFAR-10)
     train_loader, test_loader = load_data(args.idx, args.num_clients)
@@ -80,11 +90,11 @@ def main():
     fl.client.start_numpy_client_ssp(
         args.server_ip,
         CifarClient(MODEL, train_loader, test_loader),
-        args.staleness_bound,
+        args.staleness_bound if args.staleness_bound != 2000 else 30,
         delay=delay,
-        min_delay=args.min_delay,
-        max_delay=args.max_delay,
-        switchpoint_strategy=AccuracyVariance(last_k_data=2, var_threshold=0.5, clear_on_switch=False),
+        min_delay=min_delay,
+        max_delay=max_delay,
+        switchpoint_strategy=None if args.staleness_bound != 2000 else AccuracyVariance(5, 0.0001, False)
     )
 
 # Flower client
@@ -178,7 +188,7 @@ def load_data(idx, num_clients, batch_size=32, noniid=True):
     """Load CIFAR-10 (training and test set)."""
     if noniid:
         # Non-iid
-        train_loaders, test_loaders = get_data_loaders(num_clients, batch_size, DATA_FRACTION, 5, False)
+        train_loaders, test_loaders = get_data_loaders(num_clients, batch_size, DATA_FRACTION, 3, False)
         print(u"\u001b[32;1m"
               f"Client {idx}: {len(train_loaders[idx].dataset)} train samples, "
               f"{len(test_loaders[idx].dataset)} test samples"
