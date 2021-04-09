@@ -4,6 +4,8 @@
 # 3. Display the pods (i.e. containers) created in the cluster
 # You may need to wait for a while until all pods are up and running.
 
+echo "Have you run updateImage.sh?"
+
 relativeScriptPath=$(dirname $0)
 cd "${relativeScriptPath}/"
 
