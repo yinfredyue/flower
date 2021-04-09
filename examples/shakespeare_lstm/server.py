@@ -7,7 +7,7 @@ from model import RNN
 import client
 
 from flwr.server.strategy import FedAvg, Strategy
-from flwr.common.switchpoint import TestStrategy
+from flwr.common.switchpoint import TestStrategy, AccuracyVariance
 import argparse
 
 def get_eval_fn(num_clients) -> Callable[[fl.common.Weights], Optional[Tuple[float, float]]]:
@@ -54,11 +54,18 @@ if __name__ == "__main__":
     args = parser.parse_args()
     print(args)
 
+    SERVER_ACC_VAR = 1000
+    sp_strategy = None
+    if args.staleness_bound == SERVER_ACC_VAR:
+        sp_strategy = AccuracyVariance(5, 0.001, False)
+
+    print("switchpoint strategy is ", sp_strategy)
+
     fl.server.start_server_ssp(
-        staleness_bound=args.staleness_bound,
+        staleness_bound=args.staleness_bound if sp_strategy is None else args.rounds // 2,
         num_clients=args.num_clients,
         server_address="[::]:8080",
         config={"num_rounds": args.rounds},
         strategy=FedAvg(eval_fn=get_eval_fn(args.num_clients)),
-        switchpoint_strategy=TestStrategy(),
+        switchpoint_strategy=sp_strategy,
     )

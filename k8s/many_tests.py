@@ -4,14 +4,13 @@ import subprocess
 import argparse
 import time
 
-# python3 many_tests.py --containers 32 --staleness 1 2 --rounds 1 --max_delay 10 --script ./one_test_shake.sh --name shakespeare_lstm
+# python3 many_tests.py --containers 32 --staleness 1 2 3 4 5 10 20 30 1000 2000 --rounds 30 --script ./one_test_shake.sh --name shakespeare_lstm
+# python3 many_tests.py --containers 32 --staleness 1 --rounds 1 --max_delay 10 --script ./one_test_cifar.sh --name quickstart_pytorch
 
 # Keep running even after close terminal:
 # https://unix.stackexchange.com/a/4006
 # $ nohup ... &
 # $ disown
-
-# python3 many_tests.py --containers 32 --staleness 1 --rounds 1 --max_delay 10 --script ./one_test_cifar.sh --name quickstart_pytorch
 
 # $ nohup bash -c "python3 many_tests.py --containers 32 --staleness 1 2 5 10 25 50 --rounds 50 --max_delay 10 --script ./one_test_shake.sh --name shakespeare_lstm; python3 many_tests.py --containers 16 --staleness 1 2 5 10 25 50 --rounds 50 --max_delay 10 --script ./one_test_cifar.sh --name quickstart_pytorch" & 
 # $ disown
@@ -22,7 +21,6 @@ parser.add_argument('--rounds', '-r', nargs='+', default=[20], type=int)
 parser.add_argument('--max_delay', nargs='+', default=[10], type=int)
 parser.add_argument('--script', type=str, required=True)
 parser.add_argument('--name', type=str, required=True)
-parser.add_argument
 args = parser.parse_args()
 
 for c in args.containers:
