@@ -12,6 +12,7 @@ import numpy as np
 
 from flwr.common.chaos import is_straggler
 from dataset import load_data, NUM_LETTERS, one_hot_to_idx, TRAIN_DIR, TEST_DIR
+from sp_strategy import get_sp_strategy
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
@@ -214,11 +215,7 @@ def main():
     else:
         print("Start SSP client without delay")
 
-    CLIENT_ACC_VAR = 2000
-    sp_strategy = None
-    if args.staleness_bound == CLIENT_ACC_VAR:
-        sp_strategy = AccuracyVariance(3, 0.001, False)
-
+    sp_strategy = get_sp_strategy(args.staleness_bound, is_server=False)
     print("switchpoint strategy is ", sp_strategy)
 
     fl.client.start_numpy_client_ssp(

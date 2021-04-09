@@ -8,6 +8,7 @@ import client
 
 from flwr.server.strategy import FedAvg, Strategy
 from flwr.common.switchpoint import TestStrategy, AccuracyVariance
+from sp_strategy import get_sp_strategy
 import argparse
 
 def get_eval_fn(num_clients) -> Callable[[fl.common.Weights], Optional[Tuple[float, float]]]:
@@ -54,11 +55,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
     print(args)
 
-    SERVER_ACC_VAR = 1000
-    sp_strategy = None
-    if args.staleness_bound == SERVER_ACC_VAR:
-        sp_strategy = AccuracyVariance(5, 0.001, False)
-
+    sp_strategy = get_sp_strategy(args.staleness_bound, is_server=True)
     print("switchpoint strategy is ", sp_strategy)
 
     fl.server.start_server_ssp(
