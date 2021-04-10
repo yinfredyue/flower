@@ -5,12 +5,14 @@ import torch
 import torch.nn as nn
 
 import flwr as fl
-from flwr.common.switchpoint import TestStrategy
+from flwr.common.switchpoint import TestStrategy, AccuracyVariance
 import argparse
 from model import RNN
 import numpy as np
 
+from flwr.common.chaos import is_straggler
 from dataset import load_data, NUM_LETTERS, one_hot_to_idx, TRAIN_DIR, TEST_DIR
+from sp_strategy import get_sp_strategy
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
@@ -172,6 +174,11 @@ def parse_args(parser: argparse.ArgumentParser):
         default="[::]:8080",
         required=False,
     )
+    parser.add_argument(
+        "--rounds",
+        type=int,
+        required=True,
+    )
     args = parser.parse_args()
     print(args)
     return args
@@ -192,23 +199,33 @@ def main():
 
     # delay related
     delay = False
-    args.max_delay = max(args.max_delay, args.min_delay)
+    min_delay = 0
+    max_delay = max(args.max_delay, args.min_delay)
     if args.min_delay > 0:
         delay = True
 
+    if not delay:
+        if is_straggler(args.idx, args.num_clients, 0.5):
+            delay = True
+            min_delay = 100
+            max_delay = 200
+
     if delay:
-        print(f"Start SSP client with delay [{args.min_delay},{args.max_delay}]")
+        print(f"Start SSP client with delay [{min_delay},{max_delay}]")
     else:
         print("Start SSP client without delay")
+
+    sp_strategy = get_sp_strategy(args.staleness_bound, is_server=False)
+    print("switchpoint strategy is ", sp_strategy)
 
     fl.client.start_numpy_client_ssp(
         args.server_ip,
         ShakespeareClient(args.idx),
-        args.staleness_bound,
+        args.staleness_bound if sp_strategy is None else args.rounds // 2,  # Hardcode, we run 30 rounds, set s = 30/2
         delay=delay,
-        min_delay=args.min_delay,
-        max_delay=args.max_delay,
-        switchpoint_strategy=TestStrategy(),
+        min_delay=min_delay,
+        max_delay=max_delay,
+        switchpoint_strategy=sp_strategy,
     )
 
 if __name__ == "__main__":

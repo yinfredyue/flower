@@ -58,11 +58,11 @@ do
         echo "Start client $idx"
 
         # Important: the `&` should be outside the quotes.
-        kubectl exec $name -- bash -c "cd ${src_dir} && python3 client.py --num_clients $num_clients --staleness_bound $staleness --server_ip $serveraddr --idx $idx &> ./log/client${idx}.log" --request-timeout=${timeout} &
+        kubectl exec $name -- bash -c "cd ${src_dir} && python3 client.py --num_clients $num_clients --staleness_bound $staleness --rounds $rounds --server_ip $serveraddr --idx $idx &> ./log/client${idx}.log" --request-timeout=${timeout} &
     fi
     count=$((count+1))
 done
 
 # Testing
 # kubectl exec -it $name -- python3 /app/examples/quickstart_pytorch/server.py --num_clients 2 --staleness_bound 2 --rounds 3
-# kubectl exec -it $name -- python3 /app/examples/quickstart_pytorch/client.py --num_clients 2 --staleness_bound 2 --server_ip 10.244.3.6:8080 --idx 0
+# kubectl exec -it $name -- python3 /app/examples/quickstart_pytorch/client.py --num_clients 2 --staleness_bound 2 --rounds 3 --server_ip 10.244.3.6:8080 --idx 0

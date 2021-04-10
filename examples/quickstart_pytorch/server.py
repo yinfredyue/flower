@@ -66,5 +66,5 @@ if __name__ == "__main__":
         server_address="[::]:8080",
         config={"num_rounds": args.rounds},
         strategy=FedAvg(eval_fn=get_eval_fn(get_full_testset(DATA_FRACTION))),
-        switchpoint_strategy=None if args.staleness_bound != 1000 else AccuracyVariance(5, 0.0001)
+        switchpoint_strategy=None if args.staleness_bound != 1000 else AccuracyVariance(5, 0.0001, False)
     )
