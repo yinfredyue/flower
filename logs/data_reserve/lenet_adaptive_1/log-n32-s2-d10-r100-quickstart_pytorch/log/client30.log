@@ -1,0 +1,814 @@
+DEBUG flower 2021-04-08 11:46:25,126 | connection.py:36 | ChannelConnectivity.IDLE
+INFO flower 2021-04-08 11:46:25,129 | app.py:63 | Opened (insecure) gRPC connection
+DEBUG flower 2021-04-08 11:46:25,129 | connection.py:36 | ChannelConnectivity.CONNECTING
+DEBUG flower 2021-04-08 11:46:25,130 | connection.py:36 | ChannelConnectivity.READY
+DEBUG flower 2021-04-08 11:46:26,030 | numpy_client.py:172 | fit, FitIns(clock=0)
+INFO flower 2021-04-08 11:46:26,030 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 11:46:26,225 | numpy_client.py:228 | read: ReadRes(clock=-1)
+DEBUG flower 2021-04-08 11:46:26,242 | numpy_client.py:172 | fit, FitIns(clock=0)
+DEBUG flower 2021-04-08 11:46:26,242 | numpy_client.py:260 | cached_clock: -1, curr_clock: 0
+DEBUG flower 2021-04-08 11:46:26,804 | model_wrapper.py:21 | Load existing initial model
+INFO flower 2021-04-08 11:46:26,809 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=0)
+DEBUG flower 2021-04-08 11:46:26,832 | numpy_client.py:172 | fit, FitIns(clock=1)
+DEBUG flower 2021-04-08 11:46:26,833 | numpy_client.py:260 | cached_clock: -1, curr_clock: 1
+INFO flower 2021-04-08 11:46:27,313 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=1)
+DEBUG flower 2021-04-08 11:46:27,335 | numpy_client.py:172 | fit, FitIns(clock=2)
+DEBUG flower 2021-04-08 11:46:27,335 | numpy_client.py:260 | cached_clock: -1, curr_clock: 2
+INFO flower 2021-04-08 11:46:27,335 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 11:46:31,302 | numpy_client.py:228 | read: ReadRes(clock=0)
+DEBUG flower 2021-04-08 11:46:31,309 | numpy_client.py:172 | fit, FitIns(clock=2)
+DEBUG flower 2021-04-08 11:46:31,310 | numpy_client.py:260 | cached_clock: 0, curr_clock: 2
+INFO flower 2021-04-08 11:46:31,806 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=2)
+DEBUG flower 2021-04-08 11:46:40,031 | numpy_client.py:172 | fit, FitIns(clock=3)
+DEBUG flower 2021-04-08 11:46:40,032 | numpy_client.py:260 | cached_clock: 0, curr_clock: 3
+INFO flower 2021-04-08 11:46:40,032 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 11:46:45,158 | numpy_client.py:228 | read: ReadRes(clock=1)
+DEBUG flower 2021-04-08 11:46:45,165 | numpy_client.py:172 | fit, FitIns(clock=3)
+DEBUG flower 2021-04-08 11:46:45,165 | numpy_client.py:260 | cached_clock: 1, curr_clock: 3
+INFO flower 2021-04-08 11:46:45,614 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=3)
+DEBUG flower 2021-04-08 11:46:54,847 | numpy_client.py:172 | fit, FitIns(clock=4)
+DEBUG flower 2021-04-08 11:46:54,848 | numpy_client.py:260 | cached_clock: 1, curr_clock: 4
+INFO flower 2021-04-08 11:46:54,848 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 11:47:00,102 | numpy_client.py:228 | read: ReadRes(clock=2)
+DEBUG flower 2021-04-08 11:47:00,109 | numpy_client.py:172 | fit, FitIns(clock=4)
+DEBUG flower 2021-04-08 11:47:00,109 | numpy_client.py:260 | cached_clock: 2, curr_clock: 4
+INFO flower 2021-04-08 11:47:00,616 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=4)
+DEBUG flower 2021-04-08 11:47:10,182 | numpy_client.py:172 | fit, FitIns(clock=5)
+DEBUG flower 2021-04-08 11:47:10,182 | numpy_client.py:260 | cached_clock: 2, curr_clock: 5
+INFO flower 2021-04-08 11:47:10,182 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 11:47:15,057 | numpy_client.py:228 | read: ReadRes(clock=3)
+DEBUG flower 2021-04-08 11:47:15,064 | numpy_client.py:172 | fit, FitIns(clock=5)
+DEBUG flower 2021-04-08 11:47:15,064 | numpy_client.py:260 | cached_clock: 3, curr_clock: 5
+INFO flower 2021-04-08 11:47:15,524 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=5)
+DEBUG flower 2021-04-08 11:47:23,924 | numpy_client.py:172 | fit, FitIns(clock=6)
+DEBUG flower 2021-04-08 11:47:23,924 | numpy_client.py:260 | cached_clock: 3, curr_clock: 6
+INFO flower 2021-04-08 11:47:23,924 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 11:47:29,049 | numpy_client.py:228 | read: ReadRes(clock=4)
+DEBUG flower 2021-04-08 11:47:29,056 | numpy_client.py:172 | fit, FitIns(clock=6)
+DEBUG flower 2021-04-08 11:47:29,056 | numpy_client.py:260 | cached_clock: 4, curr_clock: 6
+INFO flower 2021-04-08 11:47:29,536 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=6)
+DEBUG flower 2021-04-08 11:47:37,908 | numpy_client.py:172 | fit, FitIns(clock=7)
+DEBUG flower 2021-04-08 11:47:37,908 | numpy_client.py:260 | cached_clock: 4, curr_clock: 7
+INFO flower 2021-04-08 11:47:37,908 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 11:47:42,959 | numpy_client.py:228 | read: ReadRes(clock=5)
+DEBUG flower 2021-04-08 11:47:42,966 | numpy_client.py:172 | fit, FitIns(clock=7)
+DEBUG flower 2021-04-08 11:47:42,966 | numpy_client.py:260 | cached_clock: 5, curr_clock: 7
+INFO flower 2021-04-08 11:47:43,424 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=7)
+DEBUG flower 2021-04-08 11:47:51,489 | numpy_client.py:172 | fit, FitIns(clock=8)
+DEBUG flower 2021-04-08 11:47:51,489 | numpy_client.py:260 | cached_clock: 5, curr_clock: 8
+INFO flower 2021-04-08 11:47:51,489 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 11:47:56,202 | numpy_client.py:228 | read: ReadRes(clock=6)
+DEBUG flower 2021-04-08 11:47:56,213 | numpy_client.py:172 | fit, FitIns(clock=8)
+DEBUG flower 2021-04-08 11:47:56,213 | numpy_client.py:260 | cached_clock: 6, curr_clock: 8
+INFO flower 2021-04-08 11:47:56,716 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=8)
+DEBUG flower 2021-04-08 11:48:04,814 | numpy_client.py:172 | fit, FitIns(clock=9)
+DEBUG flower 2021-04-08 11:48:04,814 | numpy_client.py:260 | cached_clock: 6, curr_clock: 9
+INFO flower 2021-04-08 11:48:04,814 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 11:48:09,902 | numpy_client.py:228 | read: ReadRes(clock=7)
+DEBUG flower 2021-04-08 11:48:09,910 | numpy_client.py:172 | fit, FitIns(clock=9)
+DEBUG flower 2021-04-08 11:48:09,910 | numpy_client.py:260 | cached_clock: 7, curr_clock: 9
+INFO flower 2021-04-08 11:48:10,411 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=9)
+DEBUG flower 2021-04-08 11:48:18,906 | numpy_client.py:172 | fit, FitIns(clock=10)
+DEBUG flower 2021-04-08 11:48:18,907 | numpy_client.py:260 | cached_clock: 7, curr_clock: 10
+INFO flower 2021-04-08 11:48:18,907 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 11:48:23,659 | numpy_client.py:228 | read: ReadRes(clock=8)
+DEBUG flower 2021-04-08 11:48:23,666 | numpy_client.py:172 | fit, FitIns(clock=10)
+DEBUG flower 2021-04-08 11:48:23,667 | numpy_client.py:260 | cached_clock: 8, curr_clock: 10
+INFO flower 2021-04-08 11:48:24,205 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=10)
+DEBUG flower 2021-04-08 11:48:32,478 | numpy_client.py:172 | fit, FitIns(clock=11)
+DEBUG flower 2021-04-08 11:48:32,478 | numpy_client.py:260 | cached_clock: 8, curr_clock: 11
+INFO flower 2021-04-08 11:48:32,479 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 11:48:37,318 | numpy_client.py:228 | read: ReadRes(clock=9)
+DEBUG flower 2021-04-08 11:48:37,325 | numpy_client.py:172 | fit, FitIns(clock=11)
+DEBUG flower 2021-04-08 11:48:37,326 | numpy_client.py:260 | cached_clock: 9, curr_clock: 11
+INFO flower 2021-04-08 11:48:37,813 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=11)
+DEBUG flower 2021-04-08 11:48:46,186 | numpy_client.py:172 | fit, FitIns(clock=12)
+DEBUG flower 2021-04-08 11:48:46,186 | numpy_client.py:260 | cached_clock: 9, curr_clock: 12
+INFO flower 2021-04-08 11:48:46,186 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 11:48:50,830 | numpy_client.py:228 | read: ReadRes(clock=10)
+DEBUG flower 2021-04-08 11:48:50,838 | numpy_client.py:172 | fit, FitIns(clock=12)
+DEBUG flower 2021-04-08 11:48:50,838 | numpy_client.py:260 | cached_clock: 10, curr_clock: 12
+INFO flower 2021-04-08 11:48:51,307 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=12)
+DEBUG flower 2021-04-08 11:48:59,591 | numpy_client.py:172 | fit, FitIns(clock=13)
+DEBUG flower 2021-04-08 11:48:59,591 | numpy_client.py:260 | cached_clock: 10, curr_clock: 13
+INFO flower 2021-04-08 11:48:59,592 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 11:49:04,450 | numpy_client.py:228 | read: ReadRes(clock=11)
+DEBUG flower 2021-04-08 11:49:04,458 | numpy_client.py:172 | fit, FitIns(clock=13)
+DEBUG flower 2021-04-08 11:49:04,458 | numpy_client.py:260 | cached_clock: 11, curr_clock: 13
+INFO flower 2021-04-08 11:49:04,920 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=13)
+DEBUG flower 2021-04-08 11:49:12,833 | numpy_client.py:172 | fit, FitIns(clock=14)
+DEBUG flower 2021-04-08 11:49:12,833 | numpy_client.py:260 | cached_clock: 11, curr_clock: 14
+INFO flower 2021-04-08 11:49:12,833 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 11:49:17,649 | numpy_client.py:228 | read: ReadRes(clock=12)
+DEBUG flower 2021-04-08 11:49:17,657 | numpy_client.py:172 | fit, FitIns(clock=14)
+DEBUG flower 2021-04-08 11:49:17,657 | numpy_client.py:260 | cached_clock: 12, curr_clock: 14
+INFO flower 2021-04-08 11:49:18,119 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=14)
+DEBUG flower 2021-04-08 11:49:26,694 | numpy_client.py:172 | fit, FitIns(clock=15)
+DEBUG flower 2021-04-08 11:49:26,694 | numpy_client.py:260 | cached_clock: 12, curr_clock: 15
+INFO flower 2021-04-08 11:49:26,694 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 11:49:31,403 | numpy_client.py:228 | read: ReadRes(clock=13)
+DEBUG flower 2021-04-08 11:49:31,410 | numpy_client.py:172 | fit, FitIns(clock=15)
+DEBUG flower 2021-04-08 11:49:31,411 | numpy_client.py:260 | cached_clock: 13, curr_clock: 15
+INFO flower 2021-04-08 11:49:31,917 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=15)
+DEBUG flower 2021-04-08 11:49:40,278 | numpy_client.py:172 | fit, FitIns(clock=16)
+DEBUG flower 2021-04-08 11:49:40,279 | numpy_client.py:260 | cached_clock: 13, curr_clock: 16
+INFO flower 2021-04-08 11:49:40,279 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 11:49:44,961 | numpy_client.py:228 | read: ReadRes(clock=14)
+DEBUG flower 2021-04-08 11:49:44,970 | numpy_client.py:172 | fit, FitIns(clock=16)
+DEBUG flower 2021-04-08 11:49:44,971 | numpy_client.py:260 | cached_clock: 14, curr_clock: 16
+INFO flower 2021-04-08 11:49:45,414 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=16)
+DEBUG flower 2021-04-08 11:49:54,132 | numpy_client.py:172 | fit, FitIns(clock=17)
+DEBUG flower 2021-04-08 11:49:54,132 | numpy_client.py:260 | cached_clock: 14, curr_clock: 17
+INFO flower 2021-04-08 11:49:54,132 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 11:49:58,502 | numpy_client.py:228 | read: ReadRes(clock=15)
+DEBUG flower 2021-04-08 11:49:58,509 | numpy_client.py:172 | fit, FitIns(clock=17)
+DEBUG flower 2021-04-08 11:49:58,510 | numpy_client.py:260 | cached_clock: 15, curr_clock: 17
+INFO flower 2021-04-08 11:49:59,038 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=17)
+DEBUG flower 2021-04-08 11:50:07,689 | numpy_client.py:172 | fit, FitIns(clock=18)
+DEBUG flower 2021-04-08 11:50:07,689 | numpy_client.py:260 | cached_clock: 15, curr_clock: 18
+INFO flower 2021-04-08 11:50:07,689 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 11:50:12,286 | numpy_client.py:228 | read: ReadRes(clock=16)
+DEBUG flower 2021-04-08 11:50:12,293 | numpy_client.py:172 | fit, FitIns(clock=18)
+DEBUG flower 2021-04-08 11:50:12,293 | numpy_client.py:260 | cached_clock: 16, curr_clock: 18
+INFO flower 2021-04-08 11:50:12,815 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=18)
+DEBUG flower 2021-04-08 11:50:21,312 | numpy_client.py:172 | fit, FitIns(clock=19)
+DEBUG flower 2021-04-08 11:50:21,313 | numpy_client.py:260 | cached_clock: 16, curr_clock: 19
+INFO flower 2021-04-08 11:50:21,313 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 11:50:26,239 | numpy_client.py:228 | read: ReadRes(clock=17)
+DEBUG flower 2021-04-08 11:50:26,246 | numpy_client.py:172 | fit, FitIns(clock=19)
+DEBUG flower 2021-04-08 11:50:26,246 | numpy_client.py:260 | cached_clock: 17, curr_clock: 19
+INFO flower 2021-04-08 11:50:26,702 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=19)
+DEBUG flower 2021-04-08 11:50:35,040 | numpy_client.py:172 | fit, FitIns(clock=20)
+DEBUG flower 2021-04-08 11:50:35,040 | numpy_client.py:260 | cached_clock: 17, curr_clock: 20
+INFO flower 2021-04-08 11:50:35,040 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 11:50:39,702 | numpy_client.py:228 | read: ReadRes(clock=18)
+DEBUG flower 2021-04-08 11:50:39,710 | numpy_client.py:172 | fit, FitIns(clock=20)
+DEBUG flower 2021-04-08 11:50:39,710 | numpy_client.py:260 | cached_clock: 18, curr_clock: 20
+INFO flower 2021-04-08 11:50:40,217 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=20)
+DEBUG flower 2021-04-08 11:50:48,346 | numpy_client.py:172 | fit, FitIns(clock=21)
+DEBUG flower 2021-04-08 11:50:48,346 | numpy_client.py:260 | cached_clock: 18, curr_clock: 21
+INFO flower 2021-04-08 11:50:48,346 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 11:50:53,103 | numpy_client.py:228 | read: ReadRes(clock=19)
+DEBUG flower 2021-04-08 11:50:53,110 | numpy_client.py:172 | fit, FitIns(clock=21)
+DEBUG flower 2021-04-08 11:50:53,110 | numpy_client.py:260 | cached_clock: 19, curr_clock: 21
+INFO flower 2021-04-08 11:50:53,632 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=21)
+DEBUG flower 2021-04-08 11:51:01,855 | numpy_client.py:172 | fit, FitIns(clock=22)
+DEBUG flower 2021-04-08 11:51:01,856 | numpy_client.py:260 | cached_clock: 19, curr_clock: 22
+INFO flower 2021-04-08 11:51:01,856 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 11:51:06,759 | numpy_client.py:228 | read: ReadRes(clock=20)
+DEBUG flower 2021-04-08 11:51:06,767 | numpy_client.py:172 | fit, FitIns(clock=22)
+DEBUG flower 2021-04-08 11:51:06,767 | numpy_client.py:260 | cached_clock: 20, curr_clock: 22
+INFO flower 2021-04-08 11:51:07,307 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=22)
+DEBUG flower 2021-04-08 11:51:15,436 | numpy_client.py:172 | fit, FitIns(clock=23)
+DEBUG flower 2021-04-08 11:51:15,436 | numpy_client.py:260 | cached_clock: 20, curr_clock: 23
+INFO flower 2021-04-08 11:51:15,436 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 11:51:20,249 | numpy_client.py:228 | read: ReadRes(clock=21)
+DEBUG flower 2021-04-08 11:51:20,255 | numpy_client.py:172 | fit, FitIns(clock=23)
+DEBUG flower 2021-04-08 11:51:20,255 | numpy_client.py:260 | cached_clock: 21, curr_clock: 23
+INFO flower 2021-04-08 11:51:20,720 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=23)
+DEBUG flower 2021-04-08 11:51:29,128 | numpy_client.py:172 | fit, FitIns(clock=24)
+DEBUG flower 2021-04-08 11:51:29,128 | numpy_client.py:260 | cached_clock: 21, curr_clock: 24
+INFO flower 2021-04-08 11:51:29,128 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 11:51:33,757 | numpy_client.py:228 | read: ReadRes(clock=22)
+DEBUG flower 2021-04-08 11:51:33,764 | numpy_client.py:172 | fit, FitIns(clock=24)
+DEBUG flower 2021-04-08 11:51:33,764 | numpy_client.py:260 | cached_clock: 22, curr_clock: 24
+INFO flower 2021-04-08 11:51:34,232 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=24)
+DEBUG flower 2021-04-08 11:51:42,643 | numpy_client.py:172 | fit, FitIns(clock=25)
+DEBUG flower 2021-04-08 11:51:42,643 | numpy_client.py:260 | cached_clock: 22, curr_clock: 25
+INFO flower 2021-04-08 11:51:42,643 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 11:51:47,457 | numpy_client.py:228 | read: ReadRes(clock=23)
+DEBUG flower 2021-04-08 11:51:47,464 | numpy_client.py:172 | fit, FitIns(clock=25)
+DEBUG flower 2021-04-08 11:51:47,464 | numpy_client.py:260 | cached_clock: 23, curr_clock: 25
+INFO flower 2021-04-08 11:51:47,917 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=25)
+DEBUG flower 2021-04-08 11:51:56,149 | numpy_client.py:172 | fit, FitIns(clock=26)
+DEBUG flower 2021-04-08 11:51:56,149 | numpy_client.py:260 | cached_clock: 23, curr_clock: 26
+INFO flower 2021-04-08 11:51:56,149 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 11:52:00,853 | numpy_client.py:228 | read: ReadRes(clock=24)
+DEBUG flower 2021-04-08 11:52:00,860 | numpy_client.py:172 | fit, FitIns(clock=26)
+DEBUG flower 2021-04-08 11:52:00,860 | numpy_client.py:260 | cached_clock: 24, curr_clock: 26
+INFO flower 2021-04-08 11:52:01,331 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=26)
+DEBUG flower 2021-04-08 11:52:09,699 | numpy_client.py:172 | fit, FitIns(clock=27)
+DEBUG flower 2021-04-08 11:52:09,699 | numpy_client.py:260 | cached_clock: 24, curr_clock: 27
+INFO flower 2021-04-08 11:52:09,700 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 11:52:14,661 | numpy_client.py:228 | read: ReadRes(clock=25)
+DEBUG flower 2021-04-08 11:52:14,668 | numpy_client.py:172 | fit, FitIns(clock=27)
+DEBUG flower 2021-04-08 11:52:14,668 | numpy_client.py:260 | cached_clock: 25, curr_clock: 27
+INFO flower 2021-04-08 11:52:15,212 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=27)
+DEBUG flower 2021-04-08 11:52:23,209 | numpy_client.py:172 | fit, FitIns(clock=28)
+DEBUG flower 2021-04-08 11:52:23,209 | numpy_client.py:260 | cached_clock: 25, curr_clock: 28
+INFO flower 2021-04-08 11:52:23,210 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 11:52:28,064 | numpy_client.py:228 | read: ReadRes(clock=26)
+DEBUG flower 2021-04-08 11:52:28,071 | numpy_client.py:172 | fit, FitIns(clock=28)
+DEBUG flower 2021-04-08 11:52:28,071 | numpy_client.py:260 | cached_clock: 26, curr_clock: 28
+INFO flower 2021-04-08 11:52:28,508 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=28)
+DEBUG flower 2021-04-08 11:52:36,625 | numpy_client.py:172 | fit, FitIns(clock=29)
+DEBUG flower 2021-04-08 11:52:36,626 | numpy_client.py:260 | cached_clock: 26, curr_clock: 29
+INFO flower 2021-04-08 11:52:36,626 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 11:52:41,542 | numpy_client.py:228 | read: ReadRes(clock=27)
+DEBUG flower 2021-04-08 11:52:41,549 | numpy_client.py:172 | fit, FitIns(clock=29)
+DEBUG flower 2021-04-08 11:52:41,549 | numpy_client.py:260 | cached_clock: 27, curr_clock: 29
+INFO flower 2021-04-08 11:52:42,038 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=29)
+DEBUG flower 2021-04-08 11:52:50,540 | numpy_client.py:172 | fit, FitIns(clock=30)
+DEBUG flower 2021-04-08 11:52:50,541 | numpy_client.py:260 | cached_clock: 27, curr_clock: 30
+INFO flower 2021-04-08 11:52:50,541 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 11:52:55,286 | numpy_client.py:228 | read: ReadRes(clock=28)
+DEBUG flower 2021-04-08 11:52:55,294 | numpy_client.py:172 | fit, FitIns(clock=30)
+DEBUG flower 2021-04-08 11:52:55,294 | numpy_client.py:260 | cached_clock: 28, curr_clock: 30
+INFO flower 2021-04-08 11:52:55,735 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=30)
+DEBUG flower 2021-04-08 11:53:04,311 | numpy_client.py:172 | fit, FitIns(clock=31)
+DEBUG flower 2021-04-08 11:53:04,311 | numpy_client.py:260 | cached_clock: 28, curr_clock: 31
+INFO flower 2021-04-08 11:53:04,311 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 11:53:09,003 | numpy_client.py:228 | read: ReadRes(clock=29)
+DEBUG flower 2021-04-08 11:53:09,010 | numpy_client.py:172 | fit, FitIns(clock=31)
+DEBUG flower 2021-04-08 11:53:09,010 | numpy_client.py:260 | cached_clock: 29, curr_clock: 31
+INFO flower 2021-04-08 11:53:09,516 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=31)
+DEBUG flower 2021-04-08 11:53:17,836 | numpy_client.py:172 | fit, FitIns(clock=32)
+DEBUG flower 2021-04-08 11:53:17,836 | numpy_client.py:260 | cached_clock: 29, curr_clock: 32
+INFO flower 2021-04-08 11:53:17,836 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 11:53:22,356 | numpy_client.py:228 | read: ReadRes(clock=30)
+DEBUG flower 2021-04-08 11:53:22,364 | numpy_client.py:172 | fit, FitIns(clock=32)
+DEBUG flower 2021-04-08 11:53:22,364 | numpy_client.py:260 | cached_clock: 30, curr_clock: 32
+INFO flower 2021-04-08 11:53:22,815 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=32)
+DEBUG flower 2021-04-08 11:53:31,035 | numpy_client.py:172 | fit, FitIns(clock=33)
+DEBUG flower 2021-04-08 11:53:31,035 | numpy_client.py:260 | cached_clock: 30, curr_clock: 33
+INFO flower 2021-04-08 11:53:31,035 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 11:53:35,444 | numpy_client.py:228 | read: ReadRes(clock=31)
+DEBUG flower 2021-04-08 11:53:35,451 | numpy_client.py:172 | fit, FitIns(clock=33)
+DEBUG flower 2021-04-08 11:53:35,451 | numpy_client.py:260 | cached_clock: 31, curr_clock: 33
+INFO flower 2021-04-08 11:53:35,917 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=33)
+DEBUG flower 2021-04-08 11:53:43,823 | numpy_client.py:172 | fit, FitIns(clock=34)
+DEBUG flower 2021-04-08 11:53:43,823 | numpy_client.py:260 | cached_clock: 31, curr_clock: 34
+INFO flower 2021-04-08 11:53:43,823 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 11:53:48,644 | numpy_client.py:228 | read: ReadRes(clock=32)
+DEBUG flower 2021-04-08 11:53:48,652 | numpy_client.py:172 | fit, FitIns(clock=34)
+DEBUG flower 2021-04-08 11:53:48,652 | numpy_client.py:260 | cached_clock: 32, curr_clock: 34
+INFO flower 2021-04-08 11:53:49,117 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=34)
+DEBUG flower 2021-04-08 11:53:57,420 | numpy_client.py:172 | fit, FitIns(clock=35)
+DEBUG flower 2021-04-08 11:53:57,420 | numpy_client.py:260 | cached_clock: 32, curr_clock: 35
+INFO flower 2021-04-08 11:53:57,421 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 11:54:02,127 | numpy_client.py:228 | read: ReadRes(clock=33)
+DEBUG flower 2021-04-08 11:54:02,134 | numpy_client.py:172 | fit, FitIns(clock=35)
+DEBUG flower 2021-04-08 11:54:02,134 | numpy_client.py:260 | cached_clock: 33, curr_clock: 35
+INFO flower 2021-04-08 11:54:02,613 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=35)
+DEBUG flower 2021-04-08 11:54:10,800 | numpy_client.py:172 | fit, FitIns(clock=36)
+DEBUG flower 2021-04-08 11:54:10,800 | numpy_client.py:260 | cached_clock: 33, curr_clock: 36
+INFO flower 2021-04-08 11:54:10,800 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 11:54:15,234 | numpy_client.py:228 | read: ReadRes(clock=34)
+DEBUG flower 2021-04-08 11:54:15,241 | numpy_client.py:172 | fit, FitIns(clock=36)
+DEBUG flower 2021-04-08 11:54:15,241 | numpy_client.py:260 | cached_clock: 34, curr_clock: 36
+INFO flower 2021-04-08 11:54:15,822 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=36)
+DEBUG flower 2021-04-08 11:54:24,045 | numpy_client.py:172 | fit, FitIns(clock=37)
+DEBUG flower 2021-04-08 11:54:24,045 | numpy_client.py:260 | cached_clock: 34, curr_clock: 37
+INFO flower 2021-04-08 11:54:24,045 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 11:54:28,731 | numpy_client.py:228 | read: ReadRes(clock=35)
+DEBUG flower 2021-04-08 11:54:28,738 | numpy_client.py:172 | fit, FitIns(clock=37)
+DEBUG flower 2021-04-08 11:54:28,739 | numpy_client.py:260 | cached_clock: 35, curr_clock: 37
+INFO flower 2021-04-08 11:54:29,218 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=37)
+DEBUG flower 2021-04-08 11:54:37,418 | numpy_client.py:172 | fit, FitIns(clock=38)
+DEBUG flower 2021-04-08 11:54:37,418 | numpy_client.py:260 | cached_clock: 35, curr_clock: 38
+INFO flower 2021-04-08 11:54:37,418 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 11:54:42,030 | numpy_client.py:228 | read: ReadRes(clock=36)
+DEBUG flower 2021-04-08 11:54:42,037 | numpy_client.py:172 | fit, FitIns(clock=38)
+DEBUG flower 2021-04-08 11:54:42,037 | numpy_client.py:260 | cached_clock: 36, curr_clock: 38
+INFO flower 2021-04-08 11:54:42,506 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=38)
+DEBUG flower 2021-04-08 11:54:50,980 | numpy_client.py:172 | fit, FitIns(clock=39)
+DEBUG flower 2021-04-08 11:54:50,981 | numpy_client.py:260 | cached_clock: 36, curr_clock: 39
+INFO flower 2021-04-08 11:54:50,981 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 11:54:55,794 | numpy_client.py:228 | read: ReadRes(clock=37)
+DEBUG flower 2021-04-08 11:54:55,802 | numpy_client.py:172 | fit, FitIns(clock=39)
+DEBUG flower 2021-04-08 11:54:55,802 | numpy_client.py:260 | cached_clock: 37, curr_clock: 39
+INFO flower 2021-04-08 11:54:56,317 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=39)
+DEBUG flower 2021-04-08 11:55:04,238 | numpy_client.py:172 | fit, FitIns(clock=40)
+DEBUG flower 2021-04-08 11:55:04,238 | numpy_client.py:260 | cached_clock: 37, curr_clock: 40
+INFO flower 2021-04-08 11:55:04,238 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 11:55:08,760 | numpy_client.py:228 | read: ReadRes(clock=38)
+DEBUG flower 2021-04-08 11:55:08,767 | numpy_client.py:172 | fit, FitIns(clock=40)
+DEBUG flower 2021-04-08 11:55:08,767 | numpy_client.py:260 | cached_clock: 38, curr_clock: 40
+INFO flower 2021-04-08 11:55:09,213 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=40)
+DEBUG flower 2021-04-08 11:55:17,321 | numpy_client.py:172 | fit, FitIns(clock=41)
+DEBUG flower 2021-04-08 11:55:17,322 | numpy_client.py:260 | cached_clock: 38, curr_clock: 41
+INFO flower 2021-04-08 11:55:17,322 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 11:55:22,139 | numpy_client.py:228 | read: ReadRes(clock=39)
+DEBUG flower 2021-04-08 11:55:22,147 | numpy_client.py:172 | fit, FitIns(clock=41)
+DEBUG flower 2021-04-08 11:55:22,147 | numpy_client.py:260 | cached_clock: 39, curr_clock: 41
+INFO flower 2021-04-08 11:55:22,634 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=41)
+DEBUG flower 2021-04-08 11:55:30,944 | numpy_client.py:172 | fit, FitIns(clock=42)
+DEBUG flower 2021-04-08 11:55:30,944 | numpy_client.py:260 | cached_clock: 39, curr_clock: 42
+INFO flower 2021-04-08 11:55:30,944 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 11:55:35,842 | numpy_client.py:228 | read: ReadRes(clock=40)
+DEBUG flower 2021-04-08 11:55:35,850 | numpy_client.py:172 | fit, FitIns(clock=42)
+DEBUG flower 2021-04-08 11:55:35,850 | numpy_client.py:260 | cached_clock: 40, curr_clock: 42
+INFO flower 2021-04-08 11:55:36,411 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=42)
+DEBUG flower 2021-04-08 11:55:44,599 | numpy_client.py:172 | fit, FitIns(clock=43)
+DEBUG flower 2021-04-08 11:55:44,599 | numpy_client.py:260 | cached_clock: 40, curr_clock: 43
+INFO flower 2021-04-08 11:55:44,600 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 11:55:49,270 | numpy_client.py:228 | read: ReadRes(clock=41)
+DEBUG flower 2021-04-08 11:55:49,278 | numpy_client.py:172 | fit, FitIns(clock=43)
+DEBUG flower 2021-04-08 11:55:49,278 | numpy_client.py:260 | cached_clock: 41, curr_clock: 43
+INFO flower 2021-04-08 11:55:49,815 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=43)
+DEBUG flower 2021-04-08 11:55:58,491 | numpy_client.py:172 | fit, FitIns(clock=44)
+DEBUG flower 2021-04-08 11:55:58,492 | numpy_client.py:260 | cached_clock: 41, curr_clock: 44
+INFO flower 2021-04-08 11:55:58,492 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 11:56:03,144 | numpy_client.py:228 | read: ReadRes(clock=42)
+DEBUG flower 2021-04-08 11:56:03,152 | numpy_client.py:172 | fit, FitIns(clock=44)
+DEBUG flower 2021-04-08 11:56:03,152 | numpy_client.py:260 | cached_clock: 42, curr_clock: 44
+INFO flower 2021-04-08 11:56:03,614 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=44)
+DEBUG flower 2021-04-08 11:56:11,386 | numpy_client.py:172 | fit, FitIns(clock=45)
+DEBUG flower 2021-04-08 11:56:11,386 | numpy_client.py:260 | cached_clock: 42, curr_clock: 45
+INFO flower 2021-04-08 11:56:11,386 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 11:56:15,918 | numpy_client.py:228 | read: ReadRes(clock=43)
+DEBUG flower 2021-04-08 11:56:15,926 | numpy_client.py:172 | fit, FitIns(clock=45)
+DEBUG flower 2021-04-08 11:56:15,926 | numpy_client.py:260 | cached_clock: 43, curr_clock: 45
+INFO flower 2021-04-08 11:56:16,417 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=45)
+DEBUG flower 2021-04-08 11:56:24,522 | numpy_client.py:172 | fit, FitIns(clock=46)
+DEBUG flower 2021-04-08 11:56:24,523 | numpy_client.py:260 | cached_clock: 43, curr_clock: 46
+INFO flower 2021-04-08 11:56:24,523 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 11:56:29,037 | numpy_client.py:228 | read: ReadRes(clock=44)
+DEBUG flower 2021-04-08 11:56:29,044 | numpy_client.py:172 | fit, FitIns(clock=46)
+DEBUG flower 2021-04-08 11:56:29,045 | numpy_client.py:260 | cached_clock: 44, curr_clock: 46
+INFO flower 2021-04-08 11:56:29,516 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=46)
+DEBUG flower 2021-04-08 11:56:37,415 | numpy_client.py:172 | fit, FitIns(clock=47)
+DEBUG flower 2021-04-08 11:56:37,415 | numpy_client.py:260 | cached_clock: 44, curr_clock: 47
+INFO flower 2021-04-08 11:56:37,415 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 11:56:42,123 | numpy_client.py:228 | read: ReadRes(clock=45)
+DEBUG flower 2021-04-08 11:56:42,130 | numpy_client.py:172 | fit, FitIns(clock=47)
+DEBUG flower 2021-04-08 11:56:42,130 | numpy_client.py:260 | cached_clock: 45, curr_clock: 47
+INFO flower 2021-04-08 11:56:42,635 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=47)
+DEBUG flower 2021-04-08 11:56:51,242 | numpy_client.py:172 | fit, FitIns(clock=48)
+DEBUG flower 2021-04-08 11:56:51,242 | numpy_client.py:260 | cached_clock: 45, curr_clock: 48
+INFO flower 2021-04-08 11:56:51,242 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 11:56:56,166 | numpy_client.py:228 | read: ReadRes(clock=46)
+DEBUG flower 2021-04-08 11:56:56,173 | numpy_client.py:172 | fit, FitIns(clock=48)
+DEBUG flower 2021-04-08 11:56:56,174 | numpy_client.py:260 | cached_clock: 46, curr_clock: 48
+INFO flower 2021-04-08 11:56:56,744 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=48)
+DEBUG flower 2021-04-08 11:57:04,910 | numpy_client.py:172 | fit, FitIns(clock=49)
+DEBUG flower 2021-04-08 11:57:04,910 | numpy_client.py:260 | cached_clock: 46, curr_clock: 49
+INFO flower 2021-04-08 11:57:04,911 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 11:57:09,722 | numpy_client.py:228 | read: ReadRes(clock=47)
+DEBUG flower 2021-04-08 11:57:09,729 | numpy_client.py:172 | fit, FitIns(clock=49)
+DEBUG flower 2021-04-08 11:57:09,729 | numpy_client.py:260 | cached_clock: 47, curr_clock: 49
+INFO flower 2021-04-08 11:57:10,204 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=49)
+DEBUG flower 2021-04-08 11:57:18,442 | numpy_client.py:172 | fit, FitIns(clock=50)
+DEBUG flower 2021-04-08 11:57:18,442 | numpy_client.py:260 | cached_clock: 47, curr_clock: 50
+INFO flower 2021-04-08 11:57:18,442 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 11:57:23,009 | numpy_client.py:228 | read: ReadRes(clock=48)
+DEBUG flower 2021-04-08 11:57:23,016 | numpy_client.py:172 | fit, FitIns(clock=50)
+DEBUG flower 2021-04-08 11:57:23,016 | numpy_client.py:260 | cached_clock: 48, curr_clock: 50
+INFO flower 2021-04-08 11:57:23,505 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=50)
+DEBUG flower 2021-04-08 11:57:32,025 | numpy_client.py:172 | fit, FitIns(clock=51)
+DEBUG flower 2021-04-08 11:57:32,026 | numpy_client.py:260 | cached_clock: 48, curr_clock: 51
+INFO flower 2021-04-08 11:57:32,026 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 11:57:36,614 | numpy_client.py:228 | read: ReadRes(clock=49)
+DEBUG flower 2021-04-08 11:57:36,622 | numpy_client.py:172 | fit, FitIns(clock=51)
+DEBUG flower 2021-04-08 11:57:36,622 | numpy_client.py:260 | cached_clock: 49, curr_clock: 51
+INFO flower 2021-04-08 11:57:37,233 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=51)
+DEBUG flower 2021-04-08 11:57:45,335 | numpy_client.py:172 | fit, FitIns(clock=52)
+DEBUG flower 2021-04-08 11:57:45,335 | numpy_client.py:260 | cached_clock: 49, curr_clock: 52
+INFO flower 2021-04-08 11:57:45,335 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 11:57:50,653 | numpy_client.py:228 | read: ReadRes(clock=50)
+DEBUG flower 2021-04-08 11:57:50,660 | numpy_client.py:172 | fit, FitIns(clock=52)
+DEBUG flower 2021-04-08 11:57:50,660 | numpy_client.py:260 | cached_clock: 50, curr_clock: 52
+INFO flower 2021-04-08 11:57:51,118 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=52)
+DEBUG flower 2021-04-08 11:57:59,627 | numpy_client.py:172 | fit, FitIns(clock=53)
+DEBUG flower 2021-04-08 11:57:59,627 | numpy_client.py:260 | cached_clock: 50, curr_clock: 53
+INFO flower 2021-04-08 11:57:59,627 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 11:58:04,940 | numpy_client.py:228 | read: ReadRes(clock=51)
+DEBUG flower 2021-04-08 11:58:04,948 | numpy_client.py:172 | fit, FitIns(clock=53)
+DEBUG flower 2021-04-08 11:58:04,948 | numpy_client.py:260 | cached_clock: 51, curr_clock: 53
+INFO flower 2021-04-08 11:58:05,440 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=53)
+DEBUG flower 2021-04-08 11:58:13,723 | numpy_client.py:172 | fit, FitIns(clock=54)
+DEBUG flower 2021-04-08 11:58:13,723 | numpy_client.py:260 | cached_clock: 51, curr_clock: 54
+INFO flower 2021-04-08 11:58:13,723 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 11:58:18,560 | numpy_client.py:228 | read: ReadRes(clock=52)
+DEBUG flower 2021-04-08 11:58:18,567 | numpy_client.py:172 | fit, FitIns(clock=54)
+DEBUG flower 2021-04-08 11:58:18,567 | numpy_client.py:260 | cached_clock: 52, curr_clock: 54
+INFO flower 2021-04-08 11:58:19,016 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=54)
+DEBUG flower 2021-04-08 11:58:27,112 | numpy_client.py:172 | fit, FitIns(clock=55)
+DEBUG flower 2021-04-08 11:58:27,112 | numpy_client.py:260 | cached_clock: 52, curr_clock: 55
+INFO flower 2021-04-08 11:58:27,112 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 11:58:31,782 | numpy_client.py:228 | read: ReadRes(clock=53)
+DEBUG flower 2021-04-08 11:58:31,790 | numpy_client.py:172 | fit, FitIns(clock=55)
+DEBUG flower 2021-04-08 11:58:31,790 | numpy_client.py:260 | cached_clock: 53, curr_clock: 55
+INFO flower 2021-04-08 11:58:32,236 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=55)
+DEBUG flower 2021-04-08 11:58:40,901 | numpy_client.py:172 | fit, FitIns(clock=56)
+DEBUG flower 2021-04-08 11:58:40,901 | numpy_client.py:260 | cached_clock: 53, curr_clock: 56
+INFO flower 2021-04-08 11:58:40,902 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 11:58:45,730 | numpy_client.py:228 | read: ReadRes(clock=54)
+DEBUG flower 2021-04-08 11:58:45,737 | numpy_client.py:172 | fit, FitIns(clock=56)
+DEBUG flower 2021-04-08 11:58:45,737 | numpy_client.py:260 | cached_clock: 54, curr_clock: 56
+INFO flower 2021-04-08 11:58:46,326 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=56)
+DEBUG flower 2021-04-08 11:58:54,612 | numpy_client.py:172 | fit, FitIns(clock=57)
+DEBUG flower 2021-04-08 11:58:54,612 | numpy_client.py:260 | cached_clock: 54, curr_clock: 57
+INFO flower 2021-04-08 11:58:54,612 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 11:58:59,303 | numpy_client.py:228 | read: ReadRes(clock=55)
+DEBUG flower 2021-04-08 11:58:59,310 | numpy_client.py:172 | fit, FitIns(clock=57)
+DEBUG flower 2021-04-08 11:58:59,310 | numpy_client.py:260 | cached_clock: 55, curr_clock: 57
+INFO flower 2021-04-08 11:58:59,801 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=57)
+DEBUG flower 2021-04-08 11:59:08,117 | numpy_client.py:172 | fit, FitIns(clock=58)
+DEBUG flower 2021-04-08 11:59:08,117 | numpy_client.py:260 | cached_clock: 55, curr_clock: 58
+INFO flower 2021-04-08 11:59:08,117 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 11:59:12,735 | numpy_client.py:228 | read: ReadRes(clock=56)
+DEBUG flower 2021-04-08 11:59:12,742 | numpy_client.py:172 | fit, FitIns(clock=58)
+DEBUG flower 2021-04-08 11:59:12,742 | numpy_client.py:260 | cached_clock: 56, curr_clock: 58
+INFO flower 2021-04-08 11:59:13,217 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=58)
+DEBUG flower 2021-04-08 11:59:21,705 | numpy_client.py:172 | fit, FitIns(clock=59)
+DEBUG flower 2021-04-08 11:59:21,705 | numpy_client.py:260 | cached_clock: 56, curr_clock: 59
+INFO flower 2021-04-08 11:59:21,705 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 11:59:26,521 | numpy_client.py:228 | read: ReadRes(clock=57)
+DEBUG flower 2021-04-08 11:59:26,528 | numpy_client.py:172 | fit, FitIns(clock=59)
+DEBUG flower 2021-04-08 11:59:26,528 | numpy_client.py:260 | cached_clock: 57, curr_clock: 59
+INFO flower 2021-04-08 11:59:27,110 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=59)
+DEBUG flower 2021-04-08 11:59:35,538 | numpy_client.py:172 | fit, FitIns(clock=60)
+DEBUG flower 2021-04-08 11:59:35,538 | numpy_client.py:260 | cached_clock: 57, curr_clock: 60
+INFO flower 2021-04-08 11:59:35,538 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 11:59:40,336 | numpy_client.py:228 | read: ReadRes(clock=58)
+DEBUG flower 2021-04-08 11:59:40,343 | numpy_client.py:172 | fit, FitIns(clock=60)
+DEBUG flower 2021-04-08 11:59:40,343 | numpy_client.py:260 | cached_clock: 58, curr_clock: 60
+INFO flower 2021-04-08 11:59:40,818 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=60)
+DEBUG flower 2021-04-08 11:59:49,600 | numpy_client.py:172 | fit, FitIns(clock=61)
+DEBUG flower 2021-04-08 11:59:49,600 | numpy_client.py:260 | cached_clock: 58, curr_clock: 61
+INFO flower 2021-04-08 11:59:49,600 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 11:59:54,634 | numpy_client.py:228 | read: ReadRes(clock=59)
+DEBUG flower 2021-04-08 11:59:54,641 | numpy_client.py:172 | fit, FitIns(clock=61)
+DEBUG flower 2021-04-08 11:59:54,641 | numpy_client.py:260 | cached_clock: 59, curr_clock: 61
+INFO flower 2021-04-08 11:59:55,119 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=61)
+DEBUG flower 2021-04-08 12:00:03,482 | numpy_client.py:172 | fit, FitIns(clock=62)
+DEBUG flower 2021-04-08 12:00:03,482 | numpy_client.py:260 | cached_clock: 59, curr_clock: 62
+INFO flower 2021-04-08 12:00:03,482 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 12:00:08,230 | numpy_client.py:228 | read: ReadRes(clock=60)
+DEBUG flower 2021-04-08 12:00:08,237 | numpy_client.py:172 | fit, FitIns(clock=62)
+DEBUG flower 2021-04-08 12:00:08,237 | numpy_client.py:260 | cached_clock: 60, curr_clock: 62
+INFO flower 2021-04-08 12:00:08,724 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=62)
+DEBUG flower 2021-04-08 12:00:16,816 | numpy_client.py:172 | fit, FitIns(clock=63)
+DEBUG flower 2021-04-08 12:00:16,817 | numpy_client.py:260 | cached_clock: 60, curr_clock: 63
+INFO flower 2021-04-08 12:00:16,817 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 12:00:21,242 | numpy_client.py:228 | read: ReadRes(clock=61)
+DEBUG flower 2021-04-08 12:00:21,250 | numpy_client.py:172 | fit, FitIns(clock=63)
+DEBUG flower 2021-04-08 12:00:21,250 | numpy_client.py:260 | cached_clock: 61, curr_clock: 63
+INFO flower 2021-04-08 12:00:21,705 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=63)
+DEBUG flower 2021-04-08 12:00:29,940 | numpy_client.py:172 | fit, FitIns(clock=64)
+DEBUG flower 2021-04-08 12:00:29,940 | numpy_client.py:260 | cached_clock: 61, curr_clock: 64
+INFO flower 2021-04-08 12:00:29,940 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 12:00:35,103 | numpy_client.py:228 | read: ReadRes(clock=62)
+DEBUG flower 2021-04-08 12:00:35,110 | numpy_client.py:172 | fit, FitIns(clock=64)
+DEBUG flower 2021-04-08 12:00:35,110 | numpy_client.py:260 | cached_clock: 62, curr_clock: 64
+INFO flower 2021-04-08 12:00:35,653 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=64)
+DEBUG flower 2021-04-08 12:00:43,711 | numpy_client.py:172 | fit, FitIns(clock=65)
+DEBUG flower 2021-04-08 12:00:43,712 | numpy_client.py:260 | cached_clock: 62, curr_clock: 65
+INFO flower 2021-04-08 12:00:43,712 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 12:00:48,403 | numpy_client.py:228 | read: ReadRes(clock=63)
+DEBUG flower 2021-04-08 12:00:48,417 | numpy_client.py:172 | fit, FitIns(clock=65)
+DEBUG flower 2021-04-08 12:00:48,417 | numpy_client.py:260 | cached_clock: 63, curr_clock: 65
+INFO flower 2021-04-08 12:00:48,916 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=65)
+DEBUG flower 2021-04-08 12:00:57,202 | numpy_client.py:172 | fit, FitIns(clock=66)
+DEBUG flower 2021-04-08 12:00:57,203 | numpy_client.py:260 | cached_clock: 63, curr_clock: 66
+INFO flower 2021-04-08 12:00:57,203 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 12:01:02,246 | numpy_client.py:228 | read: ReadRes(clock=64)
+DEBUG flower 2021-04-08 12:01:02,253 | numpy_client.py:172 | fit, FitIns(clock=66)
+DEBUG flower 2021-04-08 12:01:02,253 | numpy_client.py:260 | cached_clock: 64, curr_clock: 66
+INFO flower 2021-04-08 12:01:02,634 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=66)
+DEBUG flower 2021-04-08 12:01:11,215 | numpy_client.py:172 | fit, FitIns(clock=67)
+DEBUG flower 2021-04-08 12:01:11,215 | numpy_client.py:260 | cached_clock: 64, curr_clock: 67
+INFO flower 2021-04-08 12:01:11,215 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 12:01:15,766 | numpy_client.py:228 | read: ReadRes(clock=65)
+DEBUG flower 2021-04-08 12:01:15,773 | numpy_client.py:172 | fit, FitIns(clock=67)
+DEBUG flower 2021-04-08 12:01:15,774 | numpy_client.py:260 | cached_clock: 65, curr_clock: 67
+INFO flower 2021-04-08 12:01:16,222 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=67)
+DEBUG flower 2021-04-08 12:01:24,834 | numpy_client.py:172 | fit, FitIns(clock=68)
+DEBUG flower 2021-04-08 12:01:24,834 | numpy_client.py:260 | cached_clock: 65, curr_clock: 68
+INFO flower 2021-04-08 12:01:24,835 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 12:01:29,322 | numpy_client.py:228 | read: ReadRes(clock=66)
+DEBUG flower 2021-04-08 12:01:29,329 | numpy_client.py:172 | fit, FitIns(clock=68)
+DEBUG flower 2021-04-08 12:01:29,329 | numpy_client.py:260 | cached_clock: 66, curr_clock: 68
+INFO flower 2021-04-08 12:01:29,815 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=68)
+DEBUG flower 2021-04-08 12:01:38,013 | numpy_client.py:172 | fit, FitIns(clock=69)
+DEBUG flower 2021-04-08 12:01:38,013 | numpy_client.py:260 | cached_clock: 66, curr_clock: 69
+INFO flower 2021-04-08 12:01:38,013 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 12:01:42,784 | numpy_client.py:228 | read: ReadRes(clock=67)
+DEBUG flower 2021-04-08 12:01:42,791 | numpy_client.py:172 | fit, FitIns(clock=69)
+DEBUG flower 2021-04-08 12:01:42,791 | numpy_client.py:260 | cached_clock: 67, curr_clock: 69
+INFO flower 2021-04-08 12:01:43,302 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=69)
+DEBUG flower 2021-04-08 12:01:51,813 | numpy_client.py:172 | fit, FitIns(clock=70)
+DEBUG flower 2021-04-08 12:01:51,813 | numpy_client.py:260 | cached_clock: 67, curr_clock: 70
+INFO flower 2021-04-08 12:01:51,813 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 12:01:56,403 | numpy_client.py:228 | read: ReadRes(clock=68)
+DEBUG flower 2021-04-08 12:01:56,410 | numpy_client.py:172 | fit, FitIns(clock=70)
+DEBUG flower 2021-04-08 12:01:56,410 | numpy_client.py:260 | cached_clock: 68, curr_clock: 70
+INFO flower 2021-04-08 12:01:56,852 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=70)
+DEBUG flower 2021-04-08 12:02:05,238 | numpy_client.py:172 | fit, FitIns(clock=71)
+DEBUG flower 2021-04-08 12:02:05,239 | numpy_client.py:260 | cached_clock: 68, curr_clock: 71
+INFO flower 2021-04-08 12:02:05,239 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 12:02:09,702 | numpy_client.py:228 | read: ReadRes(clock=69)
+DEBUG flower 2021-04-08 12:02:09,710 | numpy_client.py:172 | fit, FitIns(clock=71)
+DEBUG flower 2021-04-08 12:02:09,710 | numpy_client.py:260 | cached_clock: 69, curr_clock: 71
+INFO flower 2021-04-08 12:02:10,214 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=71)
+DEBUG flower 2021-04-08 12:02:19,024 | numpy_client.py:172 | fit, FitIns(clock=72)
+DEBUG flower 2021-04-08 12:02:19,024 | numpy_client.py:260 | cached_clock: 69, curr_clock: 72
+INFO flower 2021-04-08 12:02:19,024 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 12:02:23,654 | numpy_client.py:228 | read: ReadRes(clock=70)
+DEBUG flower 2021-04-08 12:02:23,661 | numpy_client.py:172 | fit, FitIns(clock=72)
+DEBUG flower 2021-04-08 12:02:23,661 | numpy_client.py:260 | cached_clock: 70, curr_clock: 72
+INFO flower 2021-04-08 12:02:24,118 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=72)
+DEBUG flower 2021-04-08 12:02:31,699 | numpy_client.py:172 | fit, FitIns(clock=73)
+DEBUG flower 2021-04-08 12:02:31,699 | numpy_client.py:260 | cached_clock: 70, curr_clock: 73
+INFO flower 2021-04-08 12:02:31,699 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 12:02:36,245 | numpy_client.py:228 | read: ReadRes(clock=71)
+DEBUG flower 2021-04-08 12:02:36,252 | numpy_client.py:172 | fit, FitIns(clock=73)
+DEBUG flower 2021-04-08 12:02:36,252 | numpy_client.py:260 | cached_clock: 71, curr_clock: 73
+INFO flower 2021-04-08 12:02:36,639 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=73)
+DEBUG flower 2021-04-08 12:02:45,040 | numpy_client.py:172 | fit, FitIns(clock=74)
+DEBUG flower 2021-04-08 12:02:45,040 | numpy_client.py:260 | cached_clock: 71, curr_clock: 74
+INFO flower 2021-04-08 12:02:45,041 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 12:02:50,570 | numpy_client.py:228 | read: ReadRes(clock=72)
+DEBUG flower 2021-04-08 12:02:50,578 | numpy_client.py:172 | fit, FitIns(clock=74)
+DEBUG flower 2021-04-08 12:02:50,578 | numpy_client.py:260 | cached_clock: 72, curr_clock: 74
+INFO flower 2021-04-08 12:02:51,034 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=74)
+DEBUG flower 2021-04-08 12:02:59,633 | numpy_client.py:172 | fit, FitIns(clock=75)
+DEBUG flower 2021-04-08 12:02:59,633 | numpy_client.py:260 | cached_clock: 72, curr_clock: 75
+INFO flower 2021-04-08 12:02:59,633 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 12:03:04,802 | numpy_client.py:228 | read: ReadRes(clock=73)
+DEBUG flower 2021-04-08 12:03:04,809 | numpy_client.py:172 | fit, FitIns(clock=75)
+DEBUG flower 2021-04-08 12:03:04,809 | numpy_client.py:260 | cached_clock: 73, curr_clock: 75
+INFO flower 2021-04-08 12:03:05,315 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=75)
+DEBUG flower 2021-04-08 12:03:13,619 | numpy_client.py:172 | fit, FitIns(clock=76)
+DEBUG flower 2021-04-08 12:03:13,619 | numpy_client.py:260 | cached_clock: 73, curr_clock: 76
+INFO flower 2021-04-08 12:03:13,619 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 12:03:18,480 | numpy_client.py:228 | read: ReadRes(clock=74)
+DEBUG flower 2021-04-08 12:03:18,487 | numpy_client.py:172 | fit, FitIns(clock=76)
+DEBUG flower 2021-04-08 12:03:18,487 | numpy_client.py:260 | cached_clock: 74, curr_clock: 76
+INFO flower 2021-04-08 12:03:19,106 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=76)
+DEBUG flower 2021-04-08 12:03:27,284 | numpy_client.py:172 | fit, FitIns(clock=77)
+DEBUG flower 2021-04-08 12:03:27,284 | numpy_client.py:260 | cached_clock: 74, curr_clock: 77
+INFO flower 2021-04-08 12:03:27,284 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 12:03:32,131 | numpy_client.py:228 | read: ReadRes(clock=75)
+DEBUG flower 2021-04-08 12:03:32,138 | numpy_client.py:172 | fit, FitIns(clock=77)
+DEBUG flower 2021-04-08 12:03:32,138 | numpy_client.py:260 | cached_clock: 75, curr_clock: 77
+INFO flower 2021-04-08 12:03:32,705 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=77)
+DEBUG flower 2021-04-08 12:03:41,102 | numpy_client.py:172 | fit, FitIns(clock=78)
+DEBUG flower 2021-04-08 12:03:41,102 | numpy_client.py:260 | cached_clock: 75, curr_clock: 78
+INFO flower 2021-04-08 12:03:41,102 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 12:03:46,153 | numpy_client.py:228 | read: ReadRes(clock=76)
+DEBUG flower 2021-04-08 12:03:46,160 | numpy_client.py:172 | fit, FitIns(clock=78)
+DEBUG flower 2021-04-08 12:03:46,160 | numpy_client.py:260 | cached_clock: 76, curr_clock: 78
+INFO flower 2021-04-08 12:03:46,712 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=78)
+DEBUG flower 2021-04-08 12:03:54,706 | numpy_client.py:172 | fit, FitIns(clock=79)
+DEBUG flower 2021-04-08 12:03:54,707 | numpy_client.py:260 | cached_clock: 76, curr_clock: 79
+INFO flower 2021-04-08 12:03:54,707 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 12:03:59,345 | numpy_client.py:228 | read: ReadRes(clock=77)
+DEBUG flower 2021-04-08 12:03:59,354 | numpy_client.py:172 | fit, FitIns(clock=79)
+DEBUG flower 2021-04-08 12:03:59,354 | numpy_client.py:260 | cached_clock: 77, curr_clock: 79
+INFO flower 2021-04-08 12:03:59,918 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=79)
+DEBUG flower 2021-04-08 12:04:08,131 | numpy_client.py:172 | fit, FitIns(clock=80)
+DEBUG flower 2021-04-08 12:04:08,131 | numpy_client.py:260 | cached_clock: 77, curr_clock: 80
+INFO flower 2021-04-08 12:04:08,131 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 12:04:13,046 | numpy_client.py:228 | read: ReadRes(clock=78)
+DEBUG flower 2021-04-08 12:04:13,053 | numpy_client.py:172 | fit, FitIns(clock=80)
+DEBUG flower 2021-04-08 12:04:13,053 | numpy_client.py:260 | cached_clock: 78, curr_clock: 80
+INFO flower 2021-04-08 12:04:13,518 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=80)
+DEBUG flower 2021-04-08 12:04:22,308 | numpy_client.py:172 | fit, FitIns(clock=81)
+DEBUG flower 2021-04-08 12:04:22,308 | numpy_client.py:260 | cached_clock: 78, curr_clock: 81
+INFO flower 2021-04-08 12:04:22,309 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 12:04:26,736 | numpy_client.py:228 | read: ReadRes(clock=79)
+DEBUG flower 2021-04-08 12:04:26,744 | numpy_client.py:172 | fit, FitIns(clock=81)
+DEBUG flower 2021-04-08 12:04:26,744 | numpy_client.py:260 | cached_clock: 79, curr_clock: 81
+INFO flower 2021-04-08 12:04:27,217 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=81)
+DEBUG flower 2021-04-08 12:04:35,592 | numpy_client.py:172 | fit, FitIns(clock=82)
+DEBUG flower 2021-04-08 12:04:35,592 | numpy_client.py:260 | cached_clock: 79, curr_clock: 82
+INFO flower 2021-04-08 12:04:35,592 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 12:04:40,252 | numpy_client.py:228 | read: ReadRes(clock=80)
+DEBUG flower 2021-04-08 12:04:40,259 | numpy_client.py:172 | fit, FitIns(clock=82)
+DEBUG flower 2021-04-08 12:04:40,259 | numpy_client.py:260 | cached_clock: 80, curr_clock: 82
+INFO flower 2021-04-08 12:04:40,718 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=82)
+DEBUG flower 2021-04-08 12:04:48,752 | numpy_client.py:172 | fit, FitIns(clock=83)
+DEBUG flower 2021-04-08 12:04:48,752 | numpy_client.py:260 | cached_clock: 80, curr_clock: 83
+INFO flower 2021-04-08 12:04:48,752 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 12:04:53,648 | numpy_client.py:228 | read: ReadRes(clock=81)
+DEBUG flower 2021-04-08 12:04:53,655 | numpy_client.py:172 | fit, FitIns(clock=83)
+DEBUG flower 2021-04-08 12:04:53,656 | numpy_client.py:260 | cached_clock: 81, curr_clock: 83
+INFO flower 2021-04-08 12:04:54,115 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=83)
+DEBUG flower 2021-04-08 12:05:02,341 | numpy_client.py:172 | fit, FitIns(clock=84)
+DEBUG flower 2021-04-08 12:05:02,342 | numpy_client.py:260 | cached_clock: 81, curr_clock: 84
+INFO flower 2021-04-08 12:05:02,342 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 12:05:07,348 | numpy_client.py:228 | read: ReadRes(clock=82)
+DEBUG flower 2021-04-08 12:05:07,355 | numpy_client.py:172 | fit, FitIns(clock=84)
+DEBUG flower 2021-04-08 12:05:07,355 | numpy_client.py:260 | cached_clock: 82, curr_clock: 84
+INFO flower 2021-04-08 12:05:07,814 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=84)
+DEBUG flower 2021-04-08 12:05:16,499 | numpy_client.py:172 | fit, FitIns(clock=85)
+DEBUG flower 2021-04-08 12:05:16,499 | numpy_client.py:260 | cached_clock: 82, curr_clock: 85
+INFO flower 2021-04-08 12:05:16,499 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 12:05:21,452 | numpy_client.py:228 | read: ReadRes(clock=83)
+DEBUG flower 2021-04-08 12:05:21,459 | numpy_client.py:172 | fit, FitIns(clock=85)
+DEBUG flower 2021-04-08 12:05:21,459 | numpy_client.py:260 | cached_clock: 83, curr_clock: 85
+INFO flower 2021-04-08 12:05:22,007 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=85)
+DEBUG flower 2021-04-08 12:05:30,348 | numpy_client.py:172 | fit, FitIns(clock=86)
+DEBUG flower 2021-04-08 12:05:30,349 | numpy_client.py:260 | cached_clock: 83, curr_clock: 86
+INFO flower 2021-04-08 12:05:30,349 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 12:05:35,040 | numpy_client.py:228 | read: ReadRes(clock=84)
+DEBUG flower 2021-04-08 12:05:35,048 | numpy_client.py:172 | fit, FitIns(clock=86)
+DEBUG flower 2021-04-08 12:05:35,048 | numpy_client.py:260 | cached_clock: 84, curr_clock: 86
+INFO flower 2021-04-08 12:05:35,439 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=86)
+DEBUG flower 2021-04-08 12:05:43,525 | numpy_client.py:172 | fit, FitIns(clock=87)
+DEBUG flower 2021-04-08 12:05:43,526 | numpy_client.py:260 | cached_clock: 84, curr_clock: 87
+INFO flower 2021-04-08 12:05:43,526 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 12:05:48,638 | numpy_client.py:228 | read: ReadRes(clock=85)
+DEBUG flower 2021-04-08 12:05:48,645 | numpy_client.py:172 | fit, FitIns(clock=87)
+DEBUG flower 2021-04-08 12:05:48,645 | numpy_client.py:260 | cached_clock: 85, curr_clock: 87
+INFO flower 2021-04-08 12:05:49,117 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=87)
+DEBUG flower 2021-04-08 12:05:58,206 | numpy_client.py:172 | fit, FitIns(clock=88)
+DEBUG flower 2021-04-08 12:05:58,206 | numpy_client.py:260 | cached_clock: 85, curr_clock: 88
+INFO flower 2021-04-08 12:05:58,206 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 12:06:03,165 | numpy_client.py:228 | read: ReadRes(clock=86)
+DEBUG flower 2021-04-08 12:06:03,172 | numpy_client.py:172 | fit, FitIns(clock=88)
+DEBUG flower 2021-04-08 12:06:03,172 | numpy_client.py:260 | cached_clock: 86, curr_clock: 88
+INFO flower 2021-04-08 12:06:03,636 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=88)
+DEBUG flower 2021-04-08 12:06:11,724 | numpy_client.py:172 | fit, FitIns(clock=89)
+DEBUG flower 2021-04-08 12:06:11,724 | numpy_client.py:260 | cached_clock: 86, curr_clock: 89
+INFO flower 2021-04-08 12:06:11,724 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 12:06:16,353 | numpy_client.py:228 | read: ReadRes(clock=87)
+DEBUG flower 2021-04-08 12:06:16,361 | numpy_client.py:172 | fit, FitIns(clock=89)
+DEBUG flower 2021-04-08 12:06:16,361 | numpy_client.py:260 | cached_clock: 87, curr_clock: 89
+INFO flower 2021-04-08 12:06:16,912 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=89)
+DEBUG flower 2021-04-08 12:06:26,093 | numpy_client.py:172 | fit, FitIns(clock=90)
+DEBUG flower 2021-04-08 12:06:26,094 | numpy_client.py:260 | cached_clock: 87, curr_clock: 90
+INFO flower 2021-04-08 12:06:26,094 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 12:06:30,753 | numpy_client.py:228 | read: ReadRes(clock=88)
+DEBUG flower 2021-04-08 12:06:30,763 | numpy_client.py:172 | fit, FitIns(clock=90)
+DEBUG flower 2021-04-08 12:06:30,763 | numpy_client.py:260 | cached_clock: 88, curr_clock: 90
+INFO flower 2021-04-08 12:06:31,214 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=90)
+DEBUG flower 2021-04-08 12:06:39,615 | numpy_client.py:172 | fit, FitIns(clock=91)
+DEBUG flower 2021-04-08 12:06:39,615 | numpy_client.py:260 | cached_clock: 88, curr_clock: 91
+INFO flower 2021-04-08 12:06:39,615 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 12:06:44,455 | numpy_client.py:228 | read: ReadRes(clock=89)
+DEBUG flower 2021-04-08 12:06:44,462 | numpy_client.py:172 | fit, FitIns(clock=91)
+DEBUG flower 2021-04-08 12:06:44,462 | numpy_client.py:260 | cached_clock: 89, curr_clock: 91
+INFO flower 2021-04-08 12:06:44,915 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=91)
+DEBUG flower 2021-04-08 12:06:52,735 | numpy_client.py:172 | fit, FitIns(clock=92)
+DEBUG flower 2021-04-08 12:06:52,736 | numpy_client.py:260 | cached_clock: 89, curr_clock: 92
+INFO flower 2021-04-08 12:06:52,736 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 12:06:57,436 | numpy_client.py:228 | read: ReadRes(clock=90)
+DEBUG flower 2021-04-08 12:06:57,443 | numpy_client.py:172 | fit, FitIns(clock=92)
+DEBUG flower 2021-04-08 12:06:57,443 | numpy_client.py:260 | cached_clock: 90, curr_clock: 92
+INFO flower 2021-04-08 12:06:57,945 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=92)
+DEBUG flower 2021-04-08 12:07:06,318 | numpy_client.py:172 | fit, FitIns(clock=93)
+DEBUG flower 2021-04-08 12:07:06,318 | numpy_client.py:260 | cached_clock: 90, curr_clock: 93
+INFO flower 2021-04-08 12:07:06,318 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 12:07:10,856 | numpy_client.py:228 | read: ReadRes(clock=91)
+DEBUG flower 2021-04-08 12:07:10,864 | numpy_client.py:172 | fit, FitIns(clock=93)
+DEBUG flower 2021-04-08 12:07:10,864 | numpy_client.py:260 | cached_clock: 91, curr_clock: 93
+INFO flower 2021-04-08 12:07:11,314 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=93)
+DEBUG flower 2021-04-08 12:07:19,533 | numpy_client.py:172 | fit, FitIns(clock=94)
+DEBUG flower 2021-04-08 12:07:19,533 | numpy_client.py:260 | cached_clock: 91, curr_clock: 94
+INFO flower 2021-04-08 12:07:19,533 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 12:07:24,430 | numpy_client.py:228 | read: ReadRes(clock=92)
+DEBUG flower 2021-04-08 12:07:24,437 | numpy_client.py:172 | fit, FitIns(clock=94)
+DEBUG flower 2021-04-08 12:07:24,437 | numpy_client.py:260 | cached_clock: 92, curr_clock: 94
+INFO flower 2021-04-08 12:07:25,017 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=94)
+DEBUG flower 2021-04-08 12:07:33,379 | numpy_client.py:172 | fit, FitIns(clock=95)
+DEBUG flower 2021-04-08 12:07:33,380 | numpy_client.py:260 | cached_clock: 92, curr_clock: 95
+INFO flower 2021-04-08 12:07:33,380 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 12:07:38,055 | numpy_client.py:228 | read: ReadRes(clock=93)
+DEBUG flower 2021-04-08 12:07:38,063 | numpy_client.py:172 | fit, FitIns(clock=95)
+DEBUG flower 2021-04-08 12:07:38,063 | numpy_client.py:260 | cached_clock: 93, curr_clock: 95
+INFO flower 2021-04-08 12:07:38,518 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=95)
+DEBUG flower 2021-04-08 12:07:47,491 | numpy_client.py:172 | fit, FitIns(clock=96)
+DEBUG flower 2021-04-08 12:07:47,491 | numpy_client.py:260 | cached_clock: 93, curr_clock: 96
+INFO flower 2021-04-08 12:07:47,491 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 12:07:52,511 | numpy_client.py:228 | read: ReadRes(clock=94)
+DEBUG flower 2021-04-08 12:07:52,518 | numpy_client.py:172 | fit, FitIns(clock=96)
+DEBUG flower 2021-04-08 12:07:52,518 | numpy_client.py:260 | cached_clock: 94, curr_clock: 96
+INFO flower 2021-04-08 12:07:53,110 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=96)
+DEBUG flower 2021-04-08 12:08:01,323 | numpy_client.py:172 | fit, FitIns(clock=97)
+DEBUG flower 2021-04-08 12:08:01,323 | numpy_client.py:260 | cached_clock: 94, curr_clock: 97
+INFO flower 2021-04-08 12:08:01,323 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 12:08:06,095 | numpy_client.py:228 | read: ReadRes(clock=95)
+DEBUG flower 2021-04-08 12:08:06,102 | numpy_client.py:172 | fit, FitIns(clock=97)
+DEBUG flower 2021-04-08 12:08:06,102 | numpy_client.py:260 | cached_clock: 95, curr_clock: 97
+INFO flower 2021-04-08 12:08:06,605 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=97)
+DEBUG flower 2021-04-08 12:08:15,241 | numpy_client.py:172 | fit, FitIns(clock=98)
+DEBUG flower 2021-04-08 12:08:15,241 | numpy_client.py:260 | cached_clock: 95, curr_clock: 98
+INFO flower 2021-04-08 12:08:15,241 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 12:08:20,047 | numpy_client.py:228 | read: ReadRes(clock=96)
+DEBUG flower 2021-04-08 12:08:20,054 | numpy_client.py:172 | fit, FitIns(clock=98)
+DEBUG flower 2021-04-08 12:08:20,054 | numpy_client.py:260 | cached_clock: 96, curr_clock: 98
+INFO flower 2021-04-08 12:08:20,534 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=98)
+DEBUG flower 2021-04-08 12:08:29,183 | numpy_client.py:172 | fit, FitIns(clock=99)
+DEBUG flower 2021-04-08 12:08:29,183 | numpy_client.py:260 | cached_clock: 96, curr_clock: 99
+INFO flower 2021-04-08 12:08:29,183 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 12:08:33,825 | numpy_client.py:228 | read: ReadRes(clock=97)
+DEBUG flower 2021-04-08 12:08:33,834 | numpy_client.py:172 | fit, FitIns(clock=99)
+DEBUG flower 2021-04-08 12:08:33,834 | numpy_client.py:260 | cached_clock: 97, curr_clock: 99
+INFO flower 2021-04-08 12:08:34,520 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=99)
+DEBUG flower 2021-04-08 12:08:34,521 | numpy_client.py:217 | The client finishes computing after 1328 seconds
+INFO flower 2021-04-08 12:09:19,546 | numpy_client.py:250 | [32;1m Loss: 1.998, Accuracy: 71.875%[0m
+DEBUG flower 2021-04-08 12:09:21,118 | connection.py:68 | Insecure gRPC channel closed
+INFO flower 2021-04-08 12:09:21,118 | app.py:74 | Disconnect and shut down
+Namespace(idx=30, max_delay=0, min_delay=0, num_clients=31, server_ip='10.244.37.27:8080', staleness_bound=2)
+I'm client 30
+Start SSP client without delay
+Files already downloaded and verified
+Files already downloaded and verified
+[32;1mClient 30: 322 train samples, 64 test samples[0m
+loss=24.534693717956543, acc=0.1846590909090909
+loss=24.497732639312744, acc=0.12215909090909091
+loss=24.43402647972107, acc=0.6988636363636364
+loss=24.254367351531982, acc=0.9147727272727273
+loss=25.031002521514893, acc=0.0
+loss=26.488593578338623, acc=0.0
+loss=30.85654902458191, acc=0.0
+loss=42.49451947212219, acc=0.0
+loss=45.53688311576843, acc=0.0
+loss=46.86420655250549, acc=0.0
+loss=47.472336530685425, acc=0.0
+loss=47.8231041431427, acc=0.0
+loss=7.765858560800552, acc=0.8125
+loss=36.01426303386688, acc=0.0
+loss=41.05158460140228, acc=0.0
+loss=43.09753894805908, acc=0.0
+loss=44.370004177093506, acc=0.0
+loss=7.621332556009293, acc=0.8096590909090909
+loss=34.49515235424042, acc=0.0
+loss=39.60617184638977, acc=0.0
+loss=41.834697246551514, acc=0.0
+loss=43.055283308029175, acc=0.0
+loss=43.945034980773926, acc=0.0
+loss=44.63733887672424, acc=0.0
+loss=45.17182660102844, acc=0.0
+loss=45.722797870635986, acc=0.0
+loss=18.198944568634033, acc=0.30113636363636365
+loss=32.19645929336548, acc=0.0
+loss=39.78259515762329, acc=0.0
+loss=42.62022161483765, acc=0.0
+loss=43.96152687072754, acc=0.0
+loss=44.83445882797241, acc=0.0
+loss=45.58592486381531, acc=0.0
+loss=46.21339678764343, acc=0.0
+loss=46.71966195106506, acc=0.0
+loss=47.18718934059143, acc=0.0
+loss=47.52450203895569, acc=0.0
+loss=47.786147117614746, acc=0.0
+loss=48.12258958816528, acc=0.0
+loss=48.383275747299194, acc=0.0
+loss=48.635226249694824, acc=0.0
+loss=48.86653017997742, acc=0.0
+loss=49.07104516029358, acc=0.0
+loss=49.303236961364746, acc=0.0
+loss=49.53295922279358, acc=0.0
+loss=49.70496892929077, acc=0.0
+loss=49.87280058860779, acc=0.0
+loss=50.01019644737244, acc=0.0
+loss=50.205363035202026, acc=0.0
+loss=50.39026761054993, acc=0.0
+loss=50.47189426422119, acc=0.0
+loss=50.60521697998047, acc=0.0
+loss=50.707621812820435, acc=0.0
+loss=50.816723108291626, acc=0.0
+loss=50.920297384262085, acc=0.0
+loss=51.02633452415466, acc=0.0
+loss=51.05215096473694, acc=0.0
+loss=51.105997800827026, acc=0.0
+loss=51.06220006942749, acc=0.0
+loss=51.08064794540405, acc=0.0
+loss=51.059587717056274, acc=0.0
+loss=51.051438093185425, acc=0.0
+loss=50.96214032173157, acc=0.0
+loss=50.89139699935913, acc=0.0
+loss=50.94796442985535, acc=0.0
+loss=50.90230703353882, acc=0.0
+loss=50.82999920845032, acc=0.0
+loss=50.82656002044678, acc=0.0
+loss=50.84366059303284, acc=0.0
+loss=50.792742013931274, acc=0.0
+loss=50.77676463127136, acc=0.0
+loss=50.53526329994202, acc=0.0
+loss=8.51522633433342, acc=0.7045454545454546
+loss=33.113248348236084, acc=0.002840909090909091
+loss=37.101608991622925, acc=0.0
+loss=39.13129425048828, acc=0.0
+loss=40.35361957550049, acc=0.0
+loss=41.26505899429321, acc=0.0
+loss=41.9599974155426, acc=0.0
+loss=42.593124866485596, acc=0.0
+loss=42.92832970619202, acc=0.0
+loss=43.193113565444946, acc=0.0
+loss=43.72166204452515, acc=0.0
+loss=44.14949560165405, acc=0.0
+loss=44.45974636077881, acc=0.0
+loss=44.81588649749756, acc=0.0
+loss=6.900856480002403, acc=0.7386363636363636
+loss=31.844378352165222, acc=0.014204545454545454
+loss=34.358370780944824, acc=0.008522727272727272
+loss=36.27009308338165, acc=0.002840909090909091
+loss=37.55241775512695, acc=0.002840909090909091
+loss=38.521183133125305, acc=0.002840909090909091
+loss=39.15985918045044, acc=0.005681818181818182
+loss=39.66381633281708, acc=0.005681818181818182
+loss=40.16890799999237, acc=0.005681818181818182
+loss=40.712815046310425, acc=0.002840909090909091
+loss=41.16199207305908, acc=0.002840909090909091
+loss=6.910350903868675, acc=0.6988636363636364
+loss=29.813249349594116, acc=0.07102272727272728
+loss=32.387420535087585, acc=0.06818181818181818
+Files already downloaded and verified
+Files already downloaded and verified
+Testing on full test set: 313, 1357.0713429450989, 0.2087
+Testing on partial test set: 2, 1.9976056814193726, 0.71875

@@ -1,0 +1,1048 @@
+DEBUG flower 2021-04-08 13:45:20,119 | connection.py:36 | ChannelConnectivity.IDLE
+DEBUG flower 2021-04-08 13:45:20,174 | connection.py:36 | ChannelConnectivity.READY
+INFO flower 2021-04-08 13:45:20,174 | app.py:63 | Opened (insecure) gRPC connection
+DEBUG flower 2021-04-08 13:45:21,632 | numpy_client.py:172 | fit, FitIns(clock=0)
+INFO flower 2021-04-08 13:45:21,632 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 13:45:21,830 | numpy_client.py:228 | read: ReadRes(clock=-1)
+DEBUG flower 2021-04-08 13:45:21,845 | numpy_client.py:172 | fit, FitIns(clock=0)
+DEBUG flower 2021-04-08 13:45:21,845 | numpy_client.py:260 | cached_clock: -1, curr_clock: 0
+DEBUG flower 2021-04-08 13:45:24,682 | model_wrapper.py:21 | Load existing initial model
+DEBUG flower 2021-04-08 13:45:24,683 | numpy_client.py:201 | Not a switch point
+INFO flower 2021-04-08 13:45:24,687 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=0)
+DEBUG flower 2021-04-08 13:45:24,710 | numpy_client.py:172 | fit, FitIns(clock=1)
+DEBUG flower 2021-04-08 13:45:24,710 | numpy_client.py:260 | cached_clock: -1, curr_clock: 1
+DEBUG flower 2021-04-08 13:45:27,487 | numpy_client.py:201 | Not a switch point
+INFO flower 2021-04-08 13:45:27,490 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=1)
+DEBUG flower 2021-04-08 13:45:35,951 | numpy_client.py:172 | fit, FitIns(clock=2)
+DEBUG flower 2021-04-08 13:45:35,951 | numpy_client.py:260 | cached_clock: -1, curr_clock: 2
+DEBUG flower 2021-04-08 13:45:38,719 | numpy_client.py:201 | Not a switch point
+INFO flower 2021-04-08 13:45:38,775 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=2)
+DEBUG flower 2021-04-08 13:45:38,798 | numpy_client.py:172 | fit, FitIns(clock=3)
+DEBUG flower 2021-04-08 13:45:38,798 | numpy_client.py:260 | cached_clock: -1, curr_clock: 3
+DEBUG flower 2021-04-08 13:45:41,473 | numpy_client.py:201 | Not a switch point
+INFO flower 2021-04-08 13:45:41,477 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=3)
+DEBUG flower 2021-04-08 13:45:49,681 | numpy_client.py:172 | fit, FitIns(clock=4)
+DEBUG flower 2021-04-08 13:45:49,682 | numpy_client.py:260 | cached_clock: -1, curr_clock: 4
+DEBUG flower 2021-04-08 13:45:52,485 | numpy_client.py:201 | Not a switch point
+INFO flower 2021-04-08 13:45:52,489 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=4)
+DEBUG flower 2021-04-08 13:45:52,511 | numpy_client.py:172 | fit, FitIns(clock=5)
+DEBUG flower 2021-04-08 13:45:52,511 | numpy_client.py:260 | cached_clock: -1, curr_clock: 5
+DEBUG flower 2021-04-08 13:45:55,225 | numpy_client.py:201 | Not a switch point
+INFO flower 2021-04-08 13:45:55,274 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=5)
+DEBUG flower 2021-04-08 13:46:03,493 | numpy_client.py:172 | fit, FitIns(clock=6)
+DEBUG flower 2021-04-08 13:46:03,493 | numpy_client.py:260 | cached_clock: -1, curr_clock: 6
+DEBUG flower 2021-04-08 13:46:06,086 | acc_variance.py:19 | AccuracyVariance: sample variance 0.0016246266328710198 (last 7 data)
+DEBUG flower 2021-04-08 13:46:06,086 | numpy_client.py:201 | Not a switch point
+INFO flower 2021-04-08 13:46:06,090 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=6)
+DEBUG flower 2021-04-08 13:46:06,111 | numpy_client.py:172 | fit, FitIns(clock=7)
+DEBUG flower 2021-04-08 13:46:06,111 | numpy_client.py:260 | cached_clock: -1, curr_clock: 7
+DEBUG flower 2021-04-08 13:46:08,775 | acc_variance.py:19 | AccuracyVariance: sample variance 4.3988982207337364e-07 (last 7 data)
+DEBUG flower 2021-04-08 13:46:08,776 | acc_variance.py:23 | AccuracyVariance: should switch
+DEBUG flower 2021-04-08 13:46:08,776 | numpy_client.py:199 | Find switch point, staleness_bound -> 29
+INFO flower 2021-04-08 13:46:08,781 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=7)
+DEBUG flower 2021-04-08 13:46:17,085 | numpy_client.py:172 | fit, FitIns(clock=8)
+DEBUG flower 2021-04-08 13:46:17,085 | numpy_client.py:260 | cached_clock: -1, curr_clock: 8
+DEBUG flower 2021-04-08 13:46:19,776 | acc_variance.py:19 | AccuracyVariance: sample variance 2.6960989094817214e-07 (last 7 data)
+DEBUG flower 2021-04-08 13:46:19,777 | acc_variance.py:23 | AccuracyVariance: should switch
+DEBUG flower 2021-04-08 13:46:19,777 | numpy_client.py:199 | Find switch point, staleness_bound -> 28
+INFO flower 2021-04-08 13:46:19,781 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=8)
+DEBUG flower 2021-04-08 13:46:19,808 | numpy_client.py:172 | fit, FitIns(clock=9)
+DEBUG flower 2021-04-08 13:46:19,808 | numpy_client.py:260 | cached_clock: -1, curr_clock: 9
+DEBUG flower 2021-04-08 13:46:22,381 | acc_variance.py:19 | AccuracyVariance: sample variance 3.8312984503161305e-07 (last 7 data)
+DEBUG flower 2021-04-08 13:46:22,381 | acc_variance.py:23 | AccuracyVariance: should switch
+DEBUG flower 2021-04-08 13:46:22,381 | numpy_client.py:199 | Find switch point, staleness_bound -> 27
+INFO flower 2021-04-08 13:46:22,385 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=9)
+DEBUG flower 2021-04-08 13:46:29,925 | numpy_client.py:172 | fit, FitIns(clock=10)
+DEBUG flower 2021-04-08 13:46:29,925 | numpy_client.py:260 | cached_clock: -1, curr_clock: 10
+DEBUG flower 2021-04-08 13:46:32,779 | acc_variance.py:19 | AccuracyVariance: sample variance 3.8312984503161305e-07 (last 7 data)
+DEBUG flower 2021-04-08 13:46:32,779 | acc_variance.py:23 | AccuracyVariance: should switch
+DEBUG flower 2021-04-08 13:46:32,779 | numpy_client.py:199 | Find switch point, staleness_bound -> 26
+INFO flower 2021-04-08 13:46:32,783 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=10)
+DEBUG flower 2021-04-08 13:46:32,806 | numpy_client.py:172 | fit, FitIns(clock=11)
+DEBUG flower 2021-04-08 13:46:32,806 | numpy_client.py:260 | cached_clock: -1, curr_clock: 11
+DEBUG flower 2021-04-08 13:46:35,689 | acc_variance.py:19 | AccuracyVariance: sample variance 5.959797589381023e-07 (last 7 data)
+DEBUG flower 2021-04-08 13:46:35,689 | acc_variance.py:23 | AccuracyVariance: should switch
+DEBUG flower 2021-04-08 13:46:35,689 | numpy_client.py:199 | Find switch point, staleness_bound -> 25
+INFO flower 2021-04-08 13:46:35,693 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=11)
+DEBUG flower 2021-04-08 13:46:43,413 | numpy_client.py:172 | fit, FitIns(clock=12)
+DEBUG flower 2021-04-08 13:46:43,419 | numpy_client.py:260 | cached_clock: -1, curr_clock: 12
+DEBUG flower 2021-04-08 13:46:46,279 | acc_variance.py:19 | AccuracyVariance: sample variance 8.797796441467391e-07 (last 7 data)
+DEBUG flower 2021-04-08 13:46:46,279 | acc_variance.py:23 | AccuracyVariance: should switch
+DEBUG flower 2021-04-08 13:46:46,279 | numpy_client.py:199 | Find switch point, staleness_bound -> 24
+INFO flower 2021-04-08 13:46:46,283 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=12)
+DEBUG flower 2021-04-08 13:46:46,307 | numpy_client.py:172 | fit, FitIns(clock=13)
+DEBUG flower 2021-04-08 13:46:46,307 | numpy_client.py:260 | cached_clock: -1, curr_clock: 13
+DEBUG flower 2021-04-08 13:46:48,974 | acc_variance.py:19 | AccuracyVariance: sample variance 1.6602293284704384e-06 (last 7 data)
+DEBUG flower 2021-04-08 13:46:48,975 | acc_variance.py:23 | AccuracyVariance: should switch
+DEBUG flower 2021-04-08 13:46:48,975 | numpy_client.py:199 | Find switch point, staleness_bound -> 23
+INFO flower 2021-04-08 13:46:48,978 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=13)
+DEBUG flower 2021-04-08 13:46:56,700 | numpy_client.py:172 | fit, FitIns(clock=14)
+DEBUG flower 2021-04-08 13:46:56,701 | numpy_client.py:260 | cached_clock: -1, curr_clock: 14
+DEBUG flower 2021-04-08 13:46:59,482 | acc_variance.py:19 | AccuracyVariance: sample variance 3.0224687774718626e-06 (last 7 data)
+DEBUG flower 2021-04-08 13:46:59,483 | acc_variance.py:23 | AccuracyVariance: should switch
+DEBUG flower 2021-04-08 13:46:59,483 | numpy_client.py:199 | Find switch point, staleness_bound -> 22
+INFO flower 2021-04-08 13:46:59,486 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=14)
+DEBUG flower 2021-04-08 13:46:59,510 | numpy_client.py:172 | fit, FitIns(clock=15)
+DEBUG flower 2021-04-08 13:46:59,510 | numpy_client.py:260 | cached_clock: -1, curr_clock: 15
+DEBUG flower 2021-04-08 13:47:02,292 | acc_variance.py:19 | AccuracyVariance: sample variance 3.2495086856387336e-06 (last 7 data)
+DEBUG flower 2021-04-08 13:47:02,292 | acc_variance.py:23 | AccuracyVariance: should switch
+DEBUG flower 2021-04-08 13:47:02,292 | numpy_client.py:199 | Find switch point, staleness_bound -> 21
+INFO flower 2021-04-08 13:47:02,296 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=15)
+DEBUG flower 2021-04-08 13:47:10,145 | numpy_client.py:172 | fit, FitIns(clock=16)
+DEBUG flower 2021-04-08 13:47:10,145 | numpy_client.py:260 | cached_clock: -1, curr_clock: 16
+DEBUG flower 2021-04-08 13:47:12,989 | acc_variance.py:19 | AccuracyVariance: sample variance 1.972409202199935e-06 (last 7 data)
+DEBUG flower 2021-04-08 13:47:12,990 | acc_variance.py:23 | AccuracyVariance: should switch
+DEBUG flower 2021-04-08 13:47:12,990 | numpy_client.py:199 | Find switch point, staleness_bound -> 20
+INFO flower 2021-04-08 13:47:12,993 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=16)
+DEBUG flower 2021-04-08 13:47:13,015 | numpy_client.py:172 | fit, FitIns(clock=17)
+DEBUG flower 2021-04-08 13:47:13,015 | numpy_client.py:260 | cached_clock: -1, curr_clock: 17
+DEBUG flower 2021-04-08 13:47:15,988 | acc_variance.py:19 | AccuracyVariance: sample variance 1.2345295006575323e-06 (last 7 data)
+DEBUG flower 2021-04-08 13:47:15,989 | acc_variance.py:23 | AccuracyVariance: should switch
+DEBUG flower 2021-04-08 13:47:15,989 | numpy_client.py:199 | Find switch point, staleness_bound -> 19
+INFO flower 2021-04-08 13:47:15,993 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=17)
+DEBUG flower 2021-04-08 13:47:23,441 | numpy_client.py:172 | fit, FitIns(clock=18)
+DEBUG flower 2021-04-08 13:47:23,441 | numpy_client.py:260 | cached_clock: -1, curr_clock: 18
+DEBUG flower 2021-04-08 13:47:26,207 | acc_variance.py:19 | AccuracyVariance: sample variance 1.7737492825539431e-06 (last 7 data)
+DEBUG flower 2021-04-08 13:47:26,208 | acc_variance.py:23 | AccuracyVariance: should switch
+DEBUG flower 2021-04-08 13:47:26,208 | numpy_client.py:199 | Find switch point, staleness_bound -> 18
+INFO flower 2021-04-08 13:47:26,211 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=18)
+DEBUG flower 2021-04-08 13:47:26,235 | numpy_client.py:172 | fit, FitIns(clock=19)
+DEBUG flower 2021-04-08 13:47:26,235 | numpy_client.py:260 | cached_clock: -1, curr_clock: 19
+INFO flower 2021-04-08 13:47:26,235 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 13:47:26,283 | numpy_client.py:228 | read: ReadRes(clock=8)
+DEBUG flower 2021-04-08 13:47:26,290 | numpy_client.py:172 | fit, FitIns(clock=19)
+DEBUG flower 2021-04-08 13:47:26,290 | numpy_client.py:260 | cached_clock: 8, curr_clock: 19
+DEBUG flower 2021-04-08 13:47:29,086 | acc_variance.py:19 | AccuracyVariance: sample variance 2.681908915221534e-06 (last 7 data)
+DEBUG flower 2021-04-08 13:47:29,087 | acc_variance.py:23 | AccuracyVariance: should switch
+DEBUG flower 2021-04-08 13:47:29,087 | numpy_client.py:199 | Find switch point, staleness_bound -> 17
+INFO flower 2021-04-08 13:47:29,091 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=19)
+DEBUG flower 2021-04-08 13:47:36,590 | numpy_client.py:172 | fit, FitIns(clock=20)
+DEBUG flower 2021-04-08 13:47:36,590 | numpy_client.py:260 | cached_clock: 8, curr_clock: 20
+DEBUG flower 2021-04-08 13:47:39,389 | acc_variance.py:19 | AccuracyVariance: sample variance 8.244386665310438e-06 (last 7 data)
+DEBUG flower 2021-04-08 13:47:39,389 | acc_variance.py:23 | AccuracyVariance: should switch
+DEBUG flower 2021-04-08 13:47:39,390 | numpy_client.py:199 | Find switch point, staleness_bound -> 16
+INFO flower 2021-04-08 13:47:39,393 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=20)
+DEBUG flower 2021-04-08 13:47:39,417 | numpy_client.py:172 | fit, FitIns(clock=21)
+DEBUG flower 2021-04-08 13:47:39,417 | numpy_client.py:260 | cached_clock: 8, curr_clock: 21
+DEBUG flower 2021-04-08 13:47:42,078 | acc_variance.py:19 | AccuracyVariance: sample variance 8.244386665310363e-06 (last 7 data)
+DEBUG flower 2021-04-08 13:47:42,078 | acc_variance.py:23 | AccuracyVariance: should switch
+DEBUG flower 2021-04-08 13:47:42,078 | numpy_client.py:199 | Find switch point, staleness_bound -> 15
+INFO flower 2021-04-08 13:47:42,082 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=21)
+DEBUG flower 2021-04-08 13:47:49,675 | numpy_client.py:172 | fit, FitIns(clock=22)
+DEBUG flower 2021-04-08 13:47:49,675 | numpy_client.py:260 | cached_clock: 8, curr_clock: 22
+DEBUG flower 2021-04-08 13:47:52,374 | acc_variance.py:19 | AccuracyVariance: sample variance 1.8461182532820688e-05 (last 7 data)
+DEBUG flower 2021-04-08 13:47:52,375 | acc_variance.py:23 | AccuracyVariance: should switch
+DEBUG flower 2021-04-08 13:47:52,375 | numpy_client.py:199 | Find switch point, staleness_bound -> 14
+INFO flower 2021-04-08 13:47:52,378 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=22)
+DEBUG flower 2021-04-08 13:47:52,399 | numpy_client.py:172 | fit, FitIns(clock=23)
+DEBUG flower 2021-04-08 13:47:52,399 | numpy_client.py:260 | cached_clock: 8, curr_clock: 23
+INFO flower 2021-04-08 13:47:52,399 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 13:47:52,414 | numpy_client.py:228 | read: ReadRes(clock=10)
+DEBUG flower 2021-04-08 13:47:52,422 | numpy_client.py:172 | fit, FitIns(clock=23)
+DEBUG flower 2021-04-08 13:47:52,422 | numpy_client.py:260 | cached_clock: 10, curr_clock: 23
+DEBUG flower 2021-04-08 13:47:54,979 | acc_variance.py:19 | AccuracyVariance: sample variance 4.3492332408221286e-05 (last 7 data)
+DEBUG flower 2021-04-08 13:47:54,979 | acc_variance.py:23 | AccuracyVariance: should switch
+DEBUG flower 2021-04-08 13:47:54,979 | numpy_client.py:199 | Find switch point, staleness_bound -> 13
+INFO flower 2021-04-08 13:47:54,984 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=23)
+DEBUG flower 2021-04-08 13:48:03,342 | numpy_client.py:172 | fit, FitIns(clock=24)
+DEBUG flower 2021-04-08 13:48:03,342 | numpy_client.py:260 | cached_clock: 10, curr_clock: 24
+INFO flower 2021-04-08 13:48:03,342 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 13:48:03,374 | numpy_client.py:228 | read: ReadRes(clock=11)
+DEBUG flower 2021-04-08 13:48:03,381 | numpy_client.py:172 | fit, FitIns(clock=24)
+DEBUG flower 2021-04-08 13:48:03,381 | numpy_client.py:260 | cached_clock: 11, curr_clock: 24
+DEBUG flower 2021-04-08 13:48:05,980 | acc_variance.py:19 | AccuracyVariance: sample variance 6.291843455075178e-05 (last 7 data)
+DEBUG flower 2021-04-08 13:48:05,980 | acc_variance.py:23 | AccuracyVariance: should switch
+DEBUG flower 2021-04-08 13:48:05,980 | numpy_client.py:199 | Find switch point, staleness_bound -> 12
+INFO flower 2021-04-08 13:48:05,986 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=24)
+DEBUG flower 2021-04-08 13:48:06,010 | numpy_client.py:172 | fit, FitIns(clock=25)
+DEBUG flower 2021-04-08 13:48:06,010 | numpy_client.py:260 | cached_clock: 11, curr_clock: 25
+INFO flower 2021-04-08 13:48:06,010 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 13:48:20,802 | numpy_client.py:228 | read: ReadRes(clock=13)
+DEBUG flower 2021-04-08 13:48:20,810 | numpy_client.py:172 | fit, FitIns(clock=25)
+DEBUG flower 2021-04-08 13:48:20,810 | numpy_client.py:260 | cached_clock: 13, curr_clock: 25
+DEBUG flower 2021-04-08 13:48:23,595 | acc_variance.py:19 | AccuracyVariance: sample variance 5.0246769676186866e-05 (last 7 data)
+DEBUG flower 2021-04-08 13:48:23,596 | acc_variance.py:23 | AccuracyVariance: should switch
+DEBUG flower 2021-04-08 13:48:23,596 | numpy_client.py:199 | Find switch point, staleness_bound -> 11
+INFO flower 2021-04-08 13:48:23,599 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=25)
+DEBUG flower 2021-04-08 13:48:29,839 | numpy_client.py:172 | fit, FitIns(clock=26)
+DEBUG flower 2021-04-08 13:48:29,839 | numpy_client.py:260 | cached_clock: 13, curr_clock: 26
+INFO flower 2021-04-08 13:48:29,839 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 13:48:47,576 | numpy_client.py:228 | read: ReadRes(clock=15)
+DEBUG flower 2021-04-08 13:48:47,585 | numpy_client.py:172 | fit, FitIns(clock=26)
+DEBUG flower 2021-04-08 13:48:47,585 | numpy_client.py:260 | cached_clock: 15, curr_clock: 26
+DEBUG flower 2021-04-08 13:48:50,279 | acc_variance.py:19 | AccuracyVariance: sample variance 0.00013105878698934254 (last 7 data)
+DEBUG flower 2021-04-08 13:48:50,280 | numpy_client.py:201 | Not a switch point
+INFO flower 2021-04-08 13:48:50,285 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=26)
+DEBUG flower 2021-04-08 13:48:57,161 | numpy_client.py:172 | fit, FitIns(clock=27)
+DEBUG flower 2021-04-08 13:48:57,161 | numpy_client.py:260 | cached_clock: 15, curr_clock: 27
+INFO flower 2021-04-08 13:48:57,161 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 13:49:01,983 | numpy_client.py:228 | read: ReadRes(clock=16)
+DEBUG flower 2021-04-08 13:49:01,991 | numpy_client.py:172 | fit, FitIns(clock=27)
+DEBUG flower 2021-04-08 13:49:01,991 | numpy_client.py:260 | cached_clock: 16, curr_clock: 27
+DEBUG flower 2021-04-08 13:49:04,678 | acc_variance.py:19 | AccuracyVariance: sample variance 0.00012453138962954411 (last 7 data)
+DEBUG flower 2021-04-08 13:49:04,679 | numpy_client.py:201 | Not a switch point
+INFO flower 2021-04-08 13:49:04,682 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=27)
+DEBUG flower 2021-04-08 13:49:12,430 | numpy_client.py:172 | fit, FitIns(clock=28)
+DEBUG flower 2021-04-08 13:49:12,430 | numpy_client.py:260 | cached_clock: 16, curr_clock: 28
+INFO flower 2021-04-08 13:49:12,430 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 13:49:16,733 | numpy_client.py:228 | read: ReadRes(clock=17)
+DEBUG flower 2021-04-08 13:49:16,740 | numpy_client.py:172 | fit, FitIns(clock=28)
+DEBUG flower 2021-04-08 13:49:16,741 | numpy_client.py:260 | cached_clock: 17, curr_clock: 28
+DEBUG flower 2021-04-08 13:49:19,584 | acc_variance.py:19 | AccuracyVariance: sample variance 0.0031610198814306795 (last 7 data)
+DEBUG flower 2021-04-08 13:49:19,584 | numpy_client.py:201 | Not a switch point
+INFO flower 2021-04-08 13:49:19,588 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=28)
+DEBUG flower 2021-04-08 13:49:25,890 | numpy_client.py:172 | fit, FitIns(clock=29)
+DEBUG flower 2021-04-08 13:49:25,890 | numpy_client.py:260 | cached_clock: 17, curr_clock: 29
+INFO flower 2021-04-08 13:49:25,890 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 13:49:30,076 | numpy_client.py:228 | read: ReadRes(clock=18)
+DEBUG flower 2021-04-08 13:49:30,090 | numpy_client.py:172 | fit, FitIns(clock=29)
+DEBUG flower 2021-04-08 13:49:30,090 | numpy_client.py:260 | cached_clock: 18, curr_clock: 29
+DEBUG flower 2021-04-08 13:49:33,005 | acc_variance.py:19 | AccuracyVariance: sample variance 0.004539265643957834 (last 7 data)
+DEBUG flower 2021-04-08 13:49:33,006 | numpy_client.py:201 | Not a switch point
+INFO flower 2021-04-08 13:49:33,009 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=29)
+DEBUG flower 2021-04-08 13:49:38,929 | numpy_client.py:172 | fit, FitIns(clock=30)
+DEBUG flower 2021-04-08 13:49:38,929 | numpy_client.py:260 | cached_clock: 18, curr_clock: 30
+INFO flower 2021-04-08 13:49:38,930 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 13:49:43,475 | numpy_client.py:228 | read: ReadRes(clock=19)
+DEBUG flower 2021-04-08 13:49:43,483 | numpy_client.py:172 | fit, FitIns(clock=30)
+DEBUG flower 2021-04-08 13:49:43,483 | numpy_client.py:260 | cached_clock: 19, curr_clock: 30
+DEBUG flower 2021-04-08 13:49:46,486 | acc_variance.py:19 | AccuracyVariance: sample variance 0.008424911772291687 (last 7 data)
+DEBUG flower 2021-04-08 13:49:46,486 | numpy_client.py:201 | Not a switch point
+INFO flower 2021-04-08 13:49:46,490 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=30)
+DEBUG flower 2021-04-08 13:49:52,475 | numpy_client.py:172 | fit, FitIns(clock=31)
+DEBUG flower 2021-04-08 13:49:52,475 | numpy_client.py:260 | cached_clock: 19, curr_clock: 31
+INFO flower 2021-04-08 13:49:52,476 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 13:49:57,175 | numpy_client.py:228 | read: ReadRes(clock=20)
+DEBUG flower 2021-04-08 13:49:57,183 | numpy_client.py:172 | fit, FitIns(clock=31)
+DEBUG flower 2021-04-08 13:49:57,183 | numpy_client.py:260 | cached_clock: 20, curr_clock: 31
+DEBUG flower 2021-04-08 13:49:59,885 | acc_variance.py:19 | AccuracyVariance: sample variance 0.008424911772291687 (last 7 data)
+DEBUG flower 2021-04-08 13:49:59,885 | numpy_client.py:201 | Not a switch point
+INFO flower 2021-04-08 13:49:59,888 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=31)
+DEBUG flower 2021-04-08 13:50:06,463 | numpy_client.py:172 | fit, FitIns(clock=32)
+DEBUG flower 2021-04-08 13:50:06,463 | numpy_client.py:260 | cached_clock: 20, curr_clock: 32
+INFO flower 2021-04-08 13:50:06,463 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 13:50:10,930 | numpy_client.py:228 | read: ReadRes(clock=21)
+DEBUG flower 2021-04-08 13:50:10,978 | numpy_client.py:172 | fit, FitIns(clock=32)
+DEBUG flower 2021-04-08 13:50:10,978 | numpy_client.py:260 | cached_clock: 21, curr_clock: 32
+DEBUG flower 2021-04-08 13:50:13,981 | acc_variance.py:19 | AccuracyVariance: sample variance 0.00854932964196715 (last 7 data)
+DEBUG flower 2021-04-08 13:50:13,981 | numpy_client.py:201 | Not a switch point
+INFO flower 2021-04-08 13:50:13,985 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=32)
+DEBUG flower 2021-04-08 13:50:19,673 | numpy_client.py:172 | fit, FitIns(clock=33)
+DEBUG flower 2021-04-08 13:50:19,673 | numpy_client.py:260 | cached_clock: 21, curr_clock: 33
+INFO flower 2021-04-08 13:50:19,673 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 13:50:23,876 | numpy_client.py:228 | read: ReadRes(clock=22)
+DEBUG flower 2021-04-08 13:50:23,883 | numpy_client.py:172 | fit, FitIns(clock=33)
+DEBUG flower 2021-04-08 13:50:23,884 | numpy_client.py:260 | cached_clock: 22, curr_clock: 33
+DEBUG flower 2021-04-08 13:50:26,783 | acc_variance.py:19 | AccuracyVariance: sample variance 0.00659664453178922 (last 7 data)
+DEBUG flower 2021-04-08 13:50:26,783 | numpy_client.py:201 | Not a switch point
+INFO flower 2021-04-08 13:50:26,786 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=33)
+DEBUG flower 2021-04-08 13:50:32,791 | numpy_client.py:172 | fit, FitIns(clock=34)
+DEBUG flower 2021-04-08 13:50:32,791 | numpy_client.py:260 | cached_clock: 22, curr_clock: 34
+INFO flower 2021-04-08 13:50:32,791 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 13:50:36,975 | numpy_client.py:228 | read: ReadRes(clock=23)
+DEBUG flower 2021-04-08 13:50:36,983 | numpy_client.py:172 | fit, FitIns(clock=34)
+DEBUG flower 2021-04-08 13:50:36,983 | numpy_client.py:260 | cached_clock: 23, curr_clock: 34
+DEBUG flower 2021-04-08 13:50:39,776 | acc_variance.py:19 | AccuracyVariance: sample variance 0.005289504830501087 (last 7 data)
+DEBUG flower 2021-04-08 13:50:39,776 | numpy_client.py:201 | Not a switch point
+INFO flower 2021-04-08 13:50:39,780 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=34)
+DEBUG flower 2021-04-08 13:50:46,045 | numpy_client.py:172 | fit, FitIns(clock=35)
+DEBUG flower 2021-04-08 13:50:46,045 | numpy_client.py:260 | cached_clock: 23, curr_clock: 35
+INFO flower 2021-04-08 13:50:46,045 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 13:50:50,357 | numpy_client.py:228 | read: ReadRes(clock=24)
+DEBUG flower 2021-04-08 13:50:50,364 | numpy_client.py:172 | fit, FitIns(clock=35)
+DEBUG flower 2021-04-08 13:50:50,365 | numpy_client.py:260 | cached_clock: 24, curr_clock: 35
+DEBUG flower 2021-04-08 13:50:52,978 | acc_variance.py:19 | AccuracyVariance: sample variance 0.010800331001482118 (last 7 data)
+DEBUG flower 2021-04-08 13:50:52,978 | numpy_client.py:201 | Not a switch point
+INFO flower 2021-04-08 13:50:52,981 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=35)
+DEBUG flower 2021-04-08 13:50:59,745 | numpy_client.py:172 | fit, FitIns(clock=36)
+DEBUG flower 2021-04-08 13:50:59,746 | numpy_client.py:260 | cached_clock: 24, curr_clock: 36
+INFO flower 2021-04-08 13:50:59,746 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 13:51:04,674 | numpy_client.py:228 | read: ReadRes(clock=25)
+DEBUG flower 2021-04-08 13:51:04,685 | numpy_client.py:172 | fit, FitIns(clock=36)
+DEBUG flower 2021-04-08 13:51:04,685 | numpy_client.py:260 | cached_clock: 25, curr_clock: 36
+DEBUG flower 2021-04-08 13:51:07,400 | acc_variance.py:19 | AccuracyVariance: sample variance 0.015018136515464145 (last 7 data)
+DEBUG flower 2021-04-08 13:51:07,401 | numpy_client.py:201 | Not a switch point
+INFO flower 2021-04-08 13:51:07,404 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=36)
+DEBUG flower 2021-04-08 13:51:14,233 | numpy_client.py:172 | fit, FitIns(clock=37)
+DEBUG flower 2021-04-08 13:51:14,233 | numpy_client.py:260 | cached_clock: 25, curr_clock: 37
+INFO flower 2021-04-08 13:51:14,233 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 13:51:18,693 | numpy_client.py:228 | read: ReadRes(clock=26)
+DEBUG flower 2021-04-08 13:51:18,700 | numpy_client.py:172 | fit, FitIns(clock=37)
+DEBUG flower 2021-04-08 13:51:18,701 | numpy_client.py:260 | cached_clock: 26, curr_clock: 37
+DEBUG flower 2021-04-08 13:51:21,309 | acc_variance.py:19 | AccuracyVariance: sample variance 0.012094089538182666 (last 7 data)
+DEBUG flower 2021-04-08 13:51:21,373 | numpy_client.py:201 | Not a switch point
+INFO flower 2021-04-08 13:51:21,376 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=37)
+DEBUG flower 2021-04-08 13:51:27,363 | numpy_client.py:172 | fit, FitIns(clock=38)
+DEBUG flower 2021-04-08 13:51:27,364 | numpy_client.py:260 | cached_clock: 26, curr_clock: 38
+INFO flower 2021-04-08 13:51:27,364 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 13:51:31,949 | numpy_client.py:228 | read: ReadRes(clock=27)
+DEBUG flower 2021-04-08 13:51:31,976 | numpy_client.py:172 | fit, FitIns(clock=38)
+DEBUG flower 2021-04-08 13:51:31,976 | numpy_client.py:260 | cached_clock: 27, curr_clock: 38
+DEBUG flower 2021-04-08 13:51:34,700 | acc_variance.py:19 | AccuracyVariance: sample variance 0.01361185132427838 (last 7 data)
+DEBUG flower 2021-04-08 13:51:34,701 | numpy_client.py:201 | Not a switch point
+INFO flower 2021-04-08 13:51:34,704 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=38)
+DEBUG flower 2021-04-08 13:51:41,545 | numpy_client.py:172 | fit, FitIns(clock=39)
+DEBUG flower 2021-04-08 13:51:41,545 | numpy_client.py:260 | cached_clock: 27, curr_clock: 39
+INFO flower 2021-04-08 13:51:41,545 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 13:51:45,875 | numpy_client.py:228 | read: ReadRes(clock=28)
+DEBUG flower 2021-04-08 13:51:45,883 | numpy_client.py:172 | fit, FitIns(clock=39)
+DEBUG flower 2021-04-08 13:51:45,883 | numpy_client.py:260 | cached_clock: 28, curr_clock: 39
+DEBUG flower 2021-04-08 13:51:48,579 | acc_variance.py:19 | AccuracyVariance: sample variance 0.015236662427074782 (last 7 data)
+DEBUG flower 2021-04-08 13:51:48,579 | numpy_client.py:201 | Not a switch point
+INFO flower 2021-04-08 13:51:48,583 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=39)
+DEBUG flower 2021-04-08 13:51:54,268 | numpy_client.py:172 | fit, FitIns(clock=40)
+DEBUG flower 2021-04-08 13:51:54,268 | numpy_client.py:260 | cached_clock: 28, curr_clock: 40
+INFO flower 2021-04-08 13:51:54,268 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 13:51:58,808 | numpy_client.py:228 | read: ReadRes(clock=29)
+DEBUG flower 2021-04-08 13:51:58,815 | numpy_client.py:172 | fit, FitIns(clock=40)
+DEBUG flower 2021-04-08 13:51:58,815 | numpy_client.py:260 | cached_clock: 29, curr_clock: 40
+DEBUG flower 2021-04-08 13:52:01,704 | acc_variance.py:19 | AccuracyVariance: sample variance 0.014752329542977746 (last 7 data)
+DEBUG flower 2021-04-08 13:52:01,704 | numpy_client.py:201 | Not a switch point
+INFO flower 2021-04-08 13:52:01,708 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=40)
+DEBUG flower 2021-04-08 13:52:07,744 | numpy_client.py:172 | fit, FitIns(clock=41)
+DEBUG flower 2021-04-08 13:52:07,744 | numpy_client.py:260 | cached_clock: 29, curr_clock: 41
+INFO flower 2021-04-08 13:52:07,744 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 13:52:12,244 | numpy_client.py:228 | read: ReadRes(clock=30)
+DEBUG flower 2021-04-08 13:52:12,252 | numpy_client.py:172 | fit, FitIns(clock=41)
+DEBUG flower 2021-04-08 13:52:12,252 | numpy_client.py:260 | cached_clock: 30, curr_clock: 41
+DEBUG flower 2021-04-08 13:52:15,089 | acc_variance.py:19 | AccuracyVariance: sample variance 0.009170383120763436 (last 7 data)
+DEBUG flower 2021-04-08 13:52:15,089 | numpy_client.py:201 | Not a switch point
+INFO flower 2021-04-08 13:52:15,092 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=41)
+DEBUG flower 2021-04-08 13:52:21,783 | numpy_client.py:172 | fit, FitIns(clock=42)
+DEBUG flower 2021-04-08 13:52:21,783 | numpy_client.py:260 | cached_clock: 30, curr_clock: 42
+INFO flower 2021-04-08 13:52:21,783 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 13:52:26,401 | numpy_client.py:228 | read: ReadRes(clock=31)
+DEBUG flower 2021-04-08 13:52:26,408 | numpy_client.py:172 | fit, FitIns(clock=42)
+DEBUG flower 2021-04-08 13:52:26,408 | numpy_client.py:260 | cached_clock: 31, curr_clock: 42
+DEBUG flower 2021-04-08 13:52:29,290 | acc_variance.py:19 | AccuracyVariance: sample variance 0.012950427311811162 (last 7 data)
+DEBUG flower 2021-04-08 13:52:29,290 | numpy_client.py:201 | Not a switch point
+INFO flower 2021-04-08 13:52:29,294 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=42)
+DEBUG flower 2021-04-08 13:52:34,975 | numpy_client.py:172 | fit, FitIns(clock=43)
+DEBUG flower 2021-04-08 13:52:34,975 | numpy_client.py:260 | cached_clock: 31, curr_clock: 43
+INFO flower 2021-04-08 13:52:34,975 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 13:52:39,775 | numpy_client.py:228 | read: ReadRes(clock=32)
+DEBUG flower 2021-04-08 13:52:39,783 | numpy_client.py:172 | fit, FitIns(clock=43)
+DEBUG flower 2021-04-08 13:52:39,783 | numpy_client.py:260 | cached_clock: 32, curr_clock: 43
+DEBUG flower 2021-04-08 13:52:42,676 | acc_variance.py:19 | AccuracyVariance: sample variance 0.010881043688835445 (last 7 data)
+DEBUG flower 2021-04-08 13:52:42,676 | numpy_client.py:201 | Not a switch point
+INFO flower 2021-04-08 13:52:42,679 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=43)
+DEBUG flower 2021-04-08 13:52:48,759 | numpy_client.py:172 | fit, FitIns(clock=44)
+DEBUG flower 2021-04-08 13:52:48,759 | numpy_client.py:260 | cached_clock: 32, curr_clock: 44
+INFO flower 2021-04-08 13:52:48,759 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 13:52:53,875 | numpy_client.py:228 | read: ReadRes(clock=33)
+DEBUG flower 2021-04-08 13:52:53,882 | numpy_client.py:172 | fit, FitIns(clock=44)
+DEBUG flower 2021-04-08 13:52:53,882 | numpy_client.py:260 | cached_clock: 33, curr_clock: 44
+DEBUG flower 2021-04-08 13:52:56,693 | acc_variance.py:19 | AccuracyVariance: sample variance 0.013276030920111011 (last 7 data)
+DEBUG flower 2021-04-08 13:52:56,693 | numpy_client.py:201 | Not a switch point
+INFO flower 2021-04-08 13:52:56,696 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=44)
+DEBUG flower 2021-04-08 13:53:02,883 | numpy_client.py:172 | fit, FitIns(clock=45)
+DEBUG flower 2021-04-08 13:53:02,884 | numpy_client.py:260 | cached_clock: 33, curr_clock: 45
+INFO flower 2021-04-08 13:53:02,884 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 13:53:07,556 | numpy_client.py:228 | read: ReadRes(clock=34)
+DEBUG flower 2021-04-08 13:53:07,563 | numpy_client.py:172 | fit, FitIns(clock=45)
+DEBUG flower 2021-04-08 13:53:07,564 | numpy_client.py:260 | cached_clock: 34, curr_clock: 45
+DEBUG flower 2021-04-08 13:53:10,187 | acc_variance.py:19 | AccuracyVariance: sample variance 0.012999879441808764 (last 7 data)
+DEBUG flower 2021-04-08 13:53:10,187 | numpy_client.py:201 | Not a switch point
+INFO flower 2021-04-08 13:53:10,191 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=45)
+DEBUG flower 2021-04-08 13:53:16,862 | numpy_client.py:172 | fit, FitIns(clock=46)
+DEBUG flower 2021-04-08 13:53:16,862 | numpy_client.py:260 | cached_clock: 34, curr_clock: 46
+INFO flower 2021-04-08 13:53:16,862 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 13:53:21,574 | numpy_client.py:228 | read: ReadRes(clock=35)
+DEBUG flower 2021-04-08 13:53:21,582 | numpy_client.py:172 | fit, FitIns(clock=46)
+DEBUG flower 2021-04-08 13:53:21,582 | numpy_client.py:260 | cached_clock: 35, curr_clock: 46
+DEBUG flower 2021-04-08 13:53:24,488 | acc_variance.py:19 | AccuracyVariance: sample variance 0.014450096855224819 (last 7 data)
+DEBUG flower 2021-04-08 13:53:24,489 | numpy_client.py:201 | Not a switch point
+INFO flower 2021-04-08 13:53:24,492 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=46)
+DEBUG flower 2021-04-08 13:53:30,478 | numpy_client.py:172 | fit, FitIns(clock=47)
+DEBUG flower 2021-04-08 13:53:30,478 | numpy_client.py:260 | cached_clock: 35, curr_clock: 47
+INFO flower 2021-04-08 13:53:30,478 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 13:53:35,035 | numpy_client.py:228 | read: ReadRes(clock=36)
+DEBUG flower 2021-04-08 13:53:35,043 | numpy_client.py:172 | fit, FitIns(clock=47)
+DEBUG flower 2021-04-08 13:53:35,043 | numpy_client.py:260 | cached_clock: 36, curr_clock: 47
+DEBUG flower 2021-04-08 13:53:37,980 | acc_variance.py:19 | AccuracyVariance: sample variance 0.016003787706787946 (last 7 data)
+DEBUG flower 2021-04-08 13:53:37,980 | numpy_client.py:201 | Not a switch point
+INFO flower 2021-04-08 13:53:37,984 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=47)
+DEBUG flower 2021-04-08 13:53:44,249 | numpy_client.py:172 | fit, FitIns(clock=48)
+DEBUG flower 2021-04-08 13:53:44,250 | numpy_client.py:260 | cached_clock: 36, curr_clock: 48
+INFO flower 2021-04-08 13:53:44,250 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 13:53:48,669 | numpy_client.py:228 | read: ReadRes(clock=37)
+DEBUG flower 2021-04-08 13:53:48,676 | numpy_client.py:172 | fit, FitIns(clock=48)
+DEBUG flower 2021-04-08 13:53:48,676 | numpy_client.py:260 | cached_clock: 37, curr_clock: 48
+DEBUG flower 2021-04-08 13:53:51,575 | acc_variance.py:19 | AccuracyVariance: sample variance 0.018834294241904664 (last 7 data)
+DEBUG flower 2021-04-08 13:53:51,575 | numpy_client.py:201 | Not a switch point
+INFO flower 2021-04-08 13:53:51,579 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=48)
+DEBUG flower 2021-04-08 13:53:57,886 | numpy_client.py:172 | fit, FitIns(clock=49)
+DEBUG flower 2021-04-08 13:53:57,887 | numpy_client.py:260 | cached_clock: 37, curr_clock: 49
+INFO flower 2021-04-08 13:53:57,887 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 13:54:02,675 | numpy_client.py:228 | read: ReadRes(clock=38)
+DEBUG flower 2021-04-08 13:54:02,682 | numpy_client.py:172 | fit, FitIns(clock=49)
+DEBUG flower 2021-04-08 13:54:02,682 | numpy_client.py:260 | cached_clock: 38, curr_clock: 49
+DEBUG flower 2021-04-08 13:54:05,607 | acc_variance.py:19 | AccuracyVariance: sample variance 0.016545476547685643 (last 7 data)
+DEBUG flower 2021-04-08 13:54:05,607 | numpy_client.py:201 | Not a switch point
+INFO flower 2021-04-08 13:54:05,611 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=49)
+DEBUG flower 2021-04-08 13:54:11,935 | numpy_client.py:172 | fit, FitIns(clock=50)
+DEBUG flower 2021-04-08 13:54:11,936 | numpy_client.py:260 | cached_clock: 38, curr_clock: 50
+INFO flower 2021-04-08 13:54:11,936 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 13:54:16,138 | numpy_client.py:228 | read: ReadRes(clock=39)
+DEBUG flower 2021-04-08 13:54:16,146 | numpy_client.py:172 | fit, FitIns(clock=50)
+DEBUG flower 2021-04-08 13:54:16,146 | numpy_client.py:260 | cached_clock: 39, curr_clock: 50
+DEBUG flower 2021-04-08 13:54:18,910 | acc_variance.py:19 | AccuracyVariance: sample variance 0.017917379382778386 (last 7 data)
+DEBUG flower 2021-04-08 13:54:18,910 | numpy_client.py:201 | Not a switch point
+INFO flower 2021-04-08 13:54:18,973 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=50)
+DEBUG flower 2021-04-08 13:54:25,846 | numpy_client.py:172 | fit, FitIns(clock=51)
+DEBUG flower 2021-04-08 13:54:25,847 | numpy_client.py:260 | cached_clock: 39, curr_clock: 51
+INFO flower 2021-04-08 13:54:25,847 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 13:54:30,168 | numpy_client.py:228 | read: ReadRes(clock=40)
+DEBUG flower 2021-04-08 13:54:30,175 | numpy_client.py:172 | fit, FitIns(clock=51)
+DEBUG flower 2021-04-08 13:54:30,175 | numpy_client.py:260 | cached_clock: 40, curr_clock: 51
+DEBUG flower 2021-04-08 13:54:32,988 | acc_variance.py:19 | AccuracyVariance: sample variance 0.018873671475977356 (last 7 data)
+DEBUG flower 2021-04-08 13:54:32,989 | numpy_client.py:201 | Not a switch point
+INFO flower 2021-04-08 13:54:32,992 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=51)
+DEBUG flower 2021-04-08 13:54:39,374 | numpy_client.py:172 | fit, FitIns(clock=52)
+DEBUG flower 2021-04-08 13:54:39,374 | numpy_client.py:260 | cached_clock: 40, curr_clock: 52
+INFO flower 2021-04-08 13:54:39,374 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 13:54:43,740 | numpy_client.py:228 | read: ReadRes(clock=41)
+DEBUG flower 2021-04-08 13:54:43,747 | numpy_client.py:172 | fit, FitIns(clock=52)
+DEBUG flower 2021-04-08 13:54:43,747 | numpy_client.py:260 | cached_clock: 41, curr_clock: 52
+DEBUG flower 2021-04-08 13:54:46,789 | acc_variance.py:19 | AccuracyVariance: sample variance 0.011616511091353593 (last 7 data)
+DEBUG flower 2021-04-08 13:54:46,790 | numpy_client.py:201 | Not a switch point
+INFO flower 2021-04-08 13:54:46,793 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=52)
+DEBUG flower 2021-04-08 13:54:52,839 | numpy_client.py:172 | fit, FitIns(clock=53)
+DEBUG flower 2021-04-08 13:54:52,840 | numpy_client.py:260 | cached_clock: 41, curr_clock: 53
+INFO flower 2021-04-08 13:54:52,840 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 13:54:57,375 | numpy_client.py:228 | read: ReadRes(clock=42)
+DEBUG flower 2021-04-08 13:54:57,386 | numpy_client.py:172 | fit, FitIns(clock=53)
+DEBUG flower 2021-04-08 13:54:57,386 | numpy_client.py:260 | cached_clock: 42, curr_clock: 53
+DEBUG flower 2021-04-08 13:55:00,206 | acc_variance.py:19 | AccuracyVariance: sample variance 0.017438566406448662 (last 7 data)
+DEBUG flower 2021-04-08 13:55:00,206 | numpy_client.py:201 | Not a switch point
+INFO flower 2021-04-08 13:55:00,210 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=53)
+DEBUG flower 2021-04-08 13:55:06,444 | numpy_client.py:172 | fit, FitIns(clock=54)
+DEBUG flower 2021-04-08 13:55:06,445 | numpy_client.py:260 | cached_clock: 42, curr_clock: 54
+INFO flower 2021-04-08 13:55:06,445 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 13:55:11,075 | numpy_client.py:228 | read: ReadRes(clock=43)
+DEBUG flower 2021-04-08 13:55:11,083 | numpy_client.py:172 | fit, FitIns(clock=54)
+DEBUG flower 2021-04-08 13:55:11,083 | numpy_client.py:260 | cached_clock: 43, curr_clock: 54
+DEBUG flower 2021-04-08 13:55:13,774 | acc_variance.py:19 | AccuracyVariance: sample variance 0.016591466319083703 (last 7 data)
+DEBUG flower 2021-04-08 13:55:13,774 | numpy_client.py:201 | Not a switch point
+INFO flower 2021-04-08 13:55:13,777 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=54)
+DEBUG flower 2021-04-08 13:55:20,077 | numpy_client.py:172 | fit, FitIns(clock=55)
+DEBUG flower 2021-04-08 13:55:20,077 | numpy_client.py:260 | cached_clock: 43, curr_clock: 55
+INFO flower 2021-04-08 13:55:20,077 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 13:55:24,524 | numpy_client.py:228 | read: ReadRes(clock=44)
+DEBUG flower 2021-04-08 13:55:24,531 | numpy_client.py:172 | fit, FitIns(clock=55)
+DEBUG flower 2021-04-08 13:55:24,531 | numpy_client.py:260 | cached_clock: 44, curr_clock: 55
+DEBUG flower 2021-04-08 13:55:27,408 | acc_variance.py:19 | AccuracyVariance: sample variance 0.01609670378920525 (last 7 data)
+DEBUG flower 2021-04-08 13:55:27,409 | numpy_client.py:201 | Not a switch point
+INFO flower 2021-04-08 13:55:27,412 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=55)
+DEBUG flower 2021-04-08 13:55:33,775 | numpy_client.py:172 | fit, FitIns(clock=56)
+DEBUG flower 2021-04-08 13:55:33,775 | numpy_client.py:260 | cached_clock: 44, curr_clock: 56
+INFO flower 2021-04-08 13:55:33,775 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 13:55:38,218 | numpy_client.py:228 | read: ReadRes(clock=45)
+DEBUG flower 2021-04-08 13:55:38,226 | numpy_client.py:172 | fit, FitIns(clock=56)
+DEBUG flower 2021-04-08 13:55:38,226 | numpy_client.py:260 | cached_clock: 45, curr_clock: 56
+DEBUG flower 2021-04-08 13:55:41,080 | acc_variance.py:19 | AccuracyVariance: sample variance 0.015273911162008413 (last 7 data)
+DEBUG flower 2021-04-08 13:55:41,081 | numpy_client.py:201 | Not a switch point
+INFO flower 2021-04-08 13:55:41,084 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=56)
+DEBUG flower 2021-04-08 13:55:47,361 | numpy_client.py:172 | fit, FitIns(clock=57)
+DEBUG flower 2021-04-08 13:55:47,361 | numpy_client.py:260 | cached_clock: 45, curr_clock: 57
+INFO flower 2021-04-08 13:55:47,361 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 13:55:51,717 | numpy_client.py:228 | read: ReadRes(clock=46)
+DEBUG flower 2021-04-08 13:55:51,725 | numpy_client.py:172 | fit, FitIns(clock=57)
+DEBUG flower 2021-04-08 13:55:51,725 | numpy_client.py:260 | cached_clock: 46, curr_clock: 57
+DEBUG flower 2021-04-08 13:55:54,478 | acc_variance.py:19 | AccuracyVariance: sample variance 0.013146093142668245 (last 7 data)
+DEBUG flower 2021-04-08 13:55:54,478 | numpy_client.py:201 | Not a switch point
+INFO flower 2021-04-08 13:55:54,481 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=57)
+DEBUG flower 2021-04-08 13:56:00,836 | numpy_client.py:172 | fit, FitIns(clock=58)
+DEBUG flower 2021-04-08 13:56:00,836 | numpy_client.py:260 | cached_clock: 46, curr_clock: 58
+INFO flower 2021-04-08 13:56:00,837 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 13:56:05,227 | numpy_client.py:228 | read: ReadRes(clock=47)
+DEBUG flower 2021-04-08 13:56:05,234 | numpy_client.py:172 | fit, FitIns(clock=58)
+DEBUG flower 2021-04-08 13:56:05,234 | numpy_client.py:260 | cached_clock: 47, curr_clock: 58
+DEBUG flower 2021-04-08 13:56:07,882 | acc_variance.py:19 | AccuracyVariance: sample variance 0.011239170763980207 (last 7 data)
+DEBUG flower 2021-04-08 13:56:07,883 | numpy_client.py:201 | Not a switch point
+INFO flower 2021-04-08 13:56:07,886 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=58)
+DEBUG flower 2021-04-08 13:56:14,622 | numpy_client.py:172 | fit, FitIns(clock=59)
+DEBUG flower 2021-04-08 13:56:14,623 | numpy_client.py:260 | cached_clock: 47, curr_clock: 59
+INFO flower 2021-04-08 13:56:14,623 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 13:56:19,376 | numpy_client.py:228 | read: ReadRes(clock=48)
+DEBUG flower 2021-04-08 13:56:19,384 | numpy_client.py:172 | fit, FitIns(clock=59)
+DEBUG flower 2021-04-08 13:56:19,384 | numpy_client.py:260 | cached_clock: 48, curr_clock: 59
+DEBUG flower 2021-04-08 13:56:22,076 | acc_variance.py:19 | AccuracyVariance: sample variance 0.010964622755029388 (last 7 data)
+DEBUG flower 2021-04-08 13:56:22,076 | numpy_client.py:201 | Not a switch point
+INFO flower 2021-04-08 13:56:22,081 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=59)
+DEBUG flower 2021-04-08 13:56:27,990 | numpy_client.py:172 | fit, FitIns(clock=60)
+DEBUG flower 2021-04-08 13:56:27,990 | numpy_client.py:260 | cached_clock: 48, curr_clock: 60
+INFO flower 2021-04-08 13:56:27,990 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 13:56:32,275 | numpy_client.py:228 | read: ReadRes(clock=49)
+DEBUG flower 2021-04-08 13:56:32,282 | numpy_client.py:172 | fit, FitIns(clock=60)
+DEBUG flower 2021-04-08 13:56:32,282 | numpy_client.py:260 | cached_clock: 49, curr_clock: 60
+DEBUG flower 2021-04-08 13:56:34,982 | acc_variance.py:19 | AccuracyVariance: sample variance 0.00988937593994522 (last 7 data)
+DEBUG flower 2021-04-08 13:56:34,982 | numpy_client.py:201 | Not a switch point
+INFO flower 2021-04-08 13:56:34,985 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=60)
+DEBUG flower 2021-04-08 13:56:41,625 | numpy_client.py:172 | fit, FitIns(clock=61)
+DEBUG flower 2021-04-08 13:56:41,626 | numpy_client.py:260 | cached_clock: 49, curr_clock: 61
+INFO flower 2021-04-08 13:56:41,626 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 13:56:46,611 | numpy_client.py:228 | read: ReadRes(clock=50)
+DEBUG flower 2021-04-08 13:56:46,618 | numpy_client.py:172 | fit, FitIns(clock=61)
+DEBUG flower 2021-04-08 13:56:46,618 | numpy_client.py:260 | cached_clock: 50, curr_clock: 61
+DEBUG flower 2021-04-08 13:56:49,395 | acc_variance.py:19 | AccuracyVariance: sample variance 0.011751103186913778 (last 7 data)
+DEBUG flower 2021-04-08 13:56:49,395 | numpy_client.py:201 | Not a switch point
+INFO flower 2021-04-08 13:56:49,399 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=61)
+DEBUG flower 2021-04-08 13:56:55,926 | numpy_client.py:172 | fit, FitIns(clock=62)
+DEBUG flower 2021-04-08 13:56:55,926 | numpy_client.py:260 | cached_clock: 50, curr_clock: 62
+INFO flower 2021-04-08 13:56:55,927 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 13:57:00,776 | numpy_client.py:228 | read: ReadRes(clock=51)
+DEBUG flower 2021-04-08 13:57:00,783 | numpy_client.py:172 | fit, FitIns(clock=62)
+DEBUG flower 2021-04-08 13:57:00,783 | numpy_client.py:260 | cached_clock: 51, curr_clock: 62
+DEBUG flower 2021-04-08 13:57:03,779 | acc_variance.py:19 | AccuracyVariance: sample variance 0.01389024482167377 (last 7 data)
+DEBUG flower 2021-04-08 13:57:03,779 | numpy_client.py:201 | Not a switch point
+INFO flower 2021-04-08 13:57:03,783 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=62)
+DEBUG flower 2021-04-08 13:57:09,855 | numpy_client.py:172 | fit, FitIns(clock=63)
+DEBUG flower 2021-04-08 13:57:09,856 | numpy_client.py:260 | cached_clock: 51, curr_clock: 63
+INFO flower 2021-04-08 13:57:09,856 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 13:57:15,075 | numpy_client.py:228 | read: ReadRes(clock=52)
+DEBUG flower 2021-04-08 13:57:15,086 | numpy_client.py:172 | fit, FitIns(clock=63)
+DEBUG flower 2021-04-08 13:57:15,086 | numpy_client.py:260 | cached_clock: 52, curr_clock: 63
+DEBUG flower 2021-04-08 13:57:17,879 | acc_variance.py:19 | AccuracyVariance: sample variance 0.012685869058819679 (last 7 data)
+DEBUG flower 2021-04-08 13:57:17,879 | numpy_client.py:201 | Not a switch point
+INFO flower 2021-04-08 13:57:17,882 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=63)
+DEBUG flower 2021-04-08 13:57:24,107 | numpy_client.py:172 | fit, FitIns(clock=64)
+DEBUG flower 2021-04-08 13:57:24,108 | numpy_client.py:260 | cached_clock: 52, curr_clock: 64
+INFO flower 2021-04-08 13:57:24,108 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 13:57:29,075 | numpy_client.py:228 | read: ReadRes(clock=53)
+DEBUG flower 2021-04-08 13:57:29,082 | numpy_client.py:172 | fit, FitIns(clock=64)
+DEBUG flower 2021-04-08 13:57:29,083 | numpy_client.py:260 | cached_clock: 53, curr_clock: 64
+DEBUG flower 2021-04-08 13:57:31,803 | acc_variance.py:19 | AccuracyVariance: sample variance 0.013883830944268056 (last 7 data)
+DEBUG flower 2021-04-08 13:57:31,803 | numpy_client.py:201 | Not a switch point
+INFO flower 2021-04-08 13:57:31,807 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=64)
+DEBUG flower 2021-04-08 13:57:38,653 | numpy_client.py:172 | fit, FitIns(clock=65)
+DEBUG flower 2021-04-08 13:57:38,653 | numpy_client.py:260 | cached_clock: 53, curr_clock: 65
+INFO flower 2021-04-08 13:57:38,654 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 13:57:43,557 | numpy_client.py:228 | read: ReadRes(clock=54)
+DEBUG flower 2021-04-08 13:57:43,565 | numpy_client.py:172 | fit, FitIns(clock=65)
+DEBUG flower 2021-04-08 13:57:43,565 | numpy_client.py:260 | cached_clock: 54, curr_clock: 65
+DEBUG flower 2021-04-08 13:57:46,414 | acc_variance.py:19 | AccuracyVariance: sample variance 0.009065632583132933 (last 7 data)
+DEBUG flower 2021-04-08 13:57:46,415 | numpy_client.py:201 | Not a switch point
+INFO flower 2021-04-08 13:57:46,475 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=65)
+DEBUG flower 2021-04-08 13:57:52,361 | numpy_client.py:172 | fit, FitIns(clock=66)
+DEBUG flower 2021-04-08 13:57:52,362 | numpy_client.py:260 | cached_clock: 54, curr_clock: 66
+INFO flower 2021-04-08 13:57:52,362 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 13:57:56,759 | numpy_client.py:228 | read: ReadRes(clock=55)
+DEBUG flower 2021-04-08 13:57:56,767 | numpy_client.py:172 | fit, FitIns(clock=66)
+DEBUG flower 2021-04-08 13:57:56,767 | numpy_client.py:260 | cached_clock: 55, curr_clock: 66
+DEBUG flower 2021-04-08 13:57:59,778 | acc_variance.py:19 | AccuracyVariance: sample variance 0.009494539349648723 (last 7 data)
+DEBUG flower 2021-04-08 13:57:59,779 | numpy_client.py:201 | Not a switch point
+INFO flower 2021-04-08 13:57:59,782 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=66)
+DEBUG flower 2021-04-08 13:58:05,596 | numpy_client.py:172 | fit, FitIns(clock=67)
+DEBUG flower 2021-04-08 13:58:05,597 | numpy_client.py:260 | cached_clock: 55, curr_clock: 67
+INFO flower 2021-04-08 13:58:05,597 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 13:58:09,996 | numpy_client.py:228 | read: ReadRes(clock=56)
+DEBUG flower 2021-04-08 13:58:10,004 | numpy_client.py:172 | fit, FitIns(clock=67)
+DEBUG flower 2021-04-08 13:58:10,004 | numpy_client.py:260 | cached_clock: 56, curr_clock: 67
+DEBUG flower 2021-04-08 13:58:12,891 | acc_variance.py:19 | AccuracyVariance: sample variance 0.009778623034742556 (last 7 data)
+DEBUG flower 2021-04-08 13:58:12,891 | numpy_client.py:201 | Not a switch point
+INFO flower 2021-04-08 13:58:12,895 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=67)
+DEBUG flower 2021-04-08 13:58:19,320 | numpy_client.py:172 | fit, FitIns(clock=68)
+DEBUG flower 2021-04-08 13:58:19,320 | numpy_client.py:260 | cached_clock: 56, curr_clock: 68
+INFO flower 2021-04-08 13:58:19,320 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 13:58:23,889 | numpy_client.py:228 | read: ReadRes(clock=57)
+DEBUG flower 2021-04-08 13:58:23,896 | numpy_client.py:172 | fit, FitIns(clock=68)
+DEBUG flower 2021-04-08 13:58:23,896 | numpy_client.py:260 | cached_clock: 57, curr_clock: 68
+DEBUG flower 2021-04-08 13:58:26,598 | acc_variance.py:19 | AccuracyVariance: sample variance 0.010594817314608294 (last 7 data)
+DEBUG flower 2021-04-08 13:58:26,598 | numpy_client.py:201 | Not a switch point
+INFO flower 2021-04-08 13:58:26,602 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=68)
+DEBUG flower 2021-04-08 13:58:32,806 | numpy_client.py:172 | fit, FitIns(clock=69)
+DEBUG flower 2021-04-08 13:58:32,806 | numpy_client.py:260 | cached_clock: 57, curr_clock: 69
+INFO flower 2021-04-08 13:58:32,806 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 13:58:38,296 | numpy_client.py:228 | read: ReadRes(clock=58)
+DEBUG flower 2021-04-08 13:58:38,303 | numpy_client.py:172 | fit, FitIns(clock=69)
+DEBUG flower 2021-04-08 13:58:38,303 | numpy_client.py:260 | cached_clock: 58, curr_clock: 69
+DEBUG flower 2021-04-08 13:58:40,909 | acc_variance.py:19 | AccuracyVariance: sample variance 0.0024265741584992844 (last 7 data)
+DEBUG flower 2021-04-08 13:58:40,910 | numpy_client.py:201 | Not a switch point
+INFO flower 2021-04-08 13:58:40,913 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=69)
+DEBUG flower 2021-04-08 13:58:47,519 | numpy_client.py:172 | fit, FitIns(clock=70)
+DEBUG flower 2021-04-08 13:58:47,519 | numpy_client.py:260 | cached_clock: 58, curr_clock: 70
+INFO flower 2021-04-08 13:58:47,519 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 13:58:52,775 | numpy_client.py:228 | read: ReadRes(clock=59)
+DEBUG flower 2021-04-08 13:58:52,782 | numpy_client.py:172 | fit, FitIns(clock=70)
+DEBUG flower 2021-04-08 13:58:52,782 | numpy_client.py:260 | cached_clock: 59, curr_clock: 70
+DEBUG flower 2021-04-08 13:58:55,681 | acc_variance.py:19 | AccuracyVariance: sample variance 0.004394499322512915 (last 7 data)
+DEBUG flower 2021-04-08 13:58:55,681 | numpy_client.py:201 | Not a switch point
+INFO flower 2021-04-08 13:58:55,684 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=70)
+DEBUG flower 2021-04-08 13:59:01,933 | numpy_client.py:172 | fit, FitIns(clock=71)
+DEBUG flower 2021-04-08 13:59:01,934 | numpy_client.py:260 | cached_clock: 59, curr_clock: 71
+INFO flower 2021-04-08 13:59:01,934 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 13:59:06,753 | numpy_client.py:228 | read: ReadRes(clock=60)
+DEBUG flower 2021-04-08 13:59:06,761 | numpy_client.py:172 | fit, FitIns(clock=71)
+DEBUG flower 2021-04-08 13:59:06,761 | numpy_client.py:260 | cached_clock: 60, curr_clock: 71
+DEBUG flower 2021-04-08 13:59:09,610 | acc_variance.py:19 | AccuracyVariance: sample variance 0.004622901470128815 (last 7 data)
+DEBUG flower 2021-04-08 13:59:09,610 | numpy_client.py:201 | Not a switch point
+INFO flower 2021-04-08 13:59:09,674 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=71)
+DEBUG flower 2021-04-08 13:59:16,048 | numpy_client.py:172 | fit, FitIns(clock=72)
+DEBUG flower 2021-04-08 13:59:16,048 | numpy_client.py:260 | cached_clock: 60, curr_clock: 72
+INFO flower 2021-04-08 13:59:16,048 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 13:59:20,958 | numpy_client.py:228 | read: ReadRes(clock=61)
+DEBUG flower 2021-04-08 13:59:20,965 | numpy_client.py:172 | fit, FitIns(clock=72)
+DEBUG flower 2021-04-08 13:59:20,965 | numpy_client.py:260 | cached_clock: 61, curr_clock: 72
+DEBUG flower 2021-04-08 13:59:23,879 | acc_variance.py:19 | AccuracyVariance: sample variance 0.0046894383532159745 (last 7 data)
+DEBUG flower 2021-04-08 13:59:23,879 | numpy_client.py:201 | Not a switch point
+INFO flower 2021-04-08 13:59:23,883 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=72)
+DEBUG flower 2021-04-08 13:59:30,453 | numpy_client.py:172 | fit, FitIns(clock=73)
+DEBUG flower 2021-04-08 13:59:30,454 | numpy_client.py:260 | cached_clock: 61, curr_clock: 73
+INFO flower 2021-04-08 13:59:30,454 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 13:59:34,875 | numpy_client.py:228 | read: ReadRes(clock=62)
+DEBUG flower 2021-04-08 13:59:34,883 | numpy_client.py:172 | fit, FitIns(clock=73)
+DEBUG flower 2021-04-08 13:59:34,883 | numpy_client.py:260 | cached_clock: 62, curr_clock: 73
+DEBUG flower 2021-04-08 13:59:37,784 | acc_variance.py:19 | AccuracyVariance: sample variance 0.005223947057017895 (last 7 data)
+DEBUG flower 2021-04-08 13:59:37,785 | numpy_client.py:201 | Not a switch point
+INFO flower 2021-04-08 13:59:37,788 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=73)
+DEBUG flower 2021-04-08 13:59:43,960 | numpy_client.py:172 | fit, FitIns(clock=74)
+DEBUG flower 2021-04-08 13:59:43,960 | numpy_client.py:260 | cached_clock: 62, curr_clock: 74
+INFO flower 2021-04-08 13:59:43,960 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 13:59:48,695 | numpy_client.py:228 | read: ReadRes(clock=63)
+DEBUG flower 2021-04-08 13:59:48,703 | numpy_client.py:172 | fit, FitIns(clock=74)
+DEBUG flower 2021-04-08 13:59:48,703 | numpy_client.py:260 | cached_clock: 63, curr_clock: 74
+DEBUG flower 2021-04-08 13:59:51,415 | acc_variance.py:19 | AccuracyVariance: sample variance 0.00541968383784628 (last 7 data)
+DEBUG flower 2021-04-08 13:59:51,416 | numpy_client.py:201 | Not a switch point
+INFO flower 2021-04-08 13:59:51,476 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=74)
+DEBUG flower 2021-04-08 13:59:57,953 | numpy_client.py:172 | fit, FitIns(clock=75)
+DEBUG flower 2021-04-08 13:59:57,953 | numpy_client.py:260 | cached_clock: 63, curr_clock: 75
+INFO flower 2021-04-08 13:59:57,953 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 14:00:02,476 | numpy_client.py:228 | read: ReadRes(clock=64)
+DEBUG flower 2021-04-08 14:00:02,483 | numpy_client.py:172 | fit, FitIns(clock=75)
+DEBUG flower 2021-04-08 14:00:02,483 | numpy_client.py:260 | cached_clock: 64, curr_clock: 75
+DEBUG flower 2021-04-08 14:00:05,097 | acc_variance.py:19 | AccuracyVariance: sample variance 0.005123112957803271 (last 7 data)
+DEBUG flower 2021-04-08 14:00:05,098 | numpy_client.py:201 | Not a switch point
+INFO flower 2021-04-08 14:00:05,101 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=75)
+DEBUG flower 2021-04-08 14:00:11,553 | numpy_client.py:172 | fit, FitIns(clock=76)
+DEBUG flower 2021-04-08 14:00:11,553 | numpy_client.py:260 | cached_clock: 64, curr_clock: 76
+INFO flower 2021-04-08 14:00:11,553 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 14:00:16,308 | numpy_client.py:228 | read: ReadRes(clock=65)
+DEBUG flower 2021-04-08 14:00:16,315 | numpy_client.py:172 | fit, FitIns(clock=76)
+DEBUG flower 2021-04-08 14:00:16,316 | numpy_client.py:260 | cached_clock: 65, curr_clock: 76
+DEBUG flower 2021-04-08 14:00:18,980 | acc_variance.py:19 | AccuracyVariance: sample variance 0.005029416425701642 (last 7 data)
+DEBUG flower 2021-04-08 14:00:18,981 | numpy_client.py:201 | Not a switch point
+INFO flower 2021-04-08 14:00:18,984 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=76)
+DEBUG flower 2021-04-08 14:00:25,771 | numpy_client.py:172 | fit, FitIns(clock=77)
+DEBUG flower 2021-04-08 14:00:25,771 | numpy_client.py:260 | cached_clock: 65, curr_clock: 77
+INFO flower 2021-04-08 14:00:25,771 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 14:00:30,275 | numpy_client.py:228 | read: ReadRes(clock=66)
+DEBUG flower 2021-04-08 14:00:30,282 | numpy_client.py:172 | fit, FitIns(clock=77)
+DEBUG flower 2021-04-08 14:00:30,282 | numpy_client.py:260 | cached_clock: 66, curr_clock: 77
+DEBUG flower 2021-04-08 14:00:33,178 | acc_variance.py:19 | AccuracyVariance: sample variance 0.004173092842067404 (last 7 data)
+DEBUG flower 2021-04-08 14:00:33,178 | numpy_client.py:201 | Not a switch point
+INFO flower 2021-04-08 14:00:33,182 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=77)
+DEBUG flower 2021-04-08 14:00:39,417 | numpy_client.py:172 | fit, FitIns(clock=78)
+DEBUG flower 2021-04-08 14:00:39,417 | numpy_client.py:260 | cached_clock: 66, curr_clock: 78
+INFO flower 2021-04-08 14:00:39,417 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 14:00:43,975 | numpy_client.py:228 | read: ReadRes(clock=67)
+DEBUG flower 2021-04-08 14:00:43,983 | numpy_client.py:172 | fit, FitIns(clock=78)
+DEBUG flower 2021-04-08 14:00:43,983 | numpy_client.py:260 | cached_clock: 67, curr_clock: 78
+DEBUG flower 2021-04-08 14:00:46,792 | acc_variance.py:19 | AccuracyVariance: sample variance 0.005086233162720407 (last 7 data)
+DEBUG flower 2021-04-08 14:00:46,793 | numpy_client.py:201 | Not a switch point
+INFO flower 2021-04-08 14:00:46,796 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=78)
+DEBUG flower 2021-04-08 14:00:53,108 | numpy_client.py:172 | fit, FitIns(clock=79)
+DEBUG flower 2021-04-08 14:00:53,108 | numpy_client.py:260 | cached_clock: 67, curr_clock: 79
+INFO flower 2021-04-08 14:00:53,108 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 14:00:57,542 | numpy_client.py:228 | read: ReadRes(clock=68)
+DEBUG flower 2021-04-08 14:00:57,550 | numpy_client.py:172 | fit, FitIns(clock=79)
+DEBUG flower 2021-04-08 14:00:57,550 | numpy_client.py:260 | cached_clock: 68, curr_clock: 79
+DEBUG flower 2021-04-08 14:01:00,316 | acc_variance.py:19 | AccuracyVariance: sample variance 0.004737585003741615 (last 7 data)
+DEBUG flower 2021-04-08 14:01:00,317 | numpy_client.py:201 | Not a switch point
+INFO flower 2021-04-08 14:01:00,377 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=79)
+DEBUG flower 2021-04-08 14:01:06,565 | numpy_client.py:172 | fit, FitIns(clock=80)
+DEBUG flower 2021-04-08 14:01:06,639 | numpy_client.py:260 | cached_clock: 68, curr_clock: 80
+INFO flower 2021-04-08 14:01:06,639 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 14:01:10,777 | numpy_client.py:228 | read: ReadRes(clock=69)
+DEBUG flower 2021-04-08 14:01:10,787 | numpy_client.py:172 | fit, FitIns(clock=80)
+DEBUG flower 2021-04-08 14:01:10,787 | numpy_client.py:260 | cached_clock: 69, curr_clock: 80
+DEBUG flower 2021-04-08 14:01:13,576 | acc_variance.py:19 | AccuracyVariance: sample variance 0.0053563397034677145 (last 7 data)
+DEBUG flower 2021-04-08 14:01:13,576 | numpy_client.py:201 | Not a switch point
+INFO flower 2021-04-08 14:01:13,580 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=80)
+DEBUG flower 2021-04-08 14:01:20,077 | numpy_client.py:172 | fit, FitIns(clock=81)
+DEBUG flower 2021-04-08 14:01:20,078 | numpy_client.py:260 | cached_clock: 69, curr_clock: 81
+INFO flower 2021-04-08 14:01:20,078 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 14:01:24,175 | numpy_client.py:228 | read: ReadRes(clock=70)
+DEBUG flower 2021-04-08 14:01:24,182 | numpy_client.py:172 | fit, FitIns(clock=81)
+DEBUG flower 2021-04-08 14:01:24,182 | numpy_client.py:260 | cached_clock: 70, curr_clock: 81
+DEBUG flower 2021-04-08 14:01:26,990 | acc_variance.py:19 | AccuracyVariance: sample variance 0.0030820809433599002 (last 7 data)
+DEBUG flower 2021-04-08 14:01:26,990 | numpy_client.py:201 | Not a switch point
+INFO flower 2021-04-08 14:01:26,994 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=81)
+DEBUG flower 2021-04-08 14:01:33,172 | numpy_client.py:172 | fit, FitIns(clock=82)
+DEBUG flower 2021-04-08 14:01:33,172 | numpy_client.py:260 | cached_clock: 70, curr_clock: 82
+INFO flower 2021-04-08 14:01:33,173 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 14:01:37,590 | numpy_client.py:228 | read: ReadRes(clock=71)
+DEBUG flower 2021-04-08 14:01:37,597 | numpy_client.py:172 | fit, FitIns(clock=82)
+DEBUG flower 2021-04-08 14:01:37,597 | numpy_client.py:260 | cached_clock: 71, curr_clock: 82
+DEBUG flower 2021-04-08 14:01:40,391 | acc_variance.py:19 | AccuracyVariance: sample variance 0.003242569778445376 (last 7 data)
+DEBUG flower 2021-04-08 14:01:40,391 | numpy_client.py:201 | Not a switch point
+INFO flower 2021-04-08 14:01:40,394 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=82)
+DEBUG flower 2021-04-08 14:01:46,588 | numpy_client.py:172 | fit, FitIns(clock=83)
+DEBUG flower 2021-04-08 14:01:46,588 | numpy_client.py:260 | cached_clock: 71, curr_clock: 83
+INFO flower 2021-04-08 14:01:46,588 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 14:01:51,075 | numpy_client.py:228 | read: ReadRes(clock=72)
+DEBUG flower 2021-04-08 14:01:51,083 | numpy_client.py:172 | fit, FitIns(clock=83)
+DEBUG flower 2021-04-08 14:01:51,083 | numpy_client.py:260 | cached_clock: 72, curr_clock: 83
+DEBUG flower 2021-04-08 14:01:53,779 | acc_variance.py:19 | AccuracyVariance: sample variance 0.003383362901497374 (last 7 data)
+DEBUG flower 2021-04-08 14:01:53,779 | numpy_client.py:201 | Not a switch point
+INFO flower 2021-04-08 14:01:53,782 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=83)
+DEBUG flower 2021-04-08 14:02:00,011 | numpy_client.py:172 | fit, FitIns(clock=84)
+DEBUG flower 2021-04-08 14:02:00,012 | numpy_client.py:260 | cached_clock: 72, curr_clock: 84
+INFO flower 2021-04-08 14:02:00,012 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 14:02:04,675 | numpy_client.py:228 | read: ReadRes(clock=73)
+DEBUG flower 2021-04-08 14:02:04,683 | numpy_client.py:172 | fit, FitIns(clock=84)
+DEBUG flower 2021-04-08 14:02:04,683 | numpy_client.py:260 | cached_clock: 73, curr_clock: 84
+DEBUG flower 2021-04-08 14:02:07,509 | acc_variance.py:19 | AccuracyVariance: sample variance 3.4808055920837665e-05 (last 7 data)
+DEBUG flower 2021-04-08 14:02:07,510 | acc_variance.py:23 | AccuracyVariance: should switch
+DEBUG flower 2021-04-08 14:02:07,510 | numpy_client.py:199 | Find switch point, staleness_bound -> 10
+INFO flower 2021-04-08 14:02:07,513 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=84)
+DEBUG flower 2021-04-08 14:02:13,693 | numpy_client.py:172 | fit, FitIns(clock=85)
+DEBUG flower 2021-04-08 14:02:13,694 | numpy_client.py:260 | cached_clock: 73, curr_clock: 85
+INFO flower 2021-04-08 14:02:13,694 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 14:02:32,295 | numpy_client.py:228 | read: ReadRes(clock=75)
+DEBUG flower 2021-04-08 14:02:32,302 | numpy_client.py:172 | fit, FitIns(clock=85)
+DEBUG flower 2021-04-08 14:02:32,302 | numpy_client.py:260 | cached_clock: 75, curr_clock: 85
+DEBUG flower 2021-04-08 14:02:35,374 | acc_variance.py:19 | AccuracyVariance: sample variance 5.868981626114332e-05 (last 7 data)
+DEBUG flower 2021-04-08 14:02:35,375 | acc_variance.py:23 | AccuracyVariance: should switch
+DEBUG flower 2021-04-08 14:02:35,375 | numpy_client.py:199 | Find switch point, staleness_bound -> 9
+INFO flower 2021-04-08 14:02:35,379 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=85)
+DEBUG flower 2021-04-08 14:02:41,660 | numpy_client.py:172 | fit, FitIns(clock=86)
+DEBUG flower 2021-04-08 14:02:41,661 | numpy_client.py:260 | cached_clock: 75, curr_clock: 86
+INFO flower 2021-04-08 14:02:41,661 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 14:02:59,499 | numpy_client.py:228 | read: ReadRes(clock=77)
+DEBUG flower 2021-04-08 14:02:59,507 | numpy_client.py:172 | fit, FitIns(clock=86)
+DEBUG flower 2021-04-08 14:02:59,507 | numpy_client.py:260 | cached_clock: 77, curr_clock: 86
+DEBUG flower 2021-04-08 14:03:02,305 | acc_variance.py:19 | AccuracyVariance: sample variance 0.0031966083870358405 (last 7 data)
+DEBUG flower 2021-04-08 14:03:02,305 | numpy_client.py:201 | Not a switch point
+INFO flower 2021-04-08 14:03:02,308 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=86)
+DEBUG flower 2021-04-08 14:03:09,727 | numpy_client.py:172 | fit, FitIns(clock=87)
+DEBUG flower 2021-04-08 14:03:09,727 | numpy_client.py:260 | cached_clock: 77, curr_clock: 87
+INFO flower 2021-04-08 14:03:09,727 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 14:03:14,060 | numpy_client.py:228 | read: ReadRes(clock=78)
+DEBUG flower 2021-04-08 14:03:14,068 | numpy_client.py:172 | fit, FitIns(clock=87)
+DEBUG flower 2021-04-08 14:03:14,068 | numpy_client.py:260 | cached_clock: 78, curr_clock: 87
+DEBUG flower 2021-04-08 14:03:16,790 | acc_variance.py:19 | AccuracyVariance: sample variance 0.00314030248981045 (last 7 data)
+DEBUG flower 2021-04-08 14:03:16,790 | numpy_client.py:201 | Not a switch point
+INFO flower 2021-04-08 14:03:16,793 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=87)
+DEBUG flower 2021-04-08 14:03:22,982 | numpy_client.py:172 | fit, FitIns(clock=88)
+DEBUG flower 2021-04-08 14:03:22,983 | numpy_client.py:260 | cached_clock: 78, curr_clock: 88
+INFO flower 2021-04-08 14:03:22,983 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 14:03:27,292 | numpy_client.py:228 | read: ReadRes(clock=79)
+DEBUG flower 2021-04-08 14:03:27,299 | numpy_client.py:172 | fit, FitIns(clock=88)
+DEBUG flower 2021-04-08 14:03:27,299 | numpy_client.py:260 | cached_clock: 79, curr_clock: 88
+DEBUG flower 2021-04-08 14:03:30,204 | acc_variance.py:19 | AccuracyVariance: sample variance 0.00302280933733408 (last 7 data)
+DEBUG flower 2021-04-08 14:03:30,205 | numpy_client.py:201 | Not a switch point
+INFO flower 2021-04-08 14:03:30,208 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=88)
+DEBUG flower 2021-04-08 14:03:35,518 | numpy_client.py:172 | fit, FitIns(clock=89)
+DEBUG flower 2021-04-08 14:03:35,518 | numpy_client.py:260 | cached_clock: 79, curr_clock: 89
+INFO flower 2021-04-08 14:03:35,518 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 14:03:40,025 | numpy_client.py:228 | read: ReadRes(clock=80)
+DEBUG flower 2021-04-08 14:03:40,030 | numpy_client.py:172 | fit, FitIns(clock=89)
+DEBUG flower 2021-04-08 14:03:40,030 | numpy_client.py:260 | cached_clock: 80, curr_clock: 89
+DEBUG flower 2021-04-08 14:03:42,785 | acc_variance.py:19 | AccuracyVariance: sample variance 0.0028295983754840497 (last 7 data)
+DEBUG flower 2021-04-08 14:03:42,785 | numpy_client.py:201 | Not a switch point
+INFO flower 2021-04-08 14:03:42,789 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=89)
+DEBUG flower 2021-04-08 14:03:49,912 | numpy_client.py:172 | fit, FitIns(clock=90)
+DEBUG flower 2021-04-08 14:03:49,912 | numpy_client.py:260 | cached_clock: 80, curr_clock: 90
+INFO flower 2021-04-08 14:03:49,912 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 14:03:54,516 | numpy_client.py:228 | read: ReadRes(clock=81)
+DEBUG flower 2021-04-08 14:03:54,523 | numpy_client.py:172 | fit, FitIns(clock=90)
+DEBUG flower 2021-04-08 14:03:54,524 | numpy_client.py:260 | cached_clock: 81, curr_clock: 90
+DEBUG flower 2021-04-08 14:03:57,199 | acc_variance.py:19 | AccuracyVariance: sample variance 0.003190762109400543 (last 7 data)
+DEBUG flower 2021-04-08 14:03:57,199 | numpy_client.py:201 | Not a switch point
+INFO flower 2021-04-08 14:03:57,202 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=90)
+DEBUG flower 2021-04-08 14:04:03,394 | numpy_client.py:172 | fit, FitIns(clock=91)
+DEBUG flower 2021-04-08 14:04:03,394 | numpy_client.py:260 | cached_clock: 81, curr_clock: 91
+INFO flower 2021-04-08 14:04:03,394 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 14:04:07,986 | numpy_client.py:228 | read: ReadRes(clock=82)
+DEBUG flower 2021-04-08 14:04:07,993 | numpy_client.py:172 | fit, FitIns(clock=91)
+DEBUG flower 2021-04-08 14:04:07,993 | numpy_client.py:260 | cached_clock: 82, curr_clock: 91
+DEBUG flower 2021-04-08 14:04:10,704 | acc_variance.py:19 | AccuracyVariance: sample variance 0.0036624375186172725 (last 7 data)
+DEBUG flower 2021-04-08 14:04:10,704 | numpy_client.py:201 | Not a switch point
+INFO flower 2021-04-08 14:04:10,708 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=91)
+DEBUG flower 2021-04-08 14:04:16,743 | numpy_client.py:172 | fit, FitIns(clock=92)
+DEBUG flower 2021-04-08 14:04:16,743 | numpy_client.py:260 | cached_clock: 82, curr_clock: 92
+INFO flower 2021-04-08 14:04:16,743 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 14:04:20,886 | numpy_client.py:228 | read: ReadRes(clock=83)
+DEBUG flower 2021-04-08 14:04:20,893 | numpy_client.py:172 | fit, FitIns(clock=92)
+DEBUG flower 2021-04-08 14:04:20,893 | numpy_client.py:260 | cached_clock: 83, curr_clock: 92
+DEBUG flower 2021-04-08 14:04:23,599 | acc_variance.py:19 | AccuracyVariance: sample variance 0.00379132523648477 (last 7 data)
+DEBUG flower 2021-04-08 14:04:23,599 | numpy_client.py:201 | Not a switch point
+INFO flower 2021-04-08 14:04:23,602 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=92)
+DEBUG flower 2021-04-08 14:04:29,580 | numpy_client.py:172 | fit, FitIns(clock=93)
+DEBUG flower 2021-04-08 14:04:29,580 | numpy_client.py:260 | cached_clock: 83, curr_clock: 93
+INFO flower 2021-04-08 14:04:29,580 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 14:04:33,784 | numpy_client.py:228 | read: ReadRes(clock=84)
+DEBUG flower 2021-04-08 14:04:33,791 | numpy_client.py:172 | fit, FitIns(clock=93)
+DEBUG flower 2021-04-08 14:04:33,791 | numpy_client.py:260 | cached_clock: 84, curr_clock: 93
+DEBUG flower 2021-04-08 14:04:36,694 | acc_variance.py:19 | AccuracyVariance: sample variance 0.004449372030318003 (last 7 data)
+DEBUG flower 2021-04-08 14:04:36,694 | numpy_client.py:201 | Not a switch point
+INFO flower 2021-04-08 14:04:36,698 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=93)
+DEBUG flower 2021-04-08 14:04:42,616 | numpy_client.py:172 | fit, FitIns(clock=94)
+DEBUG flower 2021-04-08 14:04:42,617 | numpy_client.py:260 | cached_clock: 84, curr_clock: 94
+INFO flower 2021-04-08 14:04:42,617 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 14:04:47,110 | numpy_client.py:228 | read: ReadRes(clock=85)
+DEBUG flower 2021-04-08 14:04:47,117 | numpy_client.py:172 | fit, FitIns(clock=94)
+DEBUG flower 2021-04-08 14:04:47,118 | numpy_client.py:260 | cached_clock: 85, curr_clock: 94
+DEBUG flower 2021-04-08 14:04:49,796 | acc_variance.py:19 | AccuracyVariance: sample variance 0.004375555680175241 (last 7 data)
+DEBUG flower 2021-04-08 14:04:49,797 | numpy_client.py:201 | Not a switch point
+INFO flower 2021-04-08 14:04:49,800 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=94)
+DEBUG flower 2021-04-08 14:04:55,822 | numpy_client.py:172 | fit, FitIns(clock=95)
+DEBUG flower 2021-04-08 14:04:55,822 | numpy_client.py:260 | cached_clock: 85, curr_clock: 95
+INFO flower 2021-04-08 14:04:55,823 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 14:05:00,207 | numpy_client.py:228 | read: ReadRes(clock=86)
+DEBUG flower 2021-04-08 14:05:00,214 | numpy_client.py:172 | fit, FitIns(clock=95)
+DEBUG flower 2021-04-08 14:05:00,215 | numpy_client.py:260 | cached_clock: 86, curr_clock: 95
+DEBUG flower 2021-04-08 14:05:02,905 | acc_variance.py:19 | AccuracyVariance: sample variance 0.0030899422001801806 (last 7 data)
+DEBUG flower 2021-04-08 14:05:02,905 | numpy_client.py:201 | Not a switch point
+INFO flower 2021-04-08 14:05:02,909 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=95)
+DEBUG flower 2021-04-08 14:05:09,306 | numpy_client.py:172 | fit, FitIns(clock=96)
+DEBUG flower 2021-04-08 14:05:09,306 | numpy_client.py:260 | cached_clock: 86, curr_clock: 96
+INFO flower 2021-04-08 14:05:09,306 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 14:05:13,504 | numpy_client.py:228 | read: ReadRes(clock=87)
+DEBUG flower 2021-04-08 14:05:13,511 | numpy_client.py:172 | fit, FitIns(clock=96)
+DEBUG flower 2021-04-08 14:05:13,511 | numpy_client.py:260 | cached_clock: 87, curr_clock: 96
+DEBUG flower 2021-04-08 14:05:16,386 | acc_variance.py:19 | AccuracyVariance: sample variance 0.0008252191162153726 (last 7 data)
+DEBUG flower 2021-04-08 14:05:16,386 | numpy_client.py:201 | Not a switch point
+INFO flower 2021-04-08 14:05:16,391 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=96)
+DEBUG flower 2021-04-08 14:05:22,424 | numpy_client.py:172 | fit, FitIns(clock=97)
+DEBUG flower 2021-04-08 14:05:22,424 | numpy_client.py:260 | cached_clock: 87, curr_clock: 97
+INFO flower 2021-04-08 14:05:22,424 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 14:05:26,794 | numpy_client.py:228 | read: ReadRes(clock=88)
+DEBUG flower 2021-04-08 14:05:26,802 | numpy_client.py:172 | fit, FitIns(clock=97)
+DEBUG flower 2021-04-08 14:05:26,802 | numpy_client.py:260 | cached_clock: 88, curr_clock: 97
+DEBUG flower 2021-04-08 14:05:29,589 | acc_variance.py:19 | AccuracyVariance: sample variance 0.0004059615457966743 (last 7 data)
+DEBUG flower 2021-04-08 14:05:29,590 | numpy_client.py:201 | Not a switch point
+INFO flower 2021-04-08 14:05:29,593 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=97)
+DEBUG flower 2021-04-08 14:05:36,108 | numpy_client.py:172 | fit, FitIns(clock=98)
+DEBUG flower 2021-04-08 14:05:36,108 | numpy_client.py:260 | cached_clock: 88, curr_clock: 98
+INFO flower 2021-04-08 14:05:36,108 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 14:05:40,826 | numpy_client.py:228 | read: ReadRes(clock=89)
+DEBUG flower 2021-04-08 14:05:40,834 | numpy_client.py:172 | fit, FitIns(clock=98)
+DEBUG flower 2021-04-08 14:05:40,834 | numpy_client.py:260 | cached_clock: 89, curr_clock: 98
+DEBUG flower 2021-04-08 14:05:43,603 | acc_variance.py:19 | AccuracyVariance: sample variance 0.0002413576123756729 (last 7 data)
+DEBUG flower 2021-04-08 14:05:43,603 | numpy_client.py:201 | Not a switch point
+INFO flower 2021-04-08 14:05:43,607 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=98)
+DEBUG flower 2021-04-08 14:05:49,821 | numpy_client.py:172 | fit, FitIns(clock=99)
+DEBUG flower 2021-04-08 14:05:49,821 | numpy_client.py:260 | cached_clock: 89, curr_clock: 99
+INFO flower 2021-04-08 14:05:49,821 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-08 14:05:54,711 | numpy_client.py:228 | read: ReadRes(clock=90)
+DEBUG flower 2021-04-08 14:05:54,719 | numpy_client.py:172 | fit, FitIns(clock=99)
+DEBUG flower 2021-04-08 14:05:54,719 | numpy_client.py:260 | cached_clock: 90, curr_clock: 99
+DEBUG flower 2021-04-08 14:05:57,421 | acc_variance.py:19 | AccuracyVariance: sample variance 0.0001783966078421397 (last 7 data)
+DEBUG flower 2021-04-08 14:05:57,421 | numpy_client.py:201 | Not a switch point
+INFO flower 2021-04-08 14:05:57,425 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=99)
+DEBUG flower 2021-04-08 14:05:57,425 | numpy_client.py:217 | The client finishes computing after 1235 seconds
+INFO flower 2021-04-08 14:08:15,701 | numpy_client.py:250 | [32;1m Loss: 81.220, Accuracy: 30.533%[0m
+DEBUG flower 2021-04-08 14:08:15,914 | connection.py:68 | Insecure gRPC channel closed
+INFO flower 2021-04-08 14:08:15,915 | app.py:74 | Disconnect and shut down
+Namespace(idx=29, max_delay=0, min_delay=0, num_clients=31, server_ip='10.244.37.27:8080', staleness_bound=2000)
+I'm client 29
+Start SSP client without delay
+Files already downloaded and verified
+Files already downloaded and verified
+[32;1mClient 29: 1668 train samples, 488 test samples[0m
+loss=115.14791011810303, acc=0.4498820754716981
+feed:  0.4498820754716981
+loss=105.96566414833069, acc=0.5636792452830188
+feed:  0.5636792452830188
+loss=79.72235000133514, acc=0.5654481132075472
+feed:  0.5654481132075472
+loss=55.35309159755707, acc=0.5654481132075472
+feed:  0.5654481132075472
+loss=51.217489778995514, acc=0.5654481132075472
+feed:  0.5654481132075472
+loss=50.48817586898804, acc=0.5654481132075472
+feed:  0.5654481132075472
+loss=50.12022912502289, acc=0.5648584905660378
+feed:  0.5648584905660378
+loss=49.786713004112244, acc=0.5642688679245284
+feed:  0.5642688679245284
+loss=49.47518354654312, acc=0.5642688679245284
+feed:  0.5642688679245284
+loss=49.19799494743347, acc=0.5660377358490566
+feed:  0.5660377358490566
+loss=48.96749311685562, acc=0.5654481132075472
+feed:  0.5654481132075472
+loss=48.774975180625916, acc=0.5636792452830188
+feed:  0.5636792452830188
+loss=48.5994376540184, acc=0.5630896226415094
+feed:  0.5630896226415094
+loss=48.43003350496292, acc=0.5619103773584906
+feed:  0.5619103773584906
+loss=48.26204979419708, acc=0.5607311320754716
+feed:  0.5607311320754716
+loss=48.095969915390015, acc=0.5619103773584906
+feed:  0.5619103773584906
+loss=47.92311227321625, acc=0.5625
+feed:  0.5625
+loss=47.74739199876785, acc=0.5642688679245284
+feed:  0.5642688679245284
+loss=47.56530475616455, acc=0.5648584905660378
+feed:  0.5648584905660378
+loss=47.36355811357498, acc=0.5654481132075472
+feed:  0.5654481132075472
+loss=47.15331095457077, acc=0.5701650943396226
+feed:  0.5701650943396226
+loss=46.93307888507843, acc=0.5689858490566038
+feed:  0.5689858490566038
+loss=46.694622576236725, acc=0.5760613207547169
+feed:  0.5760613207547169
+loss=46.44284653663635, acc=0.5837264150943396
+feed:  0.5837264150943396
+loss=46.17649805545807, acc=0.5860849056603774
+feed:  0.5860849056603774
+loss=74.05960094928741, acc=0.5760613207547169
+feed:  0.5760613207547169
+loss=48.44281893968582, acc=0.6049528301886793
+feed:  0.6049528301886793
+loss=50.34691512584686, acc=0.5725235849056604
+feed:  0.5725235849056604
+loss=110.71950179338455, acc=0.4251179245283019
+feed:  0.4251179245283019
+loss=119.22560584545135, acc=0.45047169811320753
+feed:  0.45047169811320753
+loss=124.46254897117615, acc=0.35141509433962265
+feed:  0.35141509433962265
+loss=48.830228209495544, acc=0.5860849056603774
+feed:  0.5860849056603774
+loss=112.29713696241379, acc=0.41450471698113206
+feed:  0.41450471698113206
+loss=112.93707776069641, acc=0.41037735849056606
+feed:  0.41037735849056606
+loss=124.06656539440155, acc=0.3561320754716981
+feed:  0.3561320754716981
+loss=44.303870648145676, acc=0.6403301886792453
+feed:  0.6403301886792453
+loss=63.59438472986221, acc=0.6456367924528302
+feed:  0.6456367924528302
+loss=98.83862572908401, acc=0.5389150943396226
+feed:  0.5389150943396226
+loss=123.52280032634735, acc=0.3608490566037736
+feed:  0.3608490566037736
+loss=63.78540036082268, acc=0.6308962264150944
+feed:  0.6308962264150944
+loss=63.2628493309021, acc=0.629127358490566
+feed:  0.629127358490566
+loss=85.17267775535583, acc=0.5294811320754716
+feed:  0.5294811320754716
+loss=124.99446821212769, acc=0.3608490566037736
+feed:  0.3608490566037736
+loss=63.80520403385162, acc=0.5524764150943396
+feed:  0.5524764150943396
+loss=125.81094872951508, acc=0.36792452830188677
+feed:  0.36792452830188677
+loss=126.30016648769379, acc=0.36851415094339623
+feed:  0.36851415094339623
+loss=63.6898148059845, acc=0.6639150943396226
+feed:  0.6639150943396226
+loss=63.61543354392052, acc=0.6656839622641509
+feed:  0.6656839622641509
+loss=64.56894338130951, acc=0.652122641509434
+feed:  0.652122641509434
+loss=63.15631005167961, acc=0.6686320754716981
+feed:  0.6686320754716981
+loss=63.02787607908249, acc=0.6709905660377359
+feed:  0.6709905660377359
+loss=121.27352213859558, acc=0.35259433962264153
+feed:  0.35259433962264153
+loss=70.38820073008537, acc=0.6255896226415094
+feed:  0.6255896226415094
+loss=118.66947394609451, acc=0.3803066037735849
+feed:  0.3803066037735849
+loss=70.21051993966103, acc=0.6261792452830188
+feed:  0.6261792452830188
+loss=93.40176910161972, acc=0.4793632075471698
+feed:  0.4793632075471698
+loss=116.2103624343872, acc=0.40153301886792453
+feed:  0.40153301886792453
+loss=70.11566746234894, acc=0.6191037735849056
+feed:  0.6191037735849056
+loss=115.19294756650925, acc=0.4074292452830189
+feed:  0.4074292452830189
+loss=69.98400983214378, acc=0.6173349056603774
+feed:  0.6173349056603774
+loss=68.71973171830177, acc=0.6356132075471698
+feed:  0.6356132075471698
+loss=59.0738400220871, acc=0.6851415094339622
+feed:  0.6851415094339622
+loss=111.90174961090088, acc=0.4056603773584906
+feed:  0.4056603773584906
+loss=59.254390716552734, acc=0.6875
+feed:  0.6875
+loss=58.566876113414764, acc=0.6821933962264151
+feed:  0.6821933962264151
+loss=59.39565694332123, acc=0.6922169811320755
+feed:  0.6922169811320755
+loss=59.415719628334045, acc=0.6922169811320755
+feed:  0.6922169811320755
+loss=58.255302369594574, acc=0.6892688679245284
+feed:  0.6892688679245284
+loss=85.1282724738121, acc=0.5489386792452831
+feed:  0.5489386792452831
+loss=59.37656372785568, acc=0.6928066037735849
+feed:  0.6928066037735849
+loss=85.48297470808029, acc=0.5377358490566038
+feed:  0.5377358490566038
+loss=59.58401969075203, acc=0.7010613207547169
+feed:  0.7010613207547169
+loss=57.62831896543503, acc=0.6975235849056604
+feed:  0.6975235849056604
+loss=82.68650588393211, acc=0.5630896226415094
+feed:  0.5630896226415094
+loss=60.21941560506821, acc=0.7004716981132075
+feed:  0.7004716981132075
+loss=84.83400756120682, acc=0.5619103773584906
+feed:  0.5619103773584906
+loss=86.7074263393879, acc=0.5672169811320755
+feed:  0.5672169811320755
+loss=48.32322281599045, acc=0.6751179245283019
+feed:  0.6751179245283019
+loss=79.13024067878723, acc=0.5141509433962265
+feed:  0.5141509433962265
+loss=83.45796728134155, acc=0.5117924528301887
+feed:  0.5117924528301887
+loss=84.41052940487862, acc=0.5129716981132075
+feed:  0.5129716981132075
+loss=85.69328126311302, acc=0.5129716981132075
+feed:  0.5129716981132075
+loss=86.51238477230072, acc=0.5106132075471698
+feed:  0.5106132075471698
+loss=93.2701543867588, acc=0.49587264150943394
+feed:  0.49587264150943394
+loss=95.54513171315193, acc=0.5123820754716981
+feed:  0.5123820754716981
+loss=96.07390320301056, acc=0.5241745283018868
+feed:  0.5241745283018868
+loss=62.22834998369217, acc=0.6715801886792453
+feed:  0.6715801886792453
+loss=80.63537645339966, acc=0.5507075471698113
+feed:  0.5507075471698113
+loss=83.57292345166206, acc=0.5483490566037735
+feed:  0.5483490566037735
+loss=84.36789041757584, acc=0.5542452830188679
+feed:  0.5542452830188679
+loss=54.304797261953354, acc=0.6444575471698113
+feed:  0.6444575471698113
+loss=42.3911529481411, acc=0.6757075471698113
+feed:  0.6757075471698113
+loss=38.15506583452225, acc=0.6969339622641509
+feed:  0.6969339622641509
+loss=36.58625203371048, acc=0.7063679245283019
+feed:  0.7063679245283019
+loss=35.41200336813927, acc=0.7211084905660378
+feed:  0.7211084905660378
+loss=34.47329020500183, acc=0.7252358490566038
+feed:  0.7252358490566038
+loss=33.68867763876915, acc=0.7311320754716981
+feed:  0.7311320754716981
+loss=32.96785715222359, acc=0.7376179245283019
+feed:  0.7376179245283019
+loss=32.30084443092346, acc=0.7441037735849056
+feed:  0.7441037735849056
+loss=31.638511389493942, acc=0.7482311320754716
+feed:  0.7482311320754716
+Files already downloaded and verified
+Files already downloaded and verified
+Testing on full test set: 313, 1497.4904010295868, 0.3377
+Testing on partial test set: 16, 81.21984076499939, 0.305327868852459

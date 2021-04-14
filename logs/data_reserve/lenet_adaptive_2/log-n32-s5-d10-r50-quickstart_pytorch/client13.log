@@ -1,0 +1,569 @@
+DEBUG flower 2021-04-10 16:55:01,277 | client.py:83 | Start SSP client with delay [40,80]
+DEBUG flower 2021-04-10 16:55:03,966 | connection.py:36 | ChannelConnectivity.IDLE
+DEBUG flower 2021-04-10 16:55:03,968 | connection.py:36 | ChannelConnectivity.READY
+INFO flower 2021-04-10 16:55:03,968 | app.py:63 | Opened (insecure) gRPC connection
+DEBUG flower 2021-04-10 16:55:03,968 | app.py:66 | Waiting for message from server...
+DEBUG flower 2021-04-10 16:55:09,818 | app.py:68 | Received server message. Handling...
+DEBUG flower 2021-04-10 16:55:09,818 | numpy_client.py:172 | fit, FitIns(clock=0)
+INFO flower 2021-04-10 16:55:09,818 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-10 16:55:09,819 | app.py:66 | Waiting for message from server...
+DEBUG flower 2021-04-10 16:55:09,957 | app.py:68 | Received server message. Handling...
+DEBUG flower 2021-04-10 16:55:09,957 | numpy_client.py:228 | read: ReadRes(clock=-1)
+DEBUG flower 2021-04-10 16:55:09,975 | numpy_client.py:172 | fit, FitIns(clock=0)
+DEBUG flower 2021-04-10 16:55:09,975 | numpy_client.py:260 | cached_clock: -1, curr_clock: 0
+DEBUG flower 2021-04-10 16:55:11,554 | model_wrapper.py:21 | Load existing initial model
+INFO flower 2021-04-10 16:55:11,558 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=0)
+INFO flower 2021-04-10 16:55:11,559 | chaos.py:14 | Delay 74 sec
+DEBUG flower 2021-04-10 16:56:25,626 | app.py:66 | Waiting for message from server...
+DEBUG flower 2021-04-10 16:56:25,648 | app.py:68 | Received server message. Handling...
+DEBUG flower 2021-04-10 16:56:25,648 | numpy_client.py:172 | fit, FitIns(clock=1)
+DEBUG flower 2021-04-10 16:56:25,649 | numpy_client.py:260 | cached_clock: -1, curr_clock: 1
+INFO flower 2021-04-10 16:56:27,272 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=1)
+INFO flower 2021-04-10 16:56:27,272 | chaos.py:14 | Delay 78 sec
+DEBUG flower 2021-04-10 16:57:45,274 | app.py:66 | Waiting for message from server...
+DEBUG flower 2021-04-10 16:57:51,786 | app.py:68 | Received server message. Handling...
+DEBUG flower 2021-04-10 16:57:51,787 | numpy_client.py:172 | fit, FitIns(clock=2)
+DEBUG flower 2021-04-10 16:57:51,787 | numpy_client.py:260 | cached_clock: -1, curr_clock: 2
+INFO flower 2021-04-10 16:57:53,371 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=2)
+INFO flower 2021-04-10 16:57:53,371 | chaos.py:14 | Delay 63 sec
+DEBUG flower 2021-04-10 16:58:56,439 | app.py:66 | Waiting for message from server...
+DEBUG flower 2021-04-10 16:58:56,463 | app.py:68 | Received server message. Handling...
+DEBUG flower 2021-04-10 16:58:56,463 | numpy_client.py:172 | fit, FitIns(clock=3)
+DEBUG flower 2021-04-10 16:58:56,463 | numpy_client.py:260 | cached_clock: -1, curr_clock: 3
+INFO flower 2021-04-10 16:58:58,255 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=3)
+INFO flower 2021-04-10 16:58:58,256 | chaos.py:14 | Delay 44 sec
+DEBUG flower 2021-04-10 16:59:42,275 | app.py:66 | Waiting for message from server...
+DEBUG flower 2021-04-10 16:59:42,297 | app.py:68 | Received server message. Handling...
+DEBUG flower 2021-04-10 16:59:42,298 | numpy_client.py:172 | fit, FitIns(clock=4)
+DEBUG flower 2021-04-10 16:59:42,298 | numpy_client.py:260 | cached_clock: -1, curr_clock: 4
+INFO flower 2021-04-10 16:59:43,864 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=4)
+INFO flower 2021-04-10 16:59:43,864 | chaos.py:14 | Delay 47 sec
+DEBUG flower 2021-04-10 17:00:30,897 | app.py:66 | Waiting for message from server...
+DEBUG flower 2021-04-10 17:00:30,922 | app.py:68 | Received server message. Handling...
+DEBUG flower 2021-04-10 17:00:30,922 | numpy_client.py:172 | fit, FitIns(clock=5)
+DEBUG flower 2021-04-10 17:00:30,923 | numpy_client.py:260 | cached_clock: -1, curr_clock: 5
+INFO flower 2021-04-10 17:00:30,923 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-10 17:00:30,923 | app.py:66 | Waiting for message from server...
+DEBUG flower 2021-04-10 17:00:31,004 | app.py:68 | Received server message. Handling...
+DEBUG flower 2021-04-10 17:00:31,004 | numpy_client.py:228 | read: ReadRes(clock=3)
+DEBUG flower 2021-04-10 17:00:31,012 | numpy_client.py:172 | fit, FitIns(clock=5)
+DEBUG flower 2021-04-10 17:00:31,012 | numpy_client.py:260 | cached_clock: 3, curr_clock: 5
+INFO flower 2021-04-10 17:00:32,567 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=5)
+INFO flower 2021-04-10 17:00:32,568 | chaos.py:14 | Delay 47 sec
+DEBUG flower 2021-04-10 17:01:19,604 | app.py:66 | Waiting for message from server...
+DEBUG flower 2021-04-10 17:01:19,628 | app.py:68 | Received server message. Handling...
+DEBUG flower 2021-04-10 17:01:19,629 | numpy_client.py:172 | fit, FitIns(clock=6)
+DEBUG flower 2021-04-10 17:01:19,629 | numpy_client.py:260 | cached_clock: 3, curr_clock: 6
+INFO flower 2021-04-10 17:01:21,351 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=6)
+INFO flower 2021-04-10 17:01:21,352 | chaos.py:14 | Delay 79 sec
+DEBUG flower 2021-04-10 17:02:40,366 | app.py:66 | Waiting for message from server...
+DEBUG flower 2021-04-10 17:02:40,390 | app.py:68 | Received server message. Handling...
+DEBUG flower 2021-04-10 17:02:40,390 | numpy_client.py:172 | fit, FitIns(clock=7)
+DEBUG flower 2021-04-10 17:02:40,391 | numpy_client.py:260 | cached_clock: 3, curr_clock: 7
+INFO flower 2021-04-10 17:02:42,049 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=7)
+INFO flower 2021-04-10 17:02:42,049 | chaos.py:14 | Delay 79 sec
+DEBUG flower 2021-04-10 17:04:01,129 | app.py:66 | Waiting for message from server...
+DEBUG flower 2021-04-10 17:04:01,155 | app.py:68 | Received server message. Handling...
+DEBUG flower 2021-04-10 17:04:01,155 | numpy_client.py:172 | fit, FitIns(clock=8)
+DEBUG flower 2021-04-10 17:04:01,156 | numpy_client.py:260 | cached_clock: 3, curr_clock: 8
+INFO flower 2021-04-10 17:04:02,666 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=8)
+INFO flower 2021-04-10 17:04:02,667 | chaos.py:14 | Delay 45 sec
+DEBUG flower 2021-04-10 17:04:47,688 | app.py:66 | Waiting for message from server...
+DEBUG flower 2021-04-10 17:04:47,713 | app.py:68 | Received server message. Handling...
+DEBUG flower 2021-04-10 17:04:47,714 | numpy_client.py:172 | fit, FitIns(clock=9)
+DEBUG flower 2021-04-10 17:04:47,714 | numpy_client.py:260 | cached_clock: 3, curr_clock: 9
+INFO flower 2021-04-10 17:04:47,714 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-10 17:04:47,715 | app.py:66 | Waiting for message from server...
+DEBUG flower 2021-04-10 17:04:47,747 | app.py:68 | Received server message. Handling...
+DEBUG flower 2021-04-10 17:04:47,747 | numpy_client.py:228 | read: ReadRes(clock=6)
+DEBUG flower 2021-04-10 17:04:47,755 | numpy_client.py:172 | fit, FitIns(clock=9)
+DEBUG flower 2021-04-10 17:04:47,755 | numpy_client.py:260 | cached_clock: 6, curr_clock: 9
+INFO flower 2021-04-10 17:04:49,267 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=9)
+INFO flower 2021-04-10 17:04:49,267 | chaos.py:14 | Delay 54 sec
+DEBUG flower 2021-04-10 17:05:43,278 | app.py:66 | Waiting for message from server...
+DEBUG flower 2021-04-10 17:05:43,302 | app.py:68 | Received server message. Handling...
+DEBUG flower 2021-04-10 17:05:43,302 | numpy_client.py:172 | fit, FitIns(clock=10)
+DEBUG flower 2021-04-10 17:05:43,302 | numpy_client.py:260 | cached_clock: 6, curr_clock: 10
+INFO flower 2021-04-10 17:05:44,870 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=10)
+INFO flower 2021-04-10 17:05:44,870 | chaos.py:14 | Delay 65 sec
+DEBUG flower 2021-04-10 17:06:49,894 | app.py:66 | Waiting for message from server...
+DEBUG flower 2021-04-10 17:06:49,918 | app.py:68 | Received server message. Handling...
+DEBUG flower 2021-04-10 17:06:49,919 | numpy_client.py:172 | fit, FitIns(clock=11)
+DEBUG flower 2021-04-10 17:06:49,919 | numpy_client.py:260 | cached_clock: 6, curr_clock: 11
+INFO flower 2021-04-10 17:06:51,670 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=11)
+INFO flower 2021-04-10 17:06:51,670 | chaos.py:14 | Delay 71 sec
+DEBUG flower 2021-04-10 17:08:02,714 | app.py:66 | Waiting for message from server...
+DEBUG flower 2021-04-10 17:08:02,736 | app.py:68 | Received server message. Handling...
+DEBUG flower 2021-04-10 17:08:02,737 | numpy_client.py:172 | fit, FitIns(clock=12)
+DEBUG flower 2021-04-10 17:08:02,737 | numpy_client.py:260 | cached_clock: 6, curr_clock: 12
+INFO flower 2021-04-10 17:08:02,737 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-10 17:08:02,738 | app.py:66 | Waiting for message from server...
+DEBUG flower 2021-04-10 17:08:02,812 | app.py:68 | Received server message. Handling...
+DEBUG flower 2021-04-10 17:08:02,812 | numpy_client.py:228 | read: ReadRes(clock=9)
+DEBUG flower 2021-04-10 17:08:02,820 | numpy_client.py:172 | fit, FitIns(clock=12)
+DEBUG flower 2021-04-10 17:08:02,820 | numpy_client.py:260 | cached_clock: 9, curr_clock: 12
+INFO flower 2021-04-10 17:08:04,348 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=12)
+INFO flower 2021-04-10 17:08:04,348 | chaos.py:14 | Delay 78 sec
+DEBUG flower 2021-04-10 17:09:22,407 | app.py:66 | Waiting for message from server...
+DEBUG flower 2021-04-10 17:09:22,431 | app.py:68 | Received server message. Handling...
+DEBUG flower 2021-04-10 17:09:22,431 | numpy_client.py:172 | fit, FitIns(clock=13)
+DEBUG flower 2021-04-10 17:09:22,431 | numpy_client.py:260 | cached_clock: 9, curr_clock: 13
+INFO flower 2021-04-10 17:09:23,976 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=13)
+INFO flower 2021-04-10 17:09:23,976 | chaos.py:14 | Delay 71 sec
+DEBUG flower 2021-04-10 17:10:34,983 | app.py:66 | Waiting for message from server...
+DEBUG flower 2021-04-10 17:10:35,007 | app.py:68 | Received server message. Handling...
+DEBUG flower 2021-04-10 17:10:35,008 | numpy_client.py:172 | fit, FitIns(clock=14)
+DEBUG flower 2021-04-10 17:10:35,008 | numpy_client.py:260 | cached_clock: 9, curr_clock: 14
+INFO flower 2021-04-10 17:10:36,750 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=14)
+INFO flower 2021-04-10 17:10:36,751 | chaos.py:14 | Delay 59 sec
+DEBUG flower 2021-04-10 17:11:35,811 | app.py:66 | Waiting for message from server...
+DEBUG flower 2021-04-10 17:11:35,835 | app.py:68 | Received server message. Handling...
+DEBUG flower 2021-04-10 17:11:35,836 | numpy_client.py:172 | fit, FitIns(clock=15)
+DEBUG flower 2021-04-10 17:11:35,836 | numpy_client.py:260 | cached_clock: 9, curr_clock: 15
+INFO flower 2021-04-10 17:11:35,836 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-10 17:11:35,836 | app.py:66 | Waiting for message from server...
+DEBUG flower 2021-04-10 17:11:35,905 | app.py:68 | Received server message. Handling...
+DEBUG flower 2021-04-10 17:11:35,906 | numpy_client.py:228 | read: ReadRes(clock=12)
+DEBUG flower 2021-04-10 17:11:35,913 | numpy_client.py:172 | fit, FitIns(clock=15)
+DEBUG flower 2021-04-10 17:11:35,913 | numpy_client.py:260 | cached_clock: 12, curr_clock: 15
+INFO flower 2021-04-10 17:11:37,552 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=15)
+INFO flower 2021-04-10 17:11:37,553 | chaos.py:14 | Delay 45 sec
+DEBUG flower 2021-04-10 17:12:22,579 | app.py:66 | Waiting for message from server...
+DEBUG flower 2021-04-10 17:12:28,744 | app.py:68 | Received server message. Handling...
+DEBUG flower 2021-04-10 17:12:28,744 | numpy_client.py:172 | fit, FitIns(clock=16)
+DEBUG flower 2021-04-10 17:12:28,744 | numpy_client.py:260 | cached_clock: 12, curr_clock: 16
+INFO flower 2021-04-10 17:12:30,271 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=16)
+INFO flower 2021-04-10 17:12:30,271 | chaos.py:14 | Delay 60 sec
+DEBUG flower 2021-04-10 17:13:30,332 | app.py:66 | Waiting for message from server...
+DEBUG flower 2021-04-10 17:13:30,356 | app.py:68 | Received server message. Handling...
+DEBUG flower 2021-04-10 17:13:30,356 | numpy_client.py:172 | fit, FitIns(clock=17)
+DEBUG flower 2021-04-10 17:13:30,356 | numpy_client.py:260 | cached_clock: 12, curr_clock: 17
+INFO flower 2021-04-10 17:13:31,951 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=17)
+INFO flower 2021-04-10 17:13:31,952 | chaos.py:14 | Delay 41 sec
+DEBUG flower 2021-04-10 17:14:12,975 | app.py:66 | Waiting for message from server...
+DEBUG flower 2021-04-10 17:14:12,997 | app.py:68 | Received server message. Handling...
+DEBUG flower 2021-04-10 17:14:12,998 | numpy_client.py:172 | fit, FitIns(clock=18)
+DEBUG flower 2021-04-10 17:14:12,998 | numpy_client.py:260 | cached_clock: 12, curr_clock: 18
+INFO flower 2021-04-10 17:14:12,998 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-10 17:14:12,999 | app.py:66 | Waiting for message from server...
+DEBUG flower 2021-04-10 17:14:13,045 | app.py:68 | Received server message. Handling...
+DEBUG flower 2021-04-10 17:14:13,046 | numpy_client.py:228 | read: ReadRes(clock=14)
+DEBUG flower 2021-04-10 17:14:13,053 | numpy_client.py:172 | fit, FitIns(clock=18)
+DEBUG flower 2021-04-10 17:14:13,053 | numpy_client.py:260 | cached_clock: 14, curr_clock: 18
+INFO flower 2021-04-10 17:14:14,686 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=18)
+INFO flower 2021-04-10 17:14:14,686 | chaos.py:14 | Delay 68 sec
+DEBUG flower 2021-04-10 17:15:22,727 | app.py:66 | Waiting for message from server...
+DEBUG flower 2021-04-10 17:15:22,750 | app.py:68 | Received server message. Handling...
+DEBUG flower 2021-04-10 17:15:22,751 | numpy_client.py:172 | fit, FitIns(clock=19)
+DEBUG flower 2021-04-10 17:15:22,751 | numpy_client.py:260 | cached_clock: 14, curr_clock: 19
+INFO flower 2021-04-10 17:15:24,269 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=19)
+INFO flower 2021-04-10 17:15:24,269 | chaos.py:14 | Delay 66 sec
+DEBUG flower 2021-04-10 17:16:30,311 | app.py:66 | Waiting for message from server...
+DEBUG flower 2021-04-10 17:16:30,335 | app.py:68 | Received server message. Handling...
+DEBUG flower 2021-04-10 17:16:30,335 | numpy_client.py:172 | fit, FitIns(clock=20)
+DEBUG flower 2021-04-10 17:16:30,335 | numpy_client.py:260 | cached_clock: 14, curr_clock: 20
+INFO flower 2021-04-10 17:16:30,335 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-10 17:16:30,336 | app.py:66 | Waiting for message from server...
+DEBUG flower 2021-04-10 17:16:30,352 | app.py:68 | Received server message. Handling...
+DEBUG flower 2021-04-10 17:16:30,352 | numpy_client.py:228 | read: ReadRes(clock=16)
+DEBUG flower 2021-04-10 17:16:30,359 | numpy_client.py:172 | fit, FitIns(clock=20)
+DEBUG flower 2021-04-10 17:16:30,359 | numpy_client.py:260 | cached_clock: 16, curr_clock: 20
+INFO flower 2021-04-10 17:16:31,971 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=20)
+INFO flower 2021-04-10 17:16:31,971 | chaos.py:14 | Delay 59 sec
+DEBUG flower 2021-04-10 17:17:30,983 | app.py:66 | Waiting for message from server...
+DEBUG flower 2021-04-10 17:17:31,007 | app.py:68 | Received server message. Handling...
+DEBUG flower 2021-04-10 17:17:31,007 | numpy_client.py:172 | fit, FitIns(clock=21)
+DEBUG flower 2021-04-10 17:17:31,007 | numpy_client.py:260 | cached_clock: 16, curr_clock: 21
+INFO flower 2021-04-10 17:17:32,585 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=21)
+INFO flower 2021-04-10 17:17:32,585 | chaos.py:14 | Delay 78 sec
+DEBUG flower 2021-04-10 17:18:50,634 | app.py:66 | Waiting for message from server...
+DEBUG flower 2021-04-10 17:18:50,655 | app.py:68 | Received server message. Handling...
+DEBUG flower 2021-04-10 17:18:50,656 | numpy_client.py:172 | fit, FitIns(clock=22)
+DEBUG flower 2021-04-10 17:18:50,656 | numpy_client.py:260 | cached_clock: 16, curr_clock: 22
+INFO flower 2021-04-10 17:18:50,656 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-10 17:18:50,656 | app.py:66 | Waiting for message from server...
+DEBUG flower 2021-04-10 17:18:50,671 | app.py:68 | Received server message. Handling...
+DEBUG flower 2021-04-10 17:18:50,671 | numpy_client.py:228 | read: ReadRes(clock=18)
+DEBUG flower 2021-04-10 17:18:50,678 | numpy_client.py:172 | fit, FitIns(clock=22)
+DEBUG flower 2021-04-10 17:18:50,678 | numpy_client.py:260 | cached_clock: 18, curr_clock: 22
+INFO flower 2021-04-10 17:18:52,245 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=22)
+INFO flower 2021-04-10 17:18:52,246 | chaos.py:14 | Delay 60 sec
+DEBUG flower 2021-04-10 17:19:52,281 | app.py:66 | Waiting for message from server...
+DEBUG flower 2021-04-10 17:19:52,303 | app.py:68 | Received server message. Handling...
+DEBUG flower 2021-04-10 17:19:52,304 | numpy_client.py:172 | fit, FitIns(clock=23)
+DEBUG flower 2021-04-10 17:19:52,304 | numpy_client.py:260 | cached_clock: 18, curr_clock: 23
+INFO flower 2021-04-10 17:19:53,970 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=23)
+INFO flower 2021-04-10 17:19:53,970 | chaos.py:14 | Delay 69 sec
+DEBUG flower 2021-04-10 17:21:03,004 | app.py:66 | Waiting for message from server...
+DEBUG flower 2021-04-10 17:21:03,031 | app.py:68 | Received server message. Handling...
+DEBUG flower 2021-04-10 17:21:03,031 | numpy_client.py:172 | fit, FitIns(clock=24)
+DEBUG flower 2021-04-10 17:21:03,031 | numpy_client.py:260 | cached_clock: 18, curr_clock: 24
+INFO flower 2021-04-10 17:21:03,031 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-10 17:21:03,032 | app.py:66 | Waiting for message from server...
+DEBUG flower 2021-04-10 17:21:03,048 | app.py:68 | Received server message. Handling...
+DEBUG flower 2021-04-10 17:21:03,049 | numpy_client.py:228 | read: ReadRes(clock=20)
+DEBUG flower 2021-04-10 17:21:03,056 | numpy_client.py:172 | fit, FitIns(clock=24)
+DEBUG flower 2021-04-10 17:21:03,056 | numpy_client.py:260 | cached_clock: 20, curr_clock: 24
+INFO flower 2021-04-10 17:21:04,669 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=24)
+INFO flower 2021-04-10 17:21:04,670 | chaos.py:14 | Delay 40 sec
+DEBUG flower 2021-04-10 17:21:44,710 | app.py:66 | Waiting for message from server...
+DEBUG flower 2021-04-10 17:21:51,024 | app.py:68 | Received server message. Handling...
+DEBUG flower 2021-04-10 17:21:51,024 | numpy_client.py:172 | fit, FitIns(clock=25)
+DEBUG flower 2021-04-10 17:21:51,024 | numpy_client.py:260 | cached_clock: 20, curr_clock: 25
+INFO flower 2021-04-10 17:21:52,649 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=25)
+INFO flower 2021-04-10 17:21:52,649 | chaos.py:14 | Delay 79 sec
+DEBUG flower 2021-04-10 17:23:11,677 | app.py:66 | Waiting for message from server...
+DEBUG flower 2021-04-10 17:23:17,818 | app.py:68 | Received server message. Handling...
+DEBUG flower 2021-04-10 17:23:17,818 | numpy_client.py:172 | fit, FitIns(clock=26)
+DEBUG flower 2021-04-10 17:23:17,818 | numpy_client.py:260 | cached_clock: 20, curr_clock: 26
+INFO flower 2021-04-10 17:23:17,819 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-10 17:23:17,819 | app.py:66 | Waiting for message from server...
+DEBUG flower 2021-04-10 17:23:17,844 | app.py:68 | Received server message. Handling...
+DEBUG flower 2021-04-10 17:23:17,845 | numpy_client.py:228 | read: ReadRes(clock=21)
+DEBUG flower 2021-04-10 17:23:17,852 | numpy_client.py:172 | fit, FitIns(clock=26)
+DEBUG flower 2021-04-10 17:23:17,852 | numpy_client.py:260 | cached_clock: 21, curr_clock: 26
+INFO flower 2021-04-10 17:23:19,365 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=26)
+INFO flower 2021-04-10 17:23:19,365 | chaos.py:14 | Delay 47 sec
+DEBUG flower 2021-04-10 17:24:06,404 | app.py:66 | Waiting for message from server...
+DEBUG flower 2021-04-10 17:24:06,426 | app.py:68 | Received server message. Handling...
+DEBUG flower 2021-04-10 17:24:06,427 | numpy_client.py:172 | fit, FitIns(clock=27)
+DEBUG flower 2021-04-10 17:24:06,427 | numpy_client.py:260 | cached_clock: 21, curr_clock: 27
+INFO flower 2021-04-10 17:24:06,427 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-10 17:24:06,427 | app.py:66 | Waiting for message from server...
+DEBUG flower 2021-04-10 17:24:06,446 | app.py:68 | Received server message. Handling...
+DEBUG flower 2021-04-10 17:24:06,447 | numpy_client.py:228 | read: ReadRes(clock=22)
+DEBUG flower 2021-04-10 17:24:06,454 | numpy_client.py:172 | fit, FitIns(clock=27)
+DEBUG flower 2021-04-10 17:24:06,454 | numpy_client.py:260 | cached_clock: 22, curr_clock: 27
+INFO flower 2021-04-10 17:24:08,065 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=27)
+INFO flower 2021-04-10 17:24:08,065 | chaos.py:14 | Delay 64 sec
+DEBUG flower 2021-04-10 17:25:12,124 | app.py:66 | Waiting for message from server...
+DEBUG flower 2021-04-10 17:25:12,146 | app.py:68 | Received server message. Handling...
+DEBUG flower 2021-04-10 17:25:12,146 | numpy_client.py:172 | fit, FitIns(clock=28)
+DEBUG flower 2021-04-10 17:25:12,146 | numpy_client.py:260 | cached_clock: 22, curr_clock: 28
+INFO flower 2021-04-10 17:25:12,147 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-10 17:25:12,147 | app.py:66 | Waiting for message from server...
+DEBUG flower 2021-04-10 17:25:12,161 | app.py:68 | Received server message. Handling...
+DEBUG flower 2021-04-10 17:25:12,162 | numpy_client.py:228 | read: ReadRes(clock=23)
+DEBUG flower 2021-04-10 17:25:12,172 | numpy_client.py:172 | fit, FitIns(clock=28)
+DEBUG flower 2021-04-10 17:25:12,173 | numpy_client.py:260 | cached_clock: 23, curr_clock: 28
+INFO flower 2021-04-10 17:25:13,688 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=28)
+INFO flower 2021-04-10 17:25:13,689 | chaos.py:14 | Delay 51 sec
+DEBUG flower 2021-04-10 17:26:04,730 | app.py:66 | Waiting for message from server...
+DEBUG flower 2021-04-10 17:26:04,753 | app.py:68 | Received server message. Handling...
+DEBUG flower 2021-04-10 17:26:04,754 | numpy_client.py:172 | fit, FitIns(clock=29)
+DEBUG flower 2021-04-10 17:26:04,754 | numpy_client.py:260 | cached_clock: 23, curr_clock: 29
+INFO flower 2021-04-10 17:26:04,754 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-10 17:26:04,754 | app.py:66 | Waiting for message from server...
+DEBUG flower 2021-04-10 17:26:04,812 | app.py:68 | Received server message. Handling...
+DEBUG flower 2021-04-10 17:26:04,813 | numpy_client.py:228 | read: ReadRes(clock=24)
+DEBUG flower 2021-04-10 17:26:04,820 | numpy_client.py:172 | fit, FitIns(clock=29)
+DEBUG flower 2021-04-10 17:26:04,820 | numpy_client.py:260 | cached_clock: 24, curr_clock: 29
+INFO flower 2021-04-10 17:26:06,349 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=29)
+INFO flower 2021-04-10 17:26:06,350 | chaos.py:14 | Delay 73 sec
+DEBUG flower 2021-04-10 17:27:19,375 | app.py:66 | Waiting for message from server...
+DEBUG flower 2021-04-10 17:27:19,398 | app.py:68 | Received server message. Handling...
+DEBUG flower 2021-04-10 17:27:19,398 | numpy_client.py:172 | fit, FitIns(clock=30)
+DEBUG flower 2021-04-10 17:27:19,399 | numpy_client.py:260 | cached_clock: 24, curr_clock: 30
+INFO flower 2021-04-10 17:27:19,399 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-10 17:27:19,399 | app.py:66 | Waiting for message from server...
+DEBUG flower 2021-04-10 17:27:19,445 | app.py:68 | Received server message. Handling...
+DEBUG flower 2021-04-10 17:27:19,446 | numpy_client.py:228 | read: ReadRes(clock=25)
+DEBUG flower 2021-04-10 17:27:19,453 | numpy_client.py:172 | fit, FitIns(clock=30)
+DEBUG flower 2021-04-10 17:27:19,453 | numpy_client.py:260 | cached_clock: 25, curr_clock: 30
+INFO flower 2021-04-10 17:27:20,964 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=30)
+INFO flower 2021-04-10 17:27:20,965 | chaos.py:14 | Delay 76 sec
+DEBUG flower 2021-04-10 17:28:36,972 | app.py:66 | Waiting for message from server...
+DEBUG flower 2021-04-10 17:28:36,994 | app.py:68 | Received server message. Handling...
+DEBUG flower 2021-04-10 17:28:36,995 | numpy_client.py:172 | fit, FitIns(clock=31)
+DEBUG flower 2021-04-10 17:28:36,995 | numpy_client.py:260 | cached_clock: 25, curr_clock: 31
+INFO flower 2021-04-10 17:28:36,995 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-10 17:28:36,996 | app.py:66 | Waiting for message from server...
+DEBUG flower 2021-04-10 17:28:37,046 | app.py:68 | Received server message. Handling...
+DEBUG flower 2021-04-10 17:28:37,046 | numpy_client.py:228 | read: ReadRes(clock=26)
+DEBUG flower 2021-04-10 17:28:37,053 | numpy_client.py:172 | fit, FitIns(clock=31)
+DEBUG flower 2021-04-10 17:28:37,054 | numpy_client.py:260 | cached_clock: 26, curr_clock: 31
+INFO flower 2021-04-10 17:28:38,557 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=31)
+INFO flower 2021-04-10 17:28:38,558 | chaos.py:14 | Delay 58 sec
+DEBUG flower 2021-04-10 17:29:36,592 | app.py:66 | Waiting for message from server...
+DEBUG flower 2021-04-10 17:29:36,616 | app.py:68 | Received server message. Handling...
+DEBUG flower 2021-04-10 17:29:36,616 | numpy_client.py:172 | fit, FitIns(clock=32)
+DEBUG flower 2021-04-10 17:29:36,616 | numpy_client.py:260 | cached_clock: 26, curr_clock: 32
+INFO flower 2021-04-10 17:29:36,617 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-10 17:29:36,617 | app.py:66 | Waiting for message from server...
+DEBUG flower 2021-04-10 17:29:36,645 | app.py:68 | Received server message. Handling...
+DEBUG flower 2021-04-10 17:29:36,646 | numpy_client.py:228 | read: ReadRes(clock=27)
+DEBUG flower 2021-04-10 17:29:36,653 | numpy_client.py:172 | fit, FitIns(clock=32)
+DEBUG flower 2021-04-10 17:29:36,654 | numpy_client.py:260 | cached_clock: 27, curr_clock: 32
+INFO flower 2021-04-10 17:29:38,270 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=32)
+INFO flower 2021-04-10 17:29:38,270 | chaos.py:14 | Delay 63 sec
+DEBUG flower 2021-04-10 17:30:41,313 | app.py:66 | Waiting for message from server...
+DEBUG flower 2021-04-10 17:30:41,336 | app.py:68 | Received server message. Handling...
+DEBUG flower 2021-04-10 17:30:41,337 | numpy_client.py:172 | fit, FitIns(clock=33)
+DEBUG flower 2021-04-10 17:30:41,337 | numpy_client.py:260 | cached_clock: 27, curr_clock: 33
+INFO flower 2021-04-10 17:30:41,337 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-10 17:30:41,337 | app.py:66 | Waiting for message from server...
+DEBUG flower 2021-04-10 17:30:41,353 | app.py:68 | Received server message. Handling...
+DEBUG flower 2021-04-10 17:30:41,353 | numpy_client.py:228 | read: ReadRes(clock=28)
+DEBUG flower 2021-04-10 17:30:41,360 | numpy_client.py:172 | fit, FitIns(clock=33)
+DEBUG flower 2021-04-10 17:30:41,360 | numpy_client.py:260 | cached_clock: 28, curr_clock: 33
+INFO flower 2021-04-10 17:30:42,946 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=33)
+INFO flower 2021-04-10 17:30:42,946 | chaos.py:14 | Delay 70 sec
+DEBUG flower 2021-04-10 17:31:52,968 | app.py:66 | Waiting for message from server...
+DEBUG flower 2021-04-10 17:31:52,990 | app.py:68 | Received server message. Handling...
+DEBUG flower 2021-04-10 17:31:52,991 | numpy_client.py:172 | fit, FitIns(clock=34)
+DEBUG flower 2021-04-10 17:31:52,991 | numpy_client.py:260 | cached_clock: 28, curr_clock: 34
+INFO flower 2021-04-10 17:31:52,991 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-10 17:31:52,992 | app.py:66 | Waiting for message from server...
+DEBUG flower 2021-04-10 17:31:53,011 | app.py:68 | Received server message. Handling...
+DEBUG flower 2021-04-10 17:31:53,012 | numpy_client.py:228 | read: ReadRes(clock=29)
+DEBUG flower 2021-04-10 17:31:53,019 | numpy_client.py:172 | fit, FitIns(clock=34)
+DEBUG flower 2021-04-10 17:31:53,019 | numpy_client.py:260 | cached_clock: 29, curr_clock: 34
+INFO flower 2021-04-10 17:31:54,562 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=34)
+INFO flower 2021-04-10 17:31:54,562 | chaos.py:14 | Delay 78 sec
+DEBUG flower 2021-04-10 17:33:12,595 | app.py:66 | Waiting for message from server...
+DEBUG flower 2021-04-10 17:33:12,614 | app.py:68 | Received server message. Handling...
+DEBUG flower 2021-04-10 17:33:12,615 | numpy_client.py:172 | fit, FitIns(clock=35)
+DEBUG flower 2021-04-10 17:33:12,615 | numpy_client.py:260 | cached_clock: 29, curr_clock: 35
+INFO flower 2021-04-10 17:33:12,615 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-10 17:33:12,616 | app.py:66 | Waiting for message from server...
+DEBUG flower 2021-04-10 17:33:12,645 | app.py:68 | Received server message. Handling...
+DEBUG flower 2021-04-10 17:33:12,646 | numpy_client.py:228 | read: ReadRes(clock=30)
+DEBUG flower 2021-04-10 17:33:12,653 | numpy_client.py:172 | fit, FitIns(clock=35)
+DEBUG flower 2021-04-10 17:33:12,653 | numpy_client.py:260 | cached_clock: 30, curr_clock: 35
+INFO flower 2021-04-10 17:33:14,168 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=35)
+INFO flower 2021-04-10 17:33:14,168 | chaos.py:14 | Delay 70 sec
+DEBUG flower 2021-04-10 17:34:24,217 | app.py:66 | Waiting for message from server...
+DEBUG flower 2021-04-10 17:34:24,239 | app.py:68 | Received server message. Handling...
+DEBUG flower 2021-04-10 17:34:24,240 | numpy_client.py:172 | fit, FitIns(clock=36)
+DEBUG flower 2021-04-10 17:34:24,240 | numpy_client.py:260 | cached_clock: 30, curr_clock: 36
+INFO flower 2021-04-10 17:34:24,240 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-10 17:34:24,240 | app.py:66 | Waiting for message from server...
+DEBUG flower 2021-04-10 17:34:24,255 | app.py:68 | Received server message. Handling...
+DEBUG flower 2021-04-10 17:34:24,256 | numpy_client.py:228 | read: ReadRes(clock=31)
+DEBUG flower 2021-04-10 17:34:24,264 | numpy_client.py:172 | fit, FitIns(clock=36)
+DEBUG flower 2021-04-10 17:34:24,264 | numpy_client.py:260 | cached_clock: 31, curr_clock: 36
+INFO flower 2021-04-10 17:34:25,772 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=36)
+INFO flower 2021-04-10 17:34:25,773 | chaos.py:14 | Delay 56 sec
+DEBUG flower 2021-04-10 17:35:21,830 | app.py:66 | Waiting for message from server...
+DEBUG flower 2021-04-10 17:35:21,850 | app.py:68 | Received server message. Handling...
+DEBUG flower 2021-04-10 17:35:21,850 | numpy_client.py:172 | fit, FitIns(clock=37)
+DEBUG flower 2021-04-10 17:35:21,851 | numpy_client.py:260 | cached_clock: 31, curr_clock: 37
+INFO flower 2021-04-10 17:35:21,851 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-10 17:35:21,851 | app.py:66 | Waiting for message from server...
+DEBUG flower 2021-04-10 17:35:29,225 | app.py:68 | Received server message. Handling...
+DEBUG flower 2021-04-10 17:35:29,226 | numpy_client.py:228 | read: ReadRes(clock=32)
+DEBUG flower 2021-04-10 17:35:29,234 | numpy_client.py:172 | fit, FitIns(clock=37)
+DEBUG flower 2021-04-10 17:35:29,234 | numpy_client.py:260 | cached_clock: 32, curr_clock: 37
+INFO flower 2021-04-10 17:35:30,770 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=37)
+INFO flower 2021-04-10 17:35:30,770 | chaos.py:14 | Delay 76 sec
+DEBUG flower 2021-04-10 17:36:46,830 | app.py:66 | Waiting for message from server...
+DEBUG flower 2021-04-10 17:36:46,854 | app.py:68 | Received server message. Handling...
+DEBUG flower 2021-04-10 17:36:46,854 | numpy_client.py:172 | fit, FitIns(clock=38)
+DEBUG flower 2021-04-10 17:36:46,855 | numpy_client.py:260 | cached_clock: 32, curr_clock: 38
+INFO flower 2021-04-10 17:36:46,855 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-10 17:36:46,855 | app.py:66 | Waiting for message from server...
+DEBUG flower 2021-04-10 17:36:50,444 | app.py:68 | Received server message. Handling...
+DEBUG flower 2021-04-10 17:36:50,445 | numpy_client.py:228 | read: ReadRes(clock=33)
+DEBUG flower 2021-04-10 17:36:50,452 | numpy_client.py:172 | fit, FitIns(clock=38)
+DEBUG flower 2021-04-10 17:36:50,452 | numpy_client.py:260 | cached_clock: 33, curr_clock: 38
+INFO flower 2021-04-10 17:36:52,051 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=38)
+INFO flower 2021-04-10 17:36:52,051 | chaos.py:14 | Delay 61 sec
+DEBUG flower 2021-04-10 17:37:53,079 | app.py:66 | Waiting for message from server...
+DEBUG flower 2021-04-10 17:37:53,101 | app.py:68 | Received server message. Handling...
+DEBUG flower 2021-04-10 17:37:53,101 | numpy_client.py:172 | fit, FitIns(clock=39)
+DEBUG flower 2021-04-10 17:37:53,101 | numpy_client.py:260 | cached_clock: 33, curr_clock: 39
+INFO flower 2021-04-10 17:37:53,102 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-10 17:37:53,102 | app.py:66 | Waiting for message from server...
+DEBUG flower 2021-04-10 17:38:19,344 | app.py:68 | Received server message. Handling...
+DEBUG flower 2021-04-10 17:38:19,345 | numpy_client.py:228 | read: ReadRes(clock=34)
+DEBUG flower 2021-04-10 17:38:19,353 | numpy_client.py:172 | fit, FitIns(clock=39)
+DEBUG flower 2021-04-10 17:38:19,353 | numpy_client.py:260 | cached_clock: 34, curr_clock: 39
+INFO flower 2021-04-10 17:38:20,866 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=39)
+INFO flower 2021-04-10 17:38:20,866 | chaos.py:14 | Delay 59 sec
+DEBUG flower 2021-04-10 17:39:19,903 | app.py:66 | Waiting for message from server...
+DEBUG flower 2021-04-10 17:39:19,925 | app.py:68 | Received server message. Handling...
+DEBUG flower 2021-04-10 17:39:19,925 | numpy_client.py:172 | fit, FitIns(clock=40)
+DEBUG flower 2021-04-10 17:39:19,925 | numpy_client.py:260 | cached_clock: 34, curr_clock: 40
+INFO flower 2021-04-10 17:39:19,925 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-10 17:39:19,926 | app.py:66 | Waiting for message from server...
+DEBUG flower 2021-04-10 17:39:40,351 | app.py:68 | Received server message. Handling...
+DEBUG flower 2021-04-10 17:39:40,351 | numpy_client.py:228 | read: ReadRes(clock=35)
+DEBUG flower 2021-04-10 17:39:40,359 | numpy_client.py:172 | fit, FitIns(clock=40)
+DEBUG flower 2021-04-10 17:39:40,359 | numpy_client.py:260 | cached_clock: 35, curr_clock: 40
+INFO flower 2021-04-10 17:39:41,969 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=40)
+INFO flower 2021-04-10 17:39:41,970 | chaos.py:14 | Delay 57 sec
+DEBUG flower 2021-04-10 17:40:38,982 | app.py:66 | Waiting for message from server...
+DEBUG flower 2021-04-10 17:40:39,004 | app.py:68 | Received server message. Handling...
+DEBUG flower 2021-04-10 17:40:39,004 | numpy_client.py:172 | fit, FitIns(clock=41)
+DEBUG flower 2021-04-10 17:40:39,004 | numpy_client.py:260 | cached_clock: 35, curr_clock: 41
+INFO flower 2021-04-10 17:40:39,004 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-10 17:40:39,005 | app.py:66 | Waiting for message from server...
+DEBUG flower 2021-04-10 17:40:47,644 | app.py:68 | Received server message. Handling...
+DEBUG flower 2021-04-10 17:40:47,644 | numpy_client.py:228 | read: ReadRes(clock=36)
+DEBUG flower 2021-04-10 17:40:47,651 | numpy_client.py:172 | fit, FitIns(clock=41)
+DEBUG flower 2021-04-10 17:40:47,651 | numpy_client.py:260 | cached_clock: 36, curr_clock: 41
+INFO flower 2021-04-10 17:40:49,248 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=41)
+INFO flower 2021-04-10 17:40:49,249 | chaos.py:14 | Delay 80 sec
+DEBUG flower 2021-04-10 17:42:09,262 | app.py:66 | Waiting for message from server...
+DEBUG flower 2021-04-10 17:42:09,285 | app.py:68 | Received server message. Handling...
+DEBUG flower 2021-04-10 17:42:09,286 | numpy_client.py:172 | fit, FitIns(clock=42)
+DEBUG flower 2021-04-10 17:42:09,286 | numpy_client.py:260 | cached_clock: 36, curr_clock: 42
+INFO flower 2021-04-10 17:42:09,286 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-10 17:42:09,286 | app.py:66 | Waiting for message from server...
+DEBUG flower 2021-04-10 17:42:14,506 | app.py:68 | Received server message. Handling...
+DEBUG flower 2021-04-10 17:42:14,507 | numpy_client.py:228 | read: ReadRes(clock=37)
+DEBUG flower 2021-04-10 17:42:14,514 | numpy_client.py:172 | fit, FitIns(clock=42)
+DEBUG flower 2021-04-10 17:42:14,515 | numpy_client.py:260 | cached_clock: 37, curr_clock: 42
+INFO flower 2021-04-10 17:42:16,066 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=42)
+INFO flower 2021-04-10 17:42:16,067 | chaos.py:14 | Delay 44 sec
+DEBUG flower 2021-04-10 17:43:00,111 | app.py:66 | Waiting for message from server...
+DEBUG flower 2021-04-10 17:43:00,135 | app.py:68 | Received server message. Handling...
+DEBUG flower 2021-04-10 17:43:00,135 | numpy_client.py:172 | fit, FitIns(clock=43)
+DEBUG flower 2021-04-10 17:43:00,135 | numpy_client.py:260 | cached_clock: 37, curr_clock: 43
+INFO flower 2021-04-10 17:43:00,135 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-10 17:43:00,136 | app.py:66 | Waiting for message from server...
+DEBUG flower 2021-04-10 17:43:27,144 | app.py:68 | Received server message. Handling...
+DEBUG flower 2021-04-10 17:43:27,145 | numpy_client.py:228 | read: ReadRes(clock=38)
+DEBUG flower 2021-04-10 17:43:27,152 | numpy_client.py:172 | fit, FitIns(clock=43)
+DEBUG flower 2021-04-10 17:43:27,152 | numpy_client.py:260 | cached_clock: 38, curr_clock: 43
+INFO flower 2021-04-10 17:43:28,746 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=43)
+INFO flower 2021-04-10 17:43:28,746 | chaos.py:14 | Delay 68 sec
+DEBUG flower 2021-04-10 17:44:36,773 | app.py:66 | Waiting for message from server...
+DEBUG flower 2021-04-10 17:44:36,795 | app.py:68 | Received server message. Handling...
+DEBUG flower 2021-04-10 17:44:36,795 | numpy_client.py:172 | fit, FitIns(clock=44)
+DEBUG flower 2021-04-10 17:44:36,795 | numpy_client.py:260 | cached_clock: 38, curr_clock: 44
+INFO flower 2021-04-10 17:44:36,795 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-10 17:44:36,796 | app.py:66 | Waiting for message from server...
+DEBUG flower 2021-04-10 17:44:36,968 | app.py:68 | Received server message. Handling...
+DEBUG flower 2021-04-10 17:44:36,968 | numpy_client.py:228 | read: ReadRes(clock=39)
+DEBUG flower 2021-04-10 17:44:36,976 | numpy_client.py:172 | fit, FitIns(clock=44)
+DEBUG flower 2021-04-10 17:44:36,976 | numpy_client.py:260 | cached_clock: 39, curr_clock: 44
+INFO flower 2021-04-10 17:44:38,652 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=44)
+INFO flower 2021-04-10 17:44:38,653 | chaos.py:14 | Delay 44 sec
+DEBUG flower 2021-04-10 17:45:22,698 | app.py:66 | Waiting for message from server...
+DEBUG flower 2021-04-10 17:45:22,721 | app.py:68 | Received server message. Handling...
+DEBUG flower 2021-04-10 17:45:22,721 | numpy_client.py:172 | fit, FitIns(clock=45)
+DEBUG flower 2021-04-10 17:45:22,722 | numpy_client.py:260 | cached_clock: 39, curr_clock: 45
+INFO flower 2021-04-10 17:45:22,722 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-10 17:45:22,722 | app.py:66 | Waiting for message from server...
+DEBUG flower 2021-04-10 17:45:51,045 | app.py:68 | Received server message. Handling...
+DEBUG flower 2021-04-10 17:45:51,046 | numpy_client.py:228 | read: ReadRes(clock=40)
+DEBUG flower 2021-04-10 17:45:51,055 | numpy_client.py:172 | fit, FitIns(clock=45)
+DEBUG flower 2021-04-10 17:45:51,055 | numpy_client.py:260 | cached_clock: 40, curr_clock: 45
+INFO flower 2021-04-10 17:45:52,549 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=45)
+INFO flower 2021-04-10 17:45:52,549 | chaos.py:14 | Delay 47 sec
+DEBUG flower 2021-04-10 17:46:39,567 | app.py:66 | Waiting for message from server...
+DEBUG flower 2021-04-10 17:46:39,590 | app.py:68 | Received server message. Handling...
+DEBUG flower 2021-04-10 17:46:39,590 | numpy_client.py:172 | fit, FitIns(clock=46)
+DEBUG flower 2021-04-10 17:46:39,590 | numpy_client.py:260 | cached_clock: 40, curr_clock: 46
+INFO flower 2021-04-10 17:46:39,591 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-10 17:46:39,591 | app.py:66 | Waiting for message from server...
+DEBUG flower 2021-04-10 17:47:22,551 | app.py:68 | Received server message. Handling...
+DEBUG flower 2021-04-10 17:47:22,552 | numpy_client.py:228 | read: ReadRes(clock=41)
+DEBUG flower 2021-04-10 17:47:22,558 | numpy_client.py:172 | fit, FitIns(clock=46)
+DEBUG flower 2021-04-10 17:47:22,558 | numpy_client.py:260 | cached_clock: 41, curr_clock: 46
+INFO flower 2021-04-10 17:47:24,156 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=46)
+INFO flower 2021-04-10 17:47:24,157 | chaos.py:14 | Delay 71 sec
+DEBUG flower 2021-04-10 17:48:35,170 | app.py:66 | Waiting for message from server...
+DEBUG flower 2021-04-10 17:48:35,192 | app.py:68 | Received server message. Handling...
+DEBUG flower 2021-04-10 17:48:35,192 | numpy_client.py:172 | fit, FitIns(clock=47)
+DEBUG flower 2021-04-10 17:48:35,193 | numpy_client.py:260 | cached_clock: 41, curr_clock: 47
+INFO flower 2021-04-10 17:48:35,193 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-10 17:48:35,193 | app.py:66 | Waiting for message from server...
+DEBUG flower 2021-04-10 17:48:35,244 | app.py:68 | Received server message. Handling...
+DEBUG flower 2021-04-10 17:48:35,245 | numpy_client.py:228 | read: ReadRes(clock=42)
+DEBUG flower 2021-04-10 17:48:35,253 | numpy_client.py:172 | fit, FitIns(clock=47)
+DEBUG flower 2021-04-10 17:48:35,253 | numpy_client.py:260 | cached_clock: 42, curr_clock: 47
+INFO flower 2021-04-10 17:48:36,851 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=47)
+INFO flower 2021-04-10 17:48:36,852 | chaos.py:14 | Delay 74 sec
+DEBUG flower 2021-04-10 17:49:50,858 | app.py:66 | Waiting for message from server...
+DEBUG flower 2021-04-10 17:49:50,880 | app.py:68 | Received server message. Handling...
+DEBUG flower 2021-04-10 17:49:50,881 | numpy_client.py:172 | fit, FitIns(clock=48)
+DEBUG flower 2021-04-10 17:49:50,881 | numpy_client.py:260 | cached_clock: 42, curr_clock: 48
+INFO flower 2021-04-10 17:49:50,881 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-10 17:49:50,882 | app.py:66 | Waiting for message from server...
+DEBUG flower 2021-04-10 17:49:50,944 | app.py:68 | Received server message. Handling...
+DEBUG flower 2021-04-10 17:49:50,945 | numpy_client.py:228 | read: ReadRes(clock=43)
+DEBUG flower 2021-04-10 17:49:50,952 | numpy_client.py:172 | fit, FitIns(clock=48)
+DEBUG flower 2021-04-10 17:49:50,952 | numpy_client.py:260 | cached_clock: 43, curr_clock: 48
+INFO flower 2021-04-10 17:49:52,557 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=48)
+INFO flower 2021-04-10 17:49:52,557 | chaos.py:14 | Delay 53 sec
+DEBUG flower 2021-04-10 17:50:45,561 | app.py:66 | Waiting for message from server...
+DEBUG flower 2021-04-10 17:50:45,583 | app.py:68 | Received server message. Handling...
+DEBUG flower 2021-04-10 17:50:45,583 | numpy_client.py:172 | fit, FitIns(clock=49)
+DEBUG flower 2021-04-10 17:50:45,583 | numpy_client.py:260 | cached_clock: 43, curr_clock: 49
+INFO flower 2021-04-10 17:50:45,583 | numpy_client.py:184 | Cache is stale, return ReadIns
+DEBUG flower 2021-04-10 17:50:45,584 | app.py:66 | Waiting for message from server...
+DEBUG flower 2021-04-10 17:50:45,645 | app.py:68 | Received server message. Handling...
+DEBUG flower 2021-04-10 17:50:45,645 | numpy_client.py:228 | read: ReadRes(clock=44)
+DEBUG flower 2021-04-10 17:50:45,653 | numpy_client.py:172 | fit, FitIns(clock=49)
+DEBUG flower 2021-04-10 17:50:45,653 | numpy_client.py:260 | cached_clock: 44, curr_clock: 49
+INFO flower 2021-04-10 17:50:47,183 | numpy_client.py:205 | Cache is fresh, return FitRes(clock=49)
+INFO flower 2021-04-10 17:50:47,183 | chaos.py:14 | Delay 70 sec
+DEBUG flower 2021-04-10 17:51:57,221 | numpy_client.py:217 | The client finishes computing after 3407 seconds
+DEBUG flower 2021-04-10 17:51:57,222 | app.py:66 | Waiting for message from server...
+DEBUG flower 2021-04-10 17:56:46,534 | app.py:68 | Received server message. Handling...
+INFO flower 2021-04-10 17:56:56,785 | numpy_client.py:250 | [32;1m Loss: 74.582, Accuracy: 0.000%[0m
+DEBUG flower 2021-04-10 17:56:56,786 | app.py:66 | Waiting for message from server...
+DEBUG flower 2021-04-10 17:56:58,080 | app.py:68 | Received server message. Handling...
+DEBUG flower 2021-04-10 17:56:58,097 | connection.py:68 | Insecure gRPC channel closed
+INFO flower 2021-04-10 17:56:58,098 | app.py:76 | Disconnect and shut down
+Namespace(idx=13, max_delay=0, min_delay=0, num_clients=31, server_ip='10.244.50.51:8080', staleness_bound=5)
+I'm client 13
+Files already downloaded and verified
+Files already downloaded and verified
+[32;1mClient 13: 1011 train samples, 249 test samples[0m
+loss=74.42920637130737, acc=0.0
+loss=71.6627025604248, acc=0.3291015625
+loss=69.54408288002014, acc=0.3291015625
+loss=67.41516137123108, acc=0.3291015625
+loss=65.25689625740051, acc=0.3291015625
+loss=62.665878653526306, acc=0.3291015625
+loss=58.84331440925598, acc=0.3291015625
+loss=50.888458013534546, acc=0.3291015625
+loss=39.83896780014038, acc=0.3232421875
+loss=36.148974776268005, acc=0.333984375
+loss=35.58148407936096, acc=0.33984375
+loss=35.38534867763519, acc=0.3671875
+loss=35.31186378002167, acc=0.3583984375
+loss=35.63695585727692, acc=0.357421875
+loss=35.58664083480835, acc=0.3349609375
+loss=35.11541259288788, acc=0.375
+loss=34.963488817214966, acc=0.396484375
+loss=34.84529113769531, acc=0.4169921875
+loss=34.876407861709595, acc=0.4013671875
+loss=35.0757919549942, acc=0.37109375
+loss=34.60048949718475, acc=0.3818359375
+loss=34.33831787109375, acc=0.3896484375
+loss=34.292411148548126, acc=0.416015625
+loss=34.432570695877075, acc=0.3916015625
+loss=33.84089434146881, acc=0.431640625
+loss=33.57138055562973, acc=0.4541015625
+loss=33.8490474820137, acc=0.4169921875
+loss=33.41978186368942, acc=0.4755859375
+loss=32.959509789943695, acc=0.482421875
+loss=32.91852295398712, acc=0.486328125
+loss=32.754482328891754, acc=0.4853515625
+loss=32.71343004703522, acc=0.4873046875
+loss=32.367689311504364, acc=0.513671875
+loss=32.019767463207245, acc=0.49609375
+loss=32.10389620065689, acc=0.5009765625
+loss=31.72136503458023, acc=0.521484375
+loss=31.736120879650116, acc=0.498046875
+loss=44.44494366645813, acc=0.46484375
+loss=66.54127252101898, acc=0.3017578125
+loss=26.90410315990448, acc=0.6259765625
+loss=80.145516872406, acc=0.3388671875
+loss=97.56819105148315, acc=0.2939453125
+loss=97.7044837474823, acc=0.1328125
+loss=100.7438178062439, acc=0.294921875
+loss=59.279629707336426, acc=0.328125
+loss=56.45317482948303, acc=0.318359375
+loss=68.89133715629578, acc=0.1669921875
+loss=40.75555765628815, acc=0.4287109375
+loss=34.244263768196106, acc=0.45703125
+loss=33.302997052669525, acc=0.4794921875
+Files already downloaded and verified
+Files already downloaded and verified
+Testing on full test set: 313, 2174.953033924103, 0.2239
+Testing on partial test set: 8, 74.58169746398926, 0.0

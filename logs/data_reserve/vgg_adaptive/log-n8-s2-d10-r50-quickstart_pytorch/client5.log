@@ -1,0 +1,20 @@
+DEBUG flower 2021-04-11 21:24:20,364 | client.py:83 | Start SSP client with delay [60,180]
+INFO flower 2021-04-11 21:24:22,362 | app.py:63 | Opened (insecure) gRPC connection
+DEBUG flower 2021-04-11 21:24:22,362 | app.py:66 | Waiting for message from server...
+DEBUG flower 2021-04-11 21:24:22,367 | connection.py:36 | ChannelConnectivity.IDLE
+DEBUG flower 2021-04-11 21:24:22,368 | connection.py:36 | ChannelConnectivity.READY
+DEBUG flower 2021-04-12 00:14:23,869 | app.py:68 | Received server message. Handling...
+INFO flower 2021-04-12 00:17:07,921 | numpy_client.py:250 | [32;1m Loss: 31.856, Accuracy: 0.000%[0m
+DEBUG flower 2021-04-12 00:17:07,922 | app.py:66 | Waiting for message from server...
+DEBUG flower 2021-04-12 00:23:52,911 | app.py:68 | Received server message. Handling...
+DEBUG flower 2021-04-12 00:23:52,922 | connection.py:68 | Insecure gRPC channel closed
+INFO flower 2021-04-12 00:23:52,922 | app.py:76 | Disconnect and shut down
+Namespace(idx=5, max_delay=0, min_delay=0, num_clients=7, server_ip='10.244.2.62:8080', staleness_bound=2)
+I'm client 5
+Files already downloaded and verified
+Files already downloaded and verified
+[32;1mClient 5: 935 train samples, 74 test samples[0m
+Files already downloaded and verified
+Files already downloaded and verified
+Testing on full test set: 313, 2026.0223186016083, 0.2351
+Testing on partial test set: 3, 31.855710983276367, 0.0
