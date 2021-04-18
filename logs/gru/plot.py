@@ -5,8 +5,7 @@ import csv
 # Usage: python plot.py
 # Specify the csv file names in data_files
 
-# data_files = ['s1', 's2', 's5', 's10', 's25', 's50']
-data_files = ['s=1', 's=2', 's=5', 's=10', 's=25', 'svr_adaptive', 'clt_adaptive']
+data_files = ['s=1', 's=2', 's=4', 's=8', 's=16', 's=25', 'svr_adaptive', 'cli_adaptive']
 data = {}
 
 for file in data_files:
@@ -31,4 +30,4 @@ for series in data:
 plt.xlabel("Time (sec)")
 plt.ylabel("Accuracy")
 plt.legend(loc='lower right')
-plt.savefig('lenet_adaptive.png', dpi=300)
+plt.savefig('gru_adaptive.png', dpi=300)
