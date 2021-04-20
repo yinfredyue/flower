@@ -6,7 +6,7 @@ import csv
 # Specify the csv file names in data_files
 
 # data_files = ['s1', 's2', 's5', 's10', 's25', 's50']
-data_files = ['s=1', 's=2', 's=5', 's=10', 's=25', 'svr_adaptive', 'clt_adaptive']
+data_files = ['s=1', 's=2', 's=5', 's=10', 's=25', 'svr_adaptive', 'cli_adaptive']
 data = {}
 
 for file in data_files:
@@ -26,7 +26,12 @@ for file in data_files:
 
 for series in data:
     acc, time = data[series]
-    plt.plot(time, acc, label=series)
+    if series == 'svr_adaptive':
+        plt.plot(time, acc, 'o-', label=series, color='#e377c2')
+    elif series == 'cli_adaptive':
+        plt.plot(time, acc, '^-', label=series, color='#8c564b')
+    else:
+        plt.plot(time, acc, '-.', label=series)
 
 plt.xlabel("Time (sec)")
 plt.ylabel("Accuracy")
